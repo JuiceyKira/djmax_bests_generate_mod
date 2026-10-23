@@ -27,6 +27,7 @@ from random import random
 from PIL import Image, ImageDraw, ImageFont
 
 from ... import api_handler, constants, models, util
+from ..level_distribution import draw_level_distribution
 from .target_plan import PlanEntry
 
 ASSET_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
@@ -34,6 +35,10 @@ FONT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "font
 EMBLEM_PATH = os.path.join(ASSET_PATH, "emblems")
 EMBLEM_BG_PATH = os.path.join(ASSET_PATH, "emblem_bg")
 DIFF_STAR_PATH = os.path.join(ASSET_PATH, "diff_stars")
+
+# The same grey strip as the bests header, but beside "NEW 30" (the bar spans y 3248..3347).
+NEW_LEVEL_BAR_BOX = (778, 533, 2302, 632)
+NEW_LEVEL_BAR_LABEL_Y = 637
 
 __all__ = ["assemble_background", "assemble_song_cards", "generate_single_song"]
 
@@ -149,17 +154,20 @@ async def assemble_song_cards(entries: list[PlanEntry], card_type: str) -> Image
 # --------------------------------------------------------------------------------------
 # background / header
 # --------------------------------------------------------------------------------------
-def assemble_background(data: models.DMBests, is_max: bool) -> Image.Image:
-    """The shared bests header, copied verbatim from generators/bests_generator/components.py.
+def assemble_background(data: models.DMBests, is_max: bool,
+                        song_db: models.DMSongDB | None = None) -> Image.Image:
+    """The shared bests header, copied from generators/bests_generator/components.py.
 
     Keeping the copy here is what makes this package independent of the bests generator; the
     rendering (mode strip, tier emblem, totals, conversion factor) is unchanged. `is_max` is
-    kept for fidelity -- the target generator always renders the normal header.
+    kept for fidelity -- the target generator always renders the normal header. The level
+    histogram is the shared generators/level_distribution renderer, placed beside "NEW 30"
+    because the top header carries the target annotations.
     """
     bmode_strip_box = (119, 40, 151, 468)
     emblem_lt = (1029, 129)
 
-    bg = Image.open(os.path.join(ASSET_PATH, "bg.png"))
+    bg = Image.open(os.path.join(ASSET_PATH, "bg.png")).convert("RGBA")
     draw = ImageDraw.Draw(bg)
 
     djpower_tier, djpower_level = util.get_djpower_tier(data.total_djpower)
@@ -213,4 +221,5 @@ def assemble_background(data: models.DMBests, is_max: bool) -> Image.Image:
     conv_const, maxpower = api_handler.get_convert_constant(data.bmode)
     draw.text((570, 4553), f"{conv_const:.8f} ({maxpower:.2f})", font=font_lt, fill='white', anchor="ls")
 
+    draw_level_distribution(bg, data, NEW_LEVEL_BAR_BOX, NEW_LEVEL_BAR_LABEL_Y, song_db)
     return bg

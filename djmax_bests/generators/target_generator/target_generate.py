@@ -12,6 +12,7 @@ from decimal import Decimal
 
 from PIL import Image, ImageDraw, ImageFont
 
+from ... import api_handler
 from .components import FONT_PATH, assemble_background, assemble_song_cards
 from .target_plan import TargetPlan
 
@@ -23,9 +24,9 @@ def _caption(plan: TargetPlan) -> str:
     def number(value: Decimal) -> str:
         return format(value.normalize(), "f")
 
-    text = f"TARGET {number(plan.target_total)} @ {number(plan.accuracy)}%"
+    text = f"TGT {number(plan.target_total)} : {number(plan.accuracy)}%"
     if plan.floor_cap is not None:
-        text += f"  (floor ≤ {number(plan.floor_cap)})"
+        text += f" (⤒{number(plan.floor_cap)})"
     if not plan.reachable:
         text += "  BEST EFFORT"
     return text
@@ -36,7 +37,7 @@ def _draw_caption(image: Image.Image, plan: TargetPlan) -> None:
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype(os.path.join(FONT_PATH, "Respect_rg.ttf"), 46)
     fill = '#E96464' if not plan.reachable else 'lightgrey'
-    draw.text((900, 580), _caption(plan), font=font, fill=fill, anchor="lm")
+    draw.text((200, 420), _caption(plan), font=font, fill=fill, anchor="lm")
 
 
 def _draw_min_accuracy(image: Image.Image, plan: TargetPlan) -> None:
@@ -49,8 +50,8 @@ def _draw_min_accuracy(image: Image.Image, plan: TargetPlan) -> None:
         return
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype(os.path.join(FONT_PATH, "Respect_rg.ttf"), 46)
-    draw.text((1225, 630), f"MIN ACC {plan.min_accuracy}%", font=font,
-              fill='#E96464', anchor="mm")
+    draw.text((200, 470), f"MIN ACC: {plan.min_accuracy}%", font=font,
+              fill='#E96464', anchor="lm")
 
 
 def _draw_current_total(image: Image.Image, plan: TargetPlan) -> None:
@@ -69,7 +70,8 @@ async def generate_target_image(plan: TargetPlan) -> Image.Image:
     # seed it from the plan so the same plan always renders the same image.
     random.seed(f"target:{plan.username}:{plan.bmode}:{plan.target_total}:{plan.accuracy}")
 
-    bg = assemble_background(data, is_max=False)
+    song_db = await api_handler.fetch_song_db()
+    bg = assemble_background(data, is_max=False, song_db=song_db)
     basic_section = await assemble_song_cards(plan.basic.entries, "basic")
     new_section = await assemble_song_cards(plan.new.entries, "new")
     if basic_section is not None:

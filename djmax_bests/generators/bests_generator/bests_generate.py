@@ -1,5 +1,5 @@
 from PIL import Image
-from ... import models
+from ... import api_handler, models
 from .components import assemble_background, assemble_song_cards
 
 
@@ -7,7 +7,8 @@ async def generate_bests_image(data: models.DMBests, is_max: bool = False) -> Im
     basic_start = (100, 691)
     new_start = (100, 3405)
 
-    bg = assemble_background(data, is_max)
+    song_db = await api_handler.fetch_song_db()
+    bg = assemble_background(data, is_max, song_db)
     basic_section = await assemble_song_cards(data.basic, "basic")
     new_section = await assemble_song_cards(data.new, "new")
     if basic_section is not None:
