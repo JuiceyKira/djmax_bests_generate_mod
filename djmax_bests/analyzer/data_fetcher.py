@@ -40,7 +40,7 @@ from typing import Literal
 import pandas as pd
 from pydantic import BaseModel, Field
 
-from .. import api_handler, util
+from .. import api_handler, paths, util
 
 # Share api_handler's cache directory (djmax_bests/cache): maxpower, songs.json and dlcs.json all
 # live there, so api_handler.remove_cache() clears this module's copies of those too.
@@ -54,9 +54,10 @@ BMODES = (4, 5, 6, 8)
 RECORDS_DB_FILENAME = 'records_db.parquet'
 DB_META_FILENAME = 'db_meta.json'
 
-# Hand-maintained tag database: one row per chart, one column per feature. Kept beside this
-# module so cache cleanup never removes it.
-TAGS_CSV_PATH = os.path.join(os.path.dirname(__file__), 'djmax_songs_tags.csv')
+# Hand-maintained tag database: one row per chart, one column per feature. In an exe build it
+# lives in data/ (seeded from the bundled default) so it can be replaced without rebuilding;
+# in a source checkout it stays beside this module. db_is_stale() watches its mtime.
+TAGS_CSV_PATH = paths.tags_csv_path()
 
 # The parquet layout's version, recorded in db_meta.json so that db_is_stale() rebuilds a store
 # written by older code. 2 = the tag columns live in the parquet (schema 1 kept them out).
@@ -429,16 +430,31 @@ def read_db_meta() -> dict:
     return meta if isinstance(meta, dict) else {}
 
 
+def _tags_stamp() -> tuple[float, int] | None:
+    """(mtime, size) of the tag table; None when the file is missing."""
+    try:
+        info = os.stat(TAGS_CSV_PATH)
+    except OSError:
+        return None
+    return (info.st_mtime, info.st_size)
+
+
 def db_is_stale() -> bool:
     """True when records_db.parquet cannot serve a read as it is.
 
-    Missing, built by an older schema (db_meta.json's `schema`), or older than a file it is built
-    from: the raw layer, the song database, or the hand-maintained tags csv.
+    Missing, built by an older schema (db_meta.json's `schema`), built from a different version
+    of the tag table (its mtime/size is stamped into db_meta.json, so replacing the csv with a
+    file that carries an older timestamp still triggers a rebuild), or older than a file it is
+    built from: the raw layer, the song database, or the tags csv.
     """
     db = records_db_path()
     if not os.path.exists(db):
         return True
-    if read_db_meta().get('schema') != DB_SCHEMA:
+    meta = read_db_meta()
+    if meta.get('schema') != DB_SCHEMA:
+        return True
+    stamp = _tags_stamp()
+    if stamp is not None and meta.get('tags_stamp') != list(stamp):
         return True
     built = os.path.getmtime(db)
     for source in (full_varecord_path(), os.path.join(CACHE_PATH, 'songs.json'), TAGS_CSV_PATH):
@@ -470,7 +486,7 @@ def save_records_db() -> None:
     if missing:
         raise FileNotFoundError(
             f'full_varecord.json cannot serve {", ".join(missing)} yet, so records_db cannot be '
-            'rebuilt — run a full refresh first, e.g. `python refresh.py`')
+            'rebuilt — run a refresh first (menu [1])')
 
     db = build_records_db(combined)
 
@@ -479,6 +495,9 @@ def save_records_db() -> None:
     meta = {'username': username,
             'built_at': datetime.now().isoformat(timespec='seconds'),
             'schema': DB_SCHEMA}
+    tags_stamp = _tags_stamp()
+    if tags_stamp is not None:
+        meta['tags_stamp'] = list(tags_stamp)
 
     # The two replaces are adjacent (no I/O between them), so the pair is inconsistent for
     # microseconds at most; the parquet lands first and the meta describing it follows.

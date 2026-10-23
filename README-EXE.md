@@ -12,7 +12,8 @@ DJMAX-Bests/
 │   ├── account.txt
 │   ├── cache/           歌曲库、换算系数
 │   ├── covers/          曲绘（exe 只带占位图，首次刷新时下载）
-│   └── records/         成绩记录库（刷新后生成）
+│   ├── records/         成绩记录库（刷新后生成）
+│   └── djmax_songs_tags.csv  谱面标签表（可单独替换，不用重打包）
 └── output/              ← 生成的图片（与 data 同级）
 ```
 
@@ -28,6 +29,16 @@ DJMAX-Bests/
 
 `[1]` 的更新策略：成绩每次都刷新；`songs.json` / `dlcs.json` / `maxpower_*.txt` 只在
 **超过 7 天**时重新下载（`settings.ini` 的 `[refresh] max_age_days` 可改，`0` = 每次都更新）。
+
+## 更新谱面标签表
+
+`data/djmax_songs_tags.csv` 是手工维护的谱面特征表（tag / 难度权重）。游戏更新谱面后：
+
+1. 直接用新 CSV 覆盖 `data/djmax_songs_tags.csv`；
+2. 下一次出图时 `db_is_stale()` 发现它的修改时间/大小与上次构建记录库时不同（即使文件时间更旧
+   也会识别），会**离线重建记录库**（几秒钟、不联网），不需要重新打包 exe。
+
+如果误删了这个文件，下次启动会从 exe 内置的默认版本重新生成一份。
 
 ## 设置文件 settings.ini
 

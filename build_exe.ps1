@@ -67,6 +67,8 @@ try {
     if (Test-Path $out) { Remove-Item $out -Recurse -Force }
     New-Item -ItemType Directory -Path (Join-Path $out "data"), (Join-Path $out "output") -Force | Out-Null
     Copy-Item $exe $out
+    # The tag table ships as an editable file beside the exe; replacing it needs no rebuild.
+    Copy-Item (Join-Path $root "djmax_bests\analyzer\djmax_songs_tags.csv") (Join-Path $out "data\djmax_songs_tags.csv")
 
     # Pre-create settings.ini from the app's own template (single source of truth), so the
     # knobs are visible before the first launch instead of appearing after it.
@@ -89,11 +91,13 @@ DJMAX 成绩图生成器（单文件版）
   data\cache\       歌曲库 / DLC 列表 / 换算系数缓存
   data\covers\      曲绘（exe 只带占位图，首次刷新时下载全部封面）
   data\records\     成绩记录库（刷新后生成，删了要重新刷新）
+  data\djmax_songs_tags.csv  谱面标签表（可单独替换，不用重新打包）
   output\           生成的图片（与 data 同级）
 
 常用操作
   * [1] 刷新成绩：成绩每次都刷新；歌曲库 / DLC 列表 / 换算系数超过 7 天才重下
     （可在 settings.ini 的 [refresh] max_age_days 修改，0 = 每次都更新）。
+  * 更新标签表：直接替换 data\djmax_songs_tags.csv，下次出图会自动重建记录库。
   * [4] 游玩历史：直接回车 = 最近一天；输入 20261012 这样的日期 = 指定那一天。
   * [5] 目标规划：难度上限留空 = 使用 settings.ini 里的 floor_cap；输入 6.0 可临时覆盖。
   * [9] 查询他人成绩：成绩只在内存中使用，不写入 data\records。

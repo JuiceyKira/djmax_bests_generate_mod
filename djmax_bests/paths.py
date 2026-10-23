@@ -49,6 +49,36 @@ OUTPUT_DIR = os.path.join(EXE_DIR, "output")
 ACCOUNT_FILE = os.path.join(APP_DIR, "account.txt")
 CONFIG_FILE = os.path.join(EXE_DIR, "settings.ini")
 
+#: Hand-maintained chart-tag table; replaceable without rebuilding the exe.
+TAGS_CSV_NAME = "djmax_songs_tags.csv"
+
+
+def _bundled_tags_csv() -> str:
+    return os.path.join(BUNDLE_DIR, "djmax_bests", "analyzer", TAGS_CSV_NAME)
+
+
+def tags_csv_path() -> str:
+    """The chart-tag table used by the record store.
+
+    Frozen builds read ``data/djmax_songs_tags.csv`` so shipping an updated CSV never needs a
+    rebuild; the file is seeded from the bundled copy on first use. Source checkouts keep reading
+    the package file. ``DJMAX_TAGS_CSV`` overrides both (useful for tests).
+    """
+    override = os.environ.get("DJMAX_TAGS_CSV")
+    if override:
+        return os.path.abspath(override)
+
+    source = _bundled_tags_csv()
+    if not FROZEN:
+        return source
+
+    target = os.path.join(APP_DIR, TAGS_CSV_NAME)
+    if not os.path.exists(target) and os.path.exists(source):
+        import shutil
+        os.makedirs(APP_DIR, exist_ok=True)
+        shutil.copy2(source, target)
+    return target
+
 
 def state_path(name: str, dev_default: str | None = None) -> str:
     """A writable state directory.

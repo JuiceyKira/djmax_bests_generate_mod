@@ -39,6 +39,7 @@ from djmax_bests import api_handler, settings
 
 paths.ensure_app_dirs()
 settings.ensure_exists()
+paths.tags_csv_path()        # seed data/djmax_songs_tags.csv from the bundled default
 COPIED = paths.seed_covers()
 
 
