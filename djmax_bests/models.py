@@ -110,6 +110,7 @@ class VARecord(BaseModel):
     score: Decimal
     maxCombo: bool
     djpower: Decimal
+    newTab: bool
     # rating: Decimal
     # updatedAt: str(date-like object) | None
 

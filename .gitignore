@@ -2,8 +2,20 @@ test*
 __pycache__
 covers
 cache
+output
+# local record store: every clone regenerates it from its own account, see readme
+records
 .DS_Store
 djmax_bests/generators/bests_generator/assets/emblem_bg/*
 !djmax_bests/generators/bests_generator/assets/emblem_bg/Max\ DJPower.png
 .vscode
 .idea
+
+# build/runtime state
+account.txt
+settings.ini
+.venv/
+.matplotlib/
+dist-exe/
+build/
+*.zip

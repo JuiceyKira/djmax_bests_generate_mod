@@ -1,3 +1,6 @@
+import asyncio
+import time
+
 import httpx, os, urllib.parse
 from PIL import Image
 from decimal import Decimal
@@ -7,9 +10,16 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from . import models
 
+from . import paths
 
-COVER_PATH = os.path.join(os.path.dirname(__file__), 'covers')
-CACHE_PATH = os.path.join(os.path.dirname(__file__), 'cache')
+
+COVER_PATH = paths.state_path('covers', os.path.join(os.path.dirname(__file__), 'covers'))
+CACHE_PATH = paths.state_path('cache', os.path.join(os.path.dirname(__file__), 'cache'))
+# Persistent record store, deliberately outside CACHE_PATH: remove_cache() empties the whole cache
+# directory, and the archive records have to survive it (same policy as the hand-maintained
+# analyzer/djmax_songs_tags.csv and target_generator/accuracy_ratio.csv).
+RECORDS_PATH = paths.state_path('records',
+                                os.path.join(os.path.dirname(os.path.dirname(__file__)), 'records'))
 HEADERS = {
     "Content-Type": "application/json",
     "User-Agent": "sh-util-bot/gh:SoreHait/djmax_bests_generate"
@@ -17,6 +27,24 @@ HEADERS = {
 
 client = httpx.AsyncClient(headers=HEADERS)
 RETRIES = 3
+
+#: How old a cache file may get before the refresh entry re-downloads it. Overridable through
+#: settings.ini ([refresh] max_age_days); 7 days is the built-in default.
+CACHE_MAX_AGE_DAYS = 7
+
+
+def cache_age_days(path: str) -> float | None:
+    """Age of a cache file in days, or None when it does not exist."""
+    try:
+        return (time.time() - os.path.getmtime(path)) / 86400
+    except OSError:
+        return None
+
+
+def cache_is_stale(path: str, max_age_days: float = CACHE_MAX_AGE_DAYS) -> bool:
+    """True when the file is missing or older than `max_age_days`."""
+    age = cache_age_days(path)
+    return age is None or age > max_age_days
 
 
 if not os.path.exists(COVER_PATH):
@@ -47,25 +75,78 @@ def get_with_retry(url) -> httpx.Response:
     raise httpx.TimeoutException(f"Failed to fetch {url} after {RETRIES} retries")
 
 
-async def get_cover(songid: int) -> Image.Image:
+async def aclose() -> None:
+    """Close the shared HTTP client; meant for scripts that end after their last request.
+
+    Without this the pooled connections are collected after the event loop is gone, which
+    prints an ignored `_ProactorBasePipeTransport.__del__` error on Windows.
+    """
+    await client.aclose()
+
+
+def _placeholder_cover() -> Image.Image:
+    """The bundled placeholder jacket, or a black square when even that is missing."""
+    placeholder = os.path.join(COVER_PATH, 'dummy.jpg')
+    if os.path.exists(placeholder):
+        return Image.open(placeholder)
+    return Image.new('RGB', (80, 80), color='black')
+
+
+async def get_cover(songid: int, quiet: bool = False) -> Image.Image:
     img_path = os.path.join(COVER_PATH, f'{songid}.jpg')
     if os.path.exists(img_path):
         return Image.open(img_path)
 
     url = f"https://v-archive.net/s3/images/jackets/{songid}.jpg"
-    print(f'Fetching cover {songid}')
+    if not quiet:
+        print(f'Fetching cover {songid}')
     response = await get_with_retry_async(url)
     if response.status_code == 200:
         with open(img_path, 'wb') as f:
             f.write(response.content)
         return Image.open(img_path)
-    else:
+    if not quiet:
         print(f'Failed to get cover {songid}')
-        return Image.new('RGB', (80, 80), color='black')
+    return _placeholder_cover()
 
-def get_convert_constant(bmode: int) -> tuple[Decimal, Decimal]:
+
+async def prefetch_covers(songids, concurrency: int = 15, quiet: bool = False) -> int:
+    """Download the jackets missing from COVER_PATH; returns how many were fetched.
+
+    The executable ships only the placeholder jacket, so the first refresh fills the cover
+    folder here (one request per song) instead of carrying ~13 MB of jackets inside the exe.
+    Later refreshes find everything present and do nothing.
+    """
+    ids = list(dict.fromkeys(int(songid) for songid in songids))
+    missing = [songid for songid in ids
+               if not os.path.exists(os.path.join(COVER_PATH, f'{songid}.jpg'))]
+    if not missing:
+        if not quiet:
+            print(f'    covers: all {len(ids)} jackets present')
+        return 0
+
+    if not quiet:
+        print(f'    covers: {len(missing)} of {len(ids)} missing, downloading...')
+    semaphore = asyncio.Semaphore(concurrency)
+    done = 0
+
+    async def worker(songid: int) -> None:
+        nonlocal done
+        async with semaphore:
+            await get_cover(songid, quiet=True)
+        done += 1
+        if not quiet and done % 50 == 0:
+            print(f'      {done}/{len(missing)}')
+
+    await asyncio.gather(*(worker(songid) for songid in missing))
+    if not quiet:
+        print(f'    covers: {done} downloaded')
+    return done
+
+def get_convert_constant(bmode: int, max_age_days: float | None = None) -> tuple[Decimal, Decimal]:
     maxpower_file = os.path.join(CACHE_PATH, f'maxpower_{bmode}.txt')
-    if os.path.exists(maxpower_file):
+    if os.path.exists(maxpower_file) and (
+            max_age_days is None or not cache_is_stale(maxpower_file, max_age_days)):
         with open(maxpower_file, 'r') as f:
             maxpower = Decimal(f.read().strip())
             return Decimal("10000.0000") / maxpower, maxpower
@@ -80,10 +161,11 @@ def get_convert_constant(bmode: int) -> tuple[Decimal, Decimal]:
     maxpower = Decimal(str(data["maxDjPower"]))
     return Decimal("10000.0000") / maxpower, maxpower
 
-async def fetch_song_db() -> "models.DMSongDB":
+async def fetch_song_db(max_age_days: float | None = None) -> "models.DMSongDB":
     from .models import DMSongDB
     db_path = os.path.join(CACHE_PATH, 'songs.json')
-    if os.path.exists(db_path):
+    if os.path.exists(db_path) and (
+            max_age_days is None or not cache_is_stale(db_path, max_age_days)):
         with open(db_path, 'r', encoding='utf-8') as f:
             return DMSongDB.model_validate_json(f.read())
 
@@ -95,10 +177,11 @@ async def fetch_song_db() -> "models.DMSongDB":
         f.write(response.text)
     return DMSongDB.model_validate_json(response.text)
 
-async def fetch_dlc_list() -> "models.VADLCList":
+async def fetch_dlc_list(max_age_days: float | None = None) -> "models.VADLCList":
     from .models import VADLCList
     dlc_path = os.path.join(CACHE_PATH, 'dlcs.json')
-    if os.path.exists(dlc_path):
+    if os.path.exists(dlc_path) and (
+            max_age_days is None or not cache_is_stale(dlc_path, max_age_days)):
         with open(dlc_path, 'r', encoding='utf-8') as f:
             return VADLCList.model_validate_json(f.read())
 

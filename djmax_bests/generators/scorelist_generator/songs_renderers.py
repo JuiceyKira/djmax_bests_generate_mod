@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 from ... import models, util
 from . import constants as c
 from .components import generate_single_song
+from ...analyzer import data_analyzer
 
 
 font_rg = ImageFont.truetype(os.path.join(c.FONT_PATH, "Respect_rg.ttf"), 44)
@@ -73,7 +74,7 @@ async def render_songs_standard(data: models.DMScorelist, dimension: tuple[int, 
                           fill='white', anchor='rt', font=font_bd)
 
         else:
-            draw.text((c.L_SPACE - 20, y_offset), "N/A", fill='white', anchor='rt', font=font_bd)
+            draw.text((c.L_SPACE - 20, y_offset), "SC?", fill='white', anchor='rt', font=font_bd)
 
         if floor.floor_avg_score is not None and floor.floor_accumulated_avg_score is not None:
             
@@ -81,10 +82,14 @@ async def render_songs_standard(data: models.DMScorelist, dimension: tuple[int, 
             acc_avg_s = f"{floor.floor_accumulated_avg_score:.2f}%"
             avg_s_len = ceil(max(font_bd_s.getlength(avg_s), font_bd_s.getlength(acc_avg_s))) + 10
 
+            total_songs = len(floor.songs)
+            cleared = 0
+            for i in floor.songs:
+                if i.score != None: cleared += 1
             draw.text((c.L_SPACE - 20 - avg_s_len, y_offset + 85), "Avg.", fill='white', anchor='rt', font=font_rg_s)
-            draw.text((c.L_SPACE - 20, y_offset + 85), avg_s, fill='white', anchor='rt', font=font_bd_s)
-            draw.text((c.L_SPACE - 20 - avg_s_len, y_offset + 128), f"\u2912", fill='white', anchor='rt', font=font_rg_s)
-            draw.text((c.L_SPACE - 20, y_offset + 128), acc_avg_s, fill='white', anchor='rt', font=font_bd_s)
+            draw.text((c.L_SPACE - 20, y_offset + 85), "100%" if avg_s =="100.00%" else avg_s, fill='gold' if avg_s =="100.00%" else'white', anchor='rt', font=font_bd_s)
+            draw.text((c.L_SPACE - 30 - avg_s_len, y_offset + 128), "Clear", fill='white', anchor='rt', font=font_rg_s)
+            draw.text((c.L_SPACE - 20, y_offset + 128), f'{cleared}/{total_songs}', fill='gold' if cleared == total_songs else'white', anchor='rt', font=font_bd_s)
 
     def __need_pattern_text_func(song: models.DMSongSimple) -> bool:
         nonlocal main_pattern
@@ -102,16 +107,19 @@ async def render_songs_by_pack(data: models.DMScorelist, dimension: tuple[int, i
         nonlocal font_rg_s, font_bd_s
         draw.text((c.L_SPACE - 20, y_offset), f"{floor.floor_diff}{floor.floor_constant}",
                   fill='white', anchor='rt', font=font_bd)
-
+        total_songs = len(floor.songs)
+        cleared = 0
+        for i in floor.songs:
+            if i.score != None: cleared += 1
         if floor.floor_avg_score is not None and floor.floor_accumulated_avg_score is not None:
             avg_s = f"{floor.floor_avg_score:.2f}%"
             acc_avg_s = f"{floor.floor_accumulated_avg_score:.2f}%"
             avg_s_len = ceil(max(font_bd_s.getlength(avg_s), font_bd_s.getlength(acc_avg_s))) + 10
 
             draw.text((c.L_SPACE - 20 - avg_s_len, y_offset + 85), "Avg.", fill='white', anchor='rt', font=font_rg_s)
-            draw.text((c.L_SPACE - 20, y_offset + 85), avg_s, fill='white', anchor='rt', font=font_bd_s)
-            draw.text((c.L_SPACE - 20 - avg_s_len, y_offset + 128), f"\u2912", fill='white', anchor='rt', font=font_rg_s)
-            draw.text((c.L_SPACE - 20, y_offset + 128), acc_avg_s, fill='white', anchor='rt', font=font_bd_s)
+            draw.text((c.L_SPACE - 20, y_offset + 85), "100%" if avg_s =="100.00%" else avg_s, fill='gold' if avg_s =="100.00%" else'white', anchor='rt', font=font_bd_s)
+            draw.text((c.L_SPACE - 30 - avg_s_len, y_offset + 128), "Clear", fill='white', anchor='rt', font=font_rg_s)
+            draw.text((c.L_SPACE - 20, y_offset + 128), f'{cleared}/{total_songs}', fill='gold' if cleared == total_songs else'white', anchor='rt', font=font_bd_s)
 
     return await __render_base(__draw_group_header, data, dimension, lambda _: False)
 
@@ -122,11 +130,16 @@ async def render_songs_pp(data: models.DMScorelist, dimension: tuple[int, int]) 
 
     def __draw_group_header(floor: models.DMScorelistFloor, draw: ImageDraw.ImageDraw, y_offset: int) -> None:
         nonlocal font_rg_s, font_bd_s
+        # Count total songs in this floor
+        analyze_util = data_analyzer.AnalyzeUtil()
+        analyzer = analyze_util.spawn_analyzer(data.bmode)
+        is_sc = True if floor.floor_diff == "SC" else False
+        floor_total = len(analyzer.filter(is_sc=is_sc, level_max=floor.floor_constant, level_min=floor.floor_constant))
         draw.text((c.L_SPACE - 20, y_offset), f"{floor.floor_diff}{floor.floor_constant}",
                   fill='white', anchor='rt', font=font_bd)
 
-        draw.text((c.L_SPACE - 20 - 145, y_offset + 120), str(len(floor.songs)), fill='white', anchor='rs', font=font_bd_s)
-        draw.text((c.L_SPACE - 20, y_offset + 120), "Patterns", fill='white', anchor='rs', font=font_rg_s)
+        draw.text((c.L_SPACE - 5 - 138, y_offset + 120), str(len(floor.songs))+"/"+str(floor_total), fill='gold' if len(floor.songs)==floor_total else 'white', anchor='rs', font=font_bd_s)
+        draw.text((c.L_SPACE - 5, y_offset + 120), "Patterns", fill='white', anchor='rs', font=font_rg_s)
 
     def __need_pattern_text_func(song: models.DMSongSimple) -> bool:
         return song.pattern != "SC"

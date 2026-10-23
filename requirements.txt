@@ -1,0 +1,26 @@
+# DJMAX Score Image Generator — 运行依赖
+#
+# 环境：CPython 3.14.6（仓库内 .venv 由 uv 创建；源码只用到 3.10+ 语法，未做更低版本验证）
+# 版本：直接依赖全部按所在 .venv 的实测版本用 == 锁定，便于复现产物
+#       （记录库 parquet 的字节、渲染结果都与 pandas / Pillow 版本相关）。
+#       传递依赖（httpcore、anyio、contourpy、pyparsing、python-dateutil 等）由 pip 自动解析；
+#       需要完全锁定时在已装好的环境里执行 `pip freeze > requirements.lock.txt`。
+#
+# 安装（在项目根目录）：
+#   uv venv .venv --python 3.14
+#   uv pip install -r requirements.txt
+#
+# 构建单文件 exe（产物在 dist-exe/）：
+#   powershell -ExecutionPolicy Bypass -File .\build_exe.ps1 -Zip
+#
+# 直接运行源码（调试用，行为与 exe 相同）：
+#   .\.venv\Scripts\python.exe app.py
+
+# --- 直接依赖 ---------------------------------------------------------------
+httpx==0.28.1        # api_handler：V-ARCHIVE REST 请求（async 客户端 + 超时重试）
+pillow==12.3.0       # 全部渲染与封面处理：Image / ImageDraw / ImageFont（TrueType）
+pydantic==2.13.5     # 请求与记录模型：VAResponse / DMBests / DMScorelist / Song
+pandas==3.0.6        # analyzer 记录帧、标签合并、records_db 读写
+pyarrow==25.0.1      # pandas 的 parquet 引擎：records_db.parquet、play_events.parquet
+numpy==2.5.3         # summary_generator/tools.py：雷达图数值处理
+matplotlib==3.11.2   # summary_generator/tools.py：雷达图 / 渐变绘制（无显示环境自动用 Agg）

@@ -6,6 +6,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 from ... import models, constants, util
 from . import constants as c
+from ...analyzer import data_analyzer
+from ..summary_generator import tools
 
 
 def __render_header_base(data: models.DMScorelist, bg: Image.Image,
@@ -28,29 +30,38 @@ def __render_stats_basic(data: models.DMScorelist, bg: Image.Image) -> None:
     font_bd = ImageFont.truetype(os.path.join(c.FONT_PATH, "Respect_bd.ttf"), 60)
     draw = ImageDraw.Draw(bg)
 
+    # From analyzer get completion status
+    # analyze_util = data_analyzer.AnalyzeUtil()
+    # analyzer = analyze_util.spawn_analyzer(data.bmode)
+    cmc, cpp = data.count_mc_pp
+    # cleared = len(analyzer.filter(bmode=data.bmode, cleared=True, is_sc=data.is_sc, level_max=data.level, level_min=data.level))
+    # total = len(analyzer.filter(bmode=data.bmode, is_sc=data.is_sc, level_max=data.level, level_min=data.level))
+    total = sum(data.count_patterns.values())
+    if data.avg_score == 0: cleared =0
+    else:cleared = round(total * data.completion_rate / data.avg_score)
     draw.text((868, 360), "Avg. Rate", fill='white', anchor='ls', font=font_rg)
-    draw.text((868, 432), "Completion", fill='white', anchor='ls', font=font_rg)
+    draw.text((868, 432), "Clear", fill='white', anchor='ls', font=font_rg)
     current_x = 1200
-    avg_s = f"{data.avg_score:.2f}%"
-    comp_s = f"{data.completion_rate:.2f}%"
+    avg_s = "100%" if data.avg_score == 100 else f"{data.avg_score:.2f}%"
+    comp_s = str(cleared)+"/"+str(total)
     comp_s_len = ceil(draw.textlength(comp_s, font=font_bd))
     current_x += comp_s_len
     draw.text((current_x, 360), avg_s, fill='white', anchor='rs', font=font_bd)
-    draw.text((current_x, 432), comp_s, fill='white', anchor='rs', font=font_bd)
+    draw.text((current_x, 432), comp_s, fill='gold' if cleared == total else 'white', anchor='rs', font=font_bd)
 
     current_x += 30
     draw.rectangle([(current_x - 1, 310), (current_x + 1, 440)], fill='white')
 
     current_x += 30
-    draw.text((current_x, 360), f"≥99%", fill='white', anchor='ls', font=font_rg)
-    draw.text((current_x, 432), f"≥97%", fill='white', anchor='ls', font=font_rg)
+    draw.text((current_x, 360), f"≥97%", fill='white', anchor='ls', font=font_rg)
+    draw.text((current_x, 432), f"≥99%", fill='white', anchor='ls', font=font_rg)
 
     current_x += 179 + 30  # length of "≥97%" and padding
     c99, c97 = data.count_99_97
     step = ceil(max(draw.textlength(str(c99), font=font_bd), draw.textlength(str(c97), font=font_bd)))
     current_x += step
-    draw.text((current_x, 360), str(c99), fill='white', anchor='rs', font=font_bd)
-    draw.text((current_x, 432), str(c97), fill='white', anchor='rs', font=font_bd)
+    draw.text((current_x, 360), str(c97), fill='white', anchor='rs', font=font_bd)
+    draw.text((current_x, 432), str(c99), fill='white', anchor='rs', font=font_bd)
 
     current_x += 30
     draw.rectangle([(current_x - 1, 310), (current_x + 1, 440)], fill='white')
@@ -60,14 +71,17 @@ def __render_stats_basic(data: models.DMScorelist, bg: Image.Image) -> None:
         bg.alpha_composite(mc_img, (current_x, 365 - c.MC_IMG_SIZE[1]))
     with Image.open(os.path.join(c.ASSET_PATH, "PP_counter.png")) as pp_img:
         bg.alpha_composite(pp_img, (current_x, 437 - c.MC_IMG_SIZE[1]))
+        if cpp == total:bg.alpha_composite(pp_img, (current_x-400-comp_s_len-step, 437 - c.MC_IMG_SIZE[1]))
+        elif cmc + cpp == total:bg.alpha_composite(mc_img, (current_x-400-comp_s_len-step, 437 - c.MC_IMG_SIZE[1]))
 
     current_x += c.MC_IMG_SIZE[0] + 30
-    cmc, cpp = data.count_mc_pp
-    step = ceil(max(draw.textlength(str(cmc), font=font_bd), draw.textlength(str(cpp), font=font_bd)))
+    # Max combo / Perfect play count
+    step = ceil(max(draw.textlength(str(cmc + cpp), font=font_bd), draw.textlength(str(cpp), font=font_bd)))
     current_x += step
-    draw.text((current_x, 360), str(cmc), fill='white', anchor='rs', font=font_bd)
-    draw.text((current_x, 432), str(cpp), fill='white', anchor='rs', font=font_bd)
-
+    draw.text((current_x-10, 360), str(cmc + cpp), fill='white', anchor='rs', font=font_bd)
+    draw.text((current_x-10, 432), str(cpp), fill='white', anchor='rs', font=font_bd)
+    # Progress bar (this cmc doesn't include cpp, but cleared include both)
+    if total!=0: bg.alpha_composite(tools.progbar_deluxe(1180, 10, cpp, cmc + cpp, cleared, total, 1), (870,450))
 
 def render_header_standard(data: models.DMScorelist, bg: Image.Image, main_pattern: str) -> None:
     def __render_star_strip(draw: ImageDraw.ImageDraw) -> None:

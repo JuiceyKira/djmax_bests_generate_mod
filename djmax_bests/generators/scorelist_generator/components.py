@@ -1,12 +1,12 @@
 import os, asyncio
 from PIL import Image, ImageDraw, ImageFont
 
-from ... import models, constants, api_handler
+from ... import models, constants, api_handler, util
 from . import constants as c
 
 
 def __generate_single_song_sync(draw_pattern_text: bool, song: models.DMSongSimple, cover: Image.Image) -> Image.Image:
-    with Image.open(os.path.join(c.ASSET_PATH, "card.png")) as overlay:
+    with Image.open(os.path.join(c.ASSET_PATH, "card.png" if song.score is None else "card_perfect.png" if song.score == 100 else "card_max.png" if util.get_mc_state(song.score, song.max_combo) else "card_clear.png" )) as overlay:
         bg = Image.new("RGBA", overlay.size)
         with cover.resize((160, 160)) as _cover:
             bg.paste(_cover)
@@ -21,9 +21,9 @@ def __generate_single_song_sync(draw_pattern_text: bool, song: models.DMSongSimp
     font_bd = font_bd.font_variant(size=30)
     draw.text(
         (80, 178),
-        f"{song.score:.2f}%" if song.score is not None else "N/P",
+        "-" if song.score is None else "100%" if song.score == 100 else f"{song.score:.2f}%",
         font=font_bd,
-        fill='white' if song.score is not None else 'gray',
+        fill='gray' if song.score is None else 'hotpink' if song.score == 100 else'darkorange' if song.score > 99.89 else 'orange' if song.score >= 99.5 else 'gold' if song.score >= 99 else 'yellow' if song.score >= 98.5 else 'greenyellow' if song.score >= 98 else 'lime' if song.score >= 97 else 'cyan' if song.score >= 96 else 'white',
         anchor="mm"
     )
 

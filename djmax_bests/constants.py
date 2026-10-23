@@ -25,6 +25,7 @@ DLC_COLOR = {
     "PLI1": "#dbd7ae",
     "PLI2": "#2269f7",
     "PLI3": "#ec6fb5",
+    "PLI4": "#2269f7",
     "GG": "#d83e0e",
     "BA": "#00d1ff",
     "ESTI": "#e9d19b",
@@ -33,6 +34,7 @@ DLC_COLOR = {
     "MAP": "#bf2d10",
     "NXN": "#c3cc00",
     "TEK": "#f4f4f4",
+    "DNF": "#ff743d",
     "ARC": "#ffffff",
     "CHU": "#ffd700",
     "CY": "#ee1538",
@@ -57,7 +59,8 @@ DIFF_COLOR = {
     "MX": "#f40052",
     "SC0": "#e00075",
     "SC1": "#c404e1",
-    "SC2": "#3d66ff"
+    "SC2": "#3d66ff",
+    "SC":"#3d66ff"
 }
 
 DJPOWER_TIER_COLOR = {
