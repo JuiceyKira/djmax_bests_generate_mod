@@ -85,7 +85,7 @@ exe 菜单：
 | [3] | 总结图 | `settings.ini` 的 `[summary]` |
 | [4] | 游玩历史 | 可输入日期，默认最近一天 |
 | [5] | 目标 DJPower | `[target]` 的 `floor_cap` / `balance_rounds` |
-| [6] | 单图生成 | Top 100 / 等级 / 新曲 / 曲包 / PP / 标签 / 单曲轨迹 |
+| [6] | 单图生成 | Top 100 / 等级 / 新曲 / 曲包 / PP / 标签 / 单曲轨迹 / 理论值 |
 | [9] | 查询他人 | 只读内存，输出到 `output/inspect/<账号>/` |
 
 刷新仍然是整体重写：`data_fetcher.fetch_all()` 一次性替换原始层，所以

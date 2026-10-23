@@ -228,11 +228,12 @@ async def cmd_single(name: str) -> None:
         print("    [5] Perfect Play 总览")
         print("    [6] 标签推歌进度")
         print("    [7] 单曲成绩轨迹")
+        print("    [8] 理论值 Top 100（不需要账号成绩）")
         print("    [0] 返回\n")
         choice = input("请输入序号后回车：").strip()
         if choice in ("", "0"):
             return
-        if choice not in "1234567" or len(choice) != 1:
+        if choice not in "12345678" or len(choice) != 1:
             continue
 
         bmode = int(ask("按键模式 [4/5/6/8]", "6", ("4", "5", "6", "8")))
@@ -263,6 +264,11 @@ async def cmd_single(name: str) -> None:
                 level = int(ask("标签难度 1-3", "1"))
                 image = tag_scorelist(name, bmode, tag, level)
                 path = _save(image, f"tag_{bmode}B", f"{tag}_{level}.png")
+            elif choice == "8":
+                # Account-independent: only the song database is needed, so this works even
+                # before the first score refresh.
+                image = await generate.generate_bests_theoretical(bmode)
+                path = _save(image, "theoretical", f"theoretical_{bmode}B.png")
             else:
                 songid = int(ask("歌曲 ID（songid）", "711"))
                 diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
