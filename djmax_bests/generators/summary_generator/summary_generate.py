@@ -74,7 +74,7 @@ def draw_modecard(bmode:int) ->Image.Image:
     # DJ POWER
     background.alpha_composite(components.draw_djpower(analyzer, 1), (400, 300))
     # Average rate
-    background.alpha_composite(components.draw_avg_score(analyzer, 1), (1300,200))
+    background.alpha_composite(components.draw_avg_score(analyzer, 1), (1300,189))
     # DJ POWER new
     background.alpha_composite(components.draw_nbpower(analyzer, 'new', 1), (1130, 600))
     # DJ POWER basic

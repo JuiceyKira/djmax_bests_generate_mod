@@ -469,7 +469,7 @@ def print_menu(name: str) -> None:
     print()
     print("    [7] 打开 output 目录")
     print("    [8] 修改账号")
-    print("    [9] 查询他人成绩    只读内存，不写入本地记录库")
+    print("    [9] 查询他人成绩    只读API响应，不写入本地记录库")
     print("    [0] 退出")
     print()
 

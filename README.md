@@ -1,208 +1,223 @@
 # DJMAX Score Image Generator
 
-This library use [V-ARCHIVE](https://v-archive.net/) as data source.
+A library that renders DJMAX RESPECT V scores from [V-ARCHIVE](https://v-archive.net/) as images.
 
-> **Repository shape**: only the Windows single-file exe is built now (`app.py` +
-> `build_exe.ps1`, output in `dist-exe/`). The old script entry points were removed and their
-> features moved into the exe menu — see [README-EXE.md](README-EXE.md). The `generate.*`
-> library API below is still available.
+> Installation, menu and configuration of the Windows single-file exe live in
+> [README-EXE.md](README-EXE.md). This document describes the image-generation modules.
+> [简体中文](README_zh.md)
 
-## Top 100 Generators
+## Environment
+
+- Python 3.10+ (the bundled `.venv` uses CPython 3.14.6);
+- dependencies in `requirements.txt`:
+
+```powershell
+uv venv .venv --python 3.14
+uv pip install -r requirements.txt
+```
+
+Every generator is `async` and returns a `PIL.Image.Image`; saving is up to the caller.
+
+## Fonts
+
+- The body fonts (`Respect_bd.ttf` / `Respect_rg.ttf` / `Respect_lt.ttf`) ship with the repo — nothing to install;
+- Only the skill radar, `tools.plot_tags_score_radar()`, asks for **Sarasa Mono HC SemiBold**, which is
+  **not** distributed with this repo or the exe and has to be installed by hand:
+  - open the [be5invis/Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic) releases and download
+    `SarasaMonoHC-TTF-<version>.7z` (currently `SarasaMonoHC-TTF-1.0.42.7z`, ~64 MB);
+  - right-click `SarasaMonoHC-SemiBold.ttf` → *Install* (or *Install for all users*), then restart the app;
+- Used by the summary sheet from `summary_generate.generate_summary()`, and the single-chart
+  progression images from `song_history_generate.generate_song_history()` / `generate_song_history_snapshot()`;
+- matplotlib registers the weight as part of the family name, hence the exact string `Sarasa Mono HC SemiBold`;
+- Nothing crashes without it, but each render spams `findfont: Generic family 'sans-serif' not found ...`
+  and the radar labels fall back to DejaVu Sans, so widths and line breaks drift from the design;
+- If the images stay unchanged after installing, delete the font cache: `.matplotlib/` in the repo root,
+  `data/.matplotlib/` for the exe.
+
+Verify that the font is registered (`Sarasa Mono HC SemiBold` must show up):
+
+```powershell
+python -c "import matplotlib.font_manager as fm; print([f.name for f in fm.fontManager.ttflist if 'Sarasa Mono HC' in f.name])"
+```
+
+---
+
+## Top 100 generators
 
 - `generate.generate_bests(username, bmode)`
-    - Generate the user's top 100 chart.
-    - `username`: the user's V-ARCHIVE account username.
-    - `bmode`: button mode, can be one of 4, 5, 6, 8.
+    - Render an account's Top 100 online.
+    - `username`: V-ARCHIVE account name (case-sensitive).
+    - `bmode`: button mode, 4 / 5 / 6 / 8.
+    - Queries the `djpower` list (70 Basic + 30 New).
 
 - `generate.generate_bests_theoretical(bmode)`
-    - Generate the theoretical (max djpower) top 100 chart of the current version.
-    - `bmode`: button mode, can be one of 4, 5, 6, 8.
+    - Render the current version's theoretical (maximum DJPower) Top 100.
+    - `bmode`: button mode, 4 / 5 / 6 / 8.
+    - Needs only the song database (`songs.json`), no account scores; titled `Max DJPower`.
 
-## Scorelist Generators
+## Scorelist generators
 
 - `generate.generate_scorelist(username, bmode, is_sc, level)`
-    - Generate the user's score overview of a certain level.
-    - `username`: the user's V-ARCHIVE account username.
-    - `bmode`: button mode, can be one of 4, 5, 6, 8.
-    - `is_sc`: (boolean) indicate whether the `level` is in SC levels.
-    - `level`: the level to generate, 1-15.
+    - Full scorelist for one level.
+    - `is_sc`: `True` when the level is an SC level.
+    - `level`: 1–15.
 
 - `generate.generate_scorelist_new(username, bmode, diff)`
-    - Generate the user's score overview of new songs in current version.
-    - `username`: the user's V-ARCHIVE account username.
-    - `bmode`: button mode, can be one of 4, 5, 6, 8.
-    - `diff`: difficulty, can be one of NM, HD, MX, SC.
+    - Scorelist of the current version's new songs.
+    - `diff`: `NM` / `HD` / `MX` / `SC`.
 
 - `generate.generate_scorelist_pack(username, bmode, diff, pack)`
-    - Generate the user's score overview of songs in a certain pack.
-    - `username`: the user's V-ARCHIVE account username.
-    - `bmode`: button mode, can be one of 4, 5, 6, 8.
-    - `diff`: difficulty, can be one of NM, HD, MX, SC.
-    - `pack`: the pack to generate, as in V-ARCHIVE's `dlcCode`.
-    - **NOTE:** You should validate the `pack` param before passing it in, the full dlc list can be retrieved with `api_handler.fetch_dlc_list()`.
+    - Scorelist of one pack.
+    - `pack`: V-ARCHIVE `dlcCode` (e.g. `DNF`, `VE`, `PLI4`); validate it yourself —
+      `api_handler.fetch_dlc_list()` returns the full list.
 
 - `generate.generate_scorelist_pp(username, bmode)`
-    - Generate the user's perfect-played score overview.
-    - `username`: the user's V-ARCHIVE account username.
-    - `bmode`: button mode, can be one of 4, 5, 6, 8.
+    - Perfect Play (100%) scorelist.
 
-## Local Cache Generators
+## Local record-store generators
 
-The generators below produce the same charts, but read the archive from the local record store in
-`records/` instead of the V-ARCHIVE API, so a repeated run spends no requests. The store has two
-layers: `full_varecord.json` holds the raw API responses, one entry per button mode, and
-`records_db.parquet` is the merged, render-ready form built from them — the hand-maintained tag
-table (`analyzer/djmax_songs_tags.csv`) is already joined and its `tags_score` already computed
-inside it, so a read is a plain parquet read (`db_meta.json` records which account it holds and
-which schema it was built with). `data_fetcher.ensure_db_available(username)` — called by every
-local generator — is the only network-touching step: it is a no-op while the store already serves
-`username`, rebuilds the parquet offline when only the song database or the tag table moved under
-it, and otherwise downloads all four modes. The reading and converting itself
-(`data_converter.load_records_db`, `fetch_bests`, `fetch_scorelist*`) is pure local file work and
-refuses a store that holds another account rather than silently using it. The song database, the
-dlc list and the djpower conversion factor come from the cache (`djmax_bests/cache`), which
-`api_handler.remove_cache()` may clear at any time — the record store sits outside it and
-survives that.
+The functions below produce the same images but read from the local store
+(`records/records_db.parquet`) and consume no requests. Each one first calls
+`data_fetcher.ensure_db_available(username)`: a no-op when the store already serves the account,
+an offline rebuild when only the song database or tag table moved, and a full four-mode download
+otherwise. Readers refuse a store belonging to another account.
 
 - `generate.generate_bests_local(username, bmode)`
 - `generate.generate_scorelist_local(username, bmode, is_sc, level)`
 - `generate.generate_scorelist_new_local(username, bmode, diff)`
 - `generate.generate_scorelist_pack_local(username, bmode, diff, pack)`
 - `generate.generate_scorelist_pp_local(username, bmode)`
+- `generate.generate_all_local(username)`
+    - Renders every single chart (4 modes × 15 levels × SC/non-SC, new songs, Perfect Play,
+      Top 100 and theoretical Top 100) into `<project>/output/`; returns `None`.
+    - Same file naming as the exe's `[2] Generate everything`.
 
-Parameters are the same as their online counterparts.
+Parameters are identical to their online counterparts.
 
-Fill the record store once with `python refresh.py` — its `username` is the account everything
-renders — before the first run; the online
-generators above (and `api_handler.fetch_song_db()`) also cache whatever they fetch.
-`records/` is **not** in the repository: it holds one account's records, so every clone regenerates it
-from its own account with that same command (the directory is created on the first write).
-`generate.generate_bests_theoretical` has no local variant: it only needs the song database,
-which `api_handler` reads from the cached `songs.json`.
+The store has two layers: `records/full_varecord.json` keeps the raw API responses for all four
+modes, and `records/records_db.parquet` is the derived, directly renderable layer (song database,
+tag table and `max_djpower` merged in). `records/db_meta.json` records the account and build
+version. `records/` is not in the repository; generate it once with
+`refresh_records(username)` / `ensure_db_available(username)`.
 
-## Utilities
+## Summary generator
 
-`prefetch_covers.py`: cache all missing covers.
+- `summary_generate.generate_summary(username, nickname=None, photo=None, prefer_button=[4, 5, 6, 8], info='')`
+    - Renders the 2200 px summary sheet plus 4 mode cards.
+    - `username`: account the store belongs to (also shown on the cover).
+    - `nickname`: overrides the displayed name when set.
+    - `photo`: jacket songid used as the avatar; `None` or out of range = random.
+    - `prefer_button`: button modes to highlight.
+    - `info`: signature text.
+    - Returns `(summary, modecards)` where `modecards` is `{4: Image, 5: Image, 6: Image, 8: Image}`.
+    - The skill radar on the right is drawn by matplotlib; see “Fonts” above (Sarasa Mono HC SemiBold).
 
-`refresh.py`: the manual refreshment method, and the one place the account is configured. The
-`username` global at its top is the **primary account**: the refresh, the records_db build and
-`db_meta.json` are keyed to it, and every entry script (`runrun.py`, `all.py`, `summary.py`,
-`target.py`) imports it from there and renders that account. Those scripts do not refresh on
-their own any more — run `python refresh.py` manually whenever the records should be updated.
-The script refreshes the two caches `api_handler` cannot refresh
-by itself: the djpower conversion factor (`maxpower_<bmode>.txt`, reused from the cache forever once it
-exists) and the archive records of that account (`records/`, the record store: `full_varecord.json`
-holding all four button modes plus the `records_db.parquet` built from them). It then calls the
-cache-aware methods, so a cold `songs.json` / `dlcs.json` is
-filled as well (before the records, so the records_db rebuild merges in the fresh song database).
-Jacket covers are handled by `prefetch_covers.py`.
-There is no partial refresh: `refresh.py` always rewrites the whole raw layer through
-`data_fetcher.fetch_all()`, so `full_varecord.json` has a single writer and can never hold entries
-from two accounts.
-The rebuild json-loads all four keys, so a missing or empty entry breaks it — that is why the raw
-layer is replaced as a whole rather than one mode at a time. An entry that is unreadable, or that
-carries no account marker, makes the store unservable: `records_db.parquet` refuses to be rebuilt
-from it and `db_meta.json` is left as it was, so the next local run fetches all four modes for the
-account it was asked for.
+- `tag_scorelist_generate.tag_scorelist(username, bmode, tag, level)`
+    - Renders the progress of one tag (synchronous, returns `Image`).
+    - `tag`: `Jack`, `Longjack`, `Stream` (or `FX`), `Stair`, `Trill`, `Chord`, `Long`, `Side`,
+      `Complex`, `SV`, `DoubleStairs`, `6B Stair`, `6B Basic`, `Read`, `Spike`.
+    - `level`: tag difficulty 1–3 (drawn as I / II / III).
 
-### Play history (`records/history/`)
+Both read the local store through `AnalyzeUtil`; for another account inject its records with
+`AnalyzeUtil.use_varecords(...)` first (see “Data layer”).
 
-V-ARCHIVE keeps only each chart's current best record, so a superseded score is gone from the API
-the moment it is beaten. `analyzer/history.py` accumulates what can still be accumulated, and every
-refresh feeds it automatically (`data_fetcher` folds the freshly fetched state into the history
-before rebuilding `records_db.parquet`):
+## Play-history generators
 
-- `play_events.parquet` — an append-only log of play events, one row per play. The first refresh
-  seeds every current best at its own `updatedAt` (the archive's play timestamp), so the history
-  starts with real depth; every later refresh diffs the new raw records against the last snapshot
-  and appends one event per chart whose score rose or that appeared. Events fire only on
-  score/max-combo changes, so a game patch that recomputes djpower never fakes a play. Events are
-  keyed per account — switching the primary account never fakes events.
-- `snapshots/` — the raw layer archived on every content change (gzip, kept forever) so the event
-  log can be re-derived if it is ever corrupted.
+- `history_generate.generate_history(username, recent100=True, date=None, target_date=None)`
+    - Renders the play-history chart from the local event log.
+    - `recent100=True`: latest 100 plays; `False`: the day selected by `date`.
+    - `date=None` means “the latest day with records”; a `datetime.date` traces back from it.
+    - Pass a list as `target_date` to receive the day actually charted (useful for file names).
+    - Rows carry the chart's previous best and score/DJPower gains; mode blocks show daily total
+      movement.
 
-The finer the refresh cadence, the finer the history: plays between two refreshes survive
-only as their final best, so refresh after a play session.
-**Deleting `records/history/` loses every superseded score permanently** — the API cannot replay
-them. 
+- `history_generate.generate_history_snapshot(username, texts, recent100=True)`
+    - Renders straight from a `{bmode: raw response text}` snapshot (inspect path; never reads
+      the local store).
+    - A single snapshot cannot know beaten scores, so it shows results only, without deltas.
 
-Read side (what a renderer would consume):
+Readers for custom rendering:
 
-- `history.recent_plays(username, n=100)` — the latest events across all button modes, newest
-  first, each with the chart's previous best and the score/djpower deltas against it.
-- `history.chart_progression(username, songid, button, pattern)` — one chart's full score trajectory.
-- `history.totals_over_time(username)` — per-mode total djpower after every play, replayed from the
-  events with the same top-70/30 + convert-constant formula (and 10000 cap) as the modecards.
-- `history.load_play_events(username)` — the bare log, for anything else.
+- `history.replay_view(username)` — returns `(events, totals)`: event rows (with each chart's
+  previous best and gains) plus the mode total after every play; this is what the history chart
+  reads.
+- `history.chart_progression(username, songid, button, pattern)` — one chart's full trajectory.
+- `history.load_play_events(username=None)` — the bare event log.
+- `history.update_history(username, texts)` / `history.verify_history()` — write and self-check.
 
-`inspect_history.py` renders the same chart for another account: it fetches all four button modes
-of the `username` set below its header (a cross-mode top 100 needs every mode) and keeps them in
-memory, so the local record store is never read or written. A single snapshot cannot know
-superseded scores, so that chart draws results only — no score/djpower increments — and final
-mode totals without a daily gain. Output: `output/inspect/<username>/History_<date>.png`.
+## Single-chart history generators
 
-The read APIs also reconcile with the current store: bests that sit in `records/` but not yet in
-the log (e.g. a refresh that was interrupted) still show up, and the next refresh's snapshot diff
-closes the gap for good. An older raw snapshot you happen to have (e.g. a saved
-`full_varecord_<date>.json`) can be backfilled into the log: call
-`history.update_history(username, older_texts)` once — seeding is absorbed by the dedup key, so
-only that snapshot's superseded bests are added (set the newest snapshot in
-`records/history/snapshots/` aside for the call, then run `update_history` with the current state
-to restore the snapshot timeline).
+- `song_history_generate.generate_song_history(username, songid, button, pattern)`
+    - Renders one chart's full score trajectory from the local store; the radar in the top right
+      needs Sarasa Mono HC SemiBold as well.
 
-`runrun.py`: scratch entry point for a single chart. Edit the variables at the top (`bmode`,
-`levels`, `difficult`, `dlc`, `tag_name`, `tag_level`), then pick the task on the
-`await ...()` line inside `main()` — `best()`, `theoretical()`, `level()`, `new()`, `perfect()`,
-`pack()` or `tag()`. It renders the primary account (the `username` in refresh.py).
+- `song_history_generate.generate_song_history_snapshot(username, texts, songid, button, pattern)`
+    - Same, from a `{bmode: raw response text}` snapshot (inspect path).
 
-The `tag()` task charts how far one account has cleared the songs that carry a given tag, and writes
-the result to `output/tag_<bmode>B/<tag_name>_<tag_level>.png`. It takes:
+## Target-DJPower generators
 
-- `username`: the V-ARCHIVE account to look up (the primary account, set in refresh.py).
-- `bmode`: button mode, one of 4, 5, 6, 8.
-- `tag_name`: the tag to look up — `Jack`, `Longjack`, `Stream` (or `FX`), `Stair`, `Trill`, `Chord`,
-  `Long`, `Side`, `Complex`, `SV`, `DoubleStairs`, `6B Stair`, `6B Basic`, `Read` or `Spike`.
-- `tag_level`: the tag's difficulty, `1`-`3` (drawn as I / II / III in the header).
+- `target_plan.build_plan(bmode, target_total, accuracy, floor_cap=None, *, username='Max DJPower', analyzer=None, balance=True, balance_rounds=7)`
+    - Works out which charts to play to reach a target total; returns a `TargetPlan`.
+    - `target_total`: target DJPower total.
+    - `accuracy`: expected accuracy as a percentage number (e.g. `99.2`).
+    - `floor_cap`: optional difficulty cap in floor units; `None` = no cap.
+    - `username`: owner of the plan (used in names / images).
+    - `analyzer`: a `RecordAnalyzer`; `None` builds one from the store.
+    - `balance` / `balance_rounds`: search the basic/new split and how many rounds to try.
+    - The plan exposes `reachable`, `achieved_total`, `current_total`, `min_accuracy`, `tasks`,
+      `basic` / `new`; `plan.describe()` returns a readable summary.
 
-`all.py`: render every chart for one account in one go (4 button modes × levels 1-15 × both SC
-and non-SC, plus new songs, perfect plays, bests and theoretical bests).
+- `target_generate.generate_target_image(plan)`
+    - Renders a `TargetPlan` in the Top 100 layout: gold `NEW` = play from scratch, cyan `UP` =
+      improve; the header shows target, achieved total, current value and minimum accuracy.
 
-`summary.py`: render the summary chart.
+## Data layer
 
-The entry scripts (`runrun.py`, `all.py`, `summary.py`, `target.py`) render entirely from the local
-record store and spend no requests on it — refresh manually with `python refresh.py` first whenever
-the store should be updated. If the store holds a different account than the primary account a
-generator was asked for, that generator fetches all four modes once (`data_fetcher.ensure_db_available`)
-and rebuilds the store, so switching the primary account costs either a manual refresh or one
-automatic fetch on the next render.
-Because `AnalyzeUtil` reads the record store, everything built on it (`tag()`, the target plan, the
-summary, the scorelist renderers used by `level()` / `pack()` / `pp()`) sees the modes that store
-holds. The store is always written wholesale by `refresh.py`, so its four entries belong to one
-account; a store left over from another account is refused, not merged.
-Output goes under `output/` beside the script, creating every target directory on demand. 
+- `data_fetcher.ensure_db_available(username)`
+    - Makes the store serve `username`: no-op when current, offline rebuild when only the song
+      database or tag table changed, full four-mode download otherwise.
 
-# Troubleshooting
+- `data_fetcher.refresh_records(username)`
+    - Force-download all four modes and rebuild the store (what the exe's `[1]` uses).
 
-- Wrong djpower / tier values, missing new songs, or anything else looks outdated
-    - The cached conversion factor or song database is stale. Run `refresh.py` for the
-      conversion factor and the archive records; `api_handler.remove_cache()` clears everything
-      under `djmax_bests/cache` (maxpower, `songs.json`, `dlcs.json`) and the
-      next run downloads what it needs. The conversion factor is never re-fetched on its own once
-      cached, so a new season needs `refresh.py` (or a manual delete of the `maxpower_*.txt`).
-      The record store in `records/` is outside the cache and survives a wipe; deleting
-      `records/records_db.parquet` alone is also safe — the next run rebuilds it offline.
+- `data_converter.load_records_db()`
+    - The merged DataFrame (with `tags` / `tags_score`); rebuilds offline when stale.
 
-- A chart shows another account's data
-    - The record store belongs to one account, and `db_meta.json` records which. A local generator
-      asked for a different account refuses the stored records and fetches all four modes for the
-      account it was asked for; a direct read reports
-      `records_db holds 'SomeoneElse' account, not 'You'`. Run `python refresh.py` once to rewrite
-      the store for the account you are working on (the `username` set in refresh.py).
-      `api_handler.remove_cache()` clears the whole cache.
+- `data_analyzer.AnalyzeUtil`
+    - `spawn_analyzer(bmode)`: read-only analyzer for one button mode.
+    - `spawn_analyzer_full()`: analyzer spanning all four modes.
+    - `use_varecords({bmode: raw response text})`: inject another account's records; reset it
+      afterwards (`AnalyzeUtil.merged_df = None`) so local charts read the store again.
 
-- `records_db holds no account, not 'You'` / `records_db cannot be rebuilt`
-    - `records/records_db.parquet` is the derived, render-ready form of the raw records. It is
-      rebuilt offline whenever it is missing, was built by an older version of the code, or is
-      older than its sources (`full_varecord.json`, `songs.json`, `analyzer/djmax_songs_tags.csv`)
-      — no requests involved. This error means the raw layer is missing entries too, so there is
-      nothing to rebuild from: run `python refresh.py` once.
+## Example
+
+```python
+import asyncio
+
+from djmax_bests import api_handler, generate
+from djmax_bests.generators.summary_generator import summary_generate
+
+
+async def main():
+    bests = await generate.generate_bests_local("YourName", 6)
+    bests.save("best_6B.png")
+
+    theoretical = await generate.generate_bests_theoretical(4)
+    theoretical.save("theoretical_4B.png")
+
+    summary, modecards = summary_generate.generate_summary("YourName", info="steam xxxx")
+    summary.save("summary.png")
+
+    await api_handler.aclose()
+
+
+asyncio.run(main())
+```
+
+## Building the exe
+
+See the “构建” section of [README-EXE.md](README-EXE.md).
+
+## License
+
+MIT, see [LICENSE](LICENSE). Game data and jackets belong to DJMAX / NEOWIZ and V-ARCHIVE.

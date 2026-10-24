@@ -90,7 +90,7 @@ DJMAX 成绩图生成器（单文件版）
   data\account.txt  你的账号
   data\cache\       歌曲库 / DLC 列表 / 换算系数缓存
   data\covers\      曲绘（exe 只带占位图，首次刷新时下载全部封面）
-  data\records\     成绩记录库（刷新后生成，删了要重新刷新）
+  data\records\     成绩记录库（刷新后生成 ※删除会永久丢失历史记录）
   data\djmax_songs_tags.csv  谱面标签表（可单独替换，不用重新打包）
   output\           生成的图片（与 data 同级）
 
@@ -109,6 +109,8 @@ DJMAX 成绩图生成器（单文件版）
   * 刷新成绩 / 查询他人都需要联网；出图完全离线。
   * 首次刷新会下载 800 多张曲绘，约 1 分钟；之后只补新曲。
   * 整个文件夹可以拷到别的电脑直接用；data\records 是个人的成绩，别发给别人。
+  * [3] 总结图 / [6]->[7] 单曲轨迹里的雷达图要系统字体 Sarasa Mono HC SemiBold
+    （github.com/be5invis/Sarasa-Gothic 的 SarasaMonoHC-SemiBold.ttf），不装会退回默认字体。
   * 程序未签名，Windows SmartScreen 可能提示，选择“更多信息 -> 仍要运行”。
   * 出图失败时先运行 [1] 刷新成绩；本地记录库缺失会给出提示。
 "@
