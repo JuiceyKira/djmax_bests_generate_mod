@@ -53,7 +53,7 @@ class SongTags(BaseModel):
     longjob: tuple[float, float] | None = None
     side: tuple[float, float] | None = None
     complex: tuple[float, float] | None = None
-    speedvaration: tuple[float, float] | None = None
+    speedvariation: tuple[float, float] | None = None
     doublestairs: tuple[float, float] | None = None
     stair6: tuple[float, float] | None = None
     main6b: tuple[float, float] | None = None

@@ -344,9 +344,9 @@ def progbar_deluxe(bar_width:int, bar_height:int, perfect:int, max_combo:int, cl
 
 
 def _sort_series(series: data_analyzer.pd.Series) -> data_analyzer.pd.Series:
-  sort_by=['difficultyspikes', 'read', 'main6b', 'speedvaration', 'Longjack', 
-           'complex', 'doublestairs', 'side', 'longjob', 'stair6', 'chord', 
-           'trill', 'stair', 'stream', 'longjack', 'jack']
+  sort_by=['difficultyspikes', 'read', 'main6b', 'speedvariation',
+           'complex', 'doublestairs', 'side', 'longjob', 'stair6', 
+           'chord', 'trill', 'stair', 'stream', 'longjack', 'jack']
   # Add index objects only
   remaining = [x for x in sort_by if x in series.index]
   return series.reindex(remaining)
@@ -373,7 +373,7 @@ def plot_tags_score_radar(data:data_analyzer.pd.Series,
             'longjob': 'Long',
             'side': 'Side',
             'complex': 'Complex',
-            'speedvaration': 'SV',
+            'speedvariation': 'SV',
             'doublestairs': 'Double\nStairs',
             'stair6':'6B Stair',
             'main6b': '6B Basic',

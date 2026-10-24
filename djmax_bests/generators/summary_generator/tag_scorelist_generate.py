@@ -24,7 +24,7 @@ TAG_DICT = {
     'Long': 'longjob',
     'Side': 'side',
     'Complex': 'complex',
-    'SV': 'speedvaration',
+    'SV': 'speedvariation',
     'DoubleStairs': 'doublestairs',
     '6B Stair': 'stair6',
     '6B Basic': 'main6b',

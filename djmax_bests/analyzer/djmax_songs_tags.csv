@@ -1,4 +1,4 @@
-﻿songid,title,button,pattern,level,jack,longjack,stream,stair,trill,chord,longjob,side,complex,speedvaration,doublestairs,stair6,main6b,read,difficultyspikes
+﻿songid,title,button,pattern,level,jack,longjack,stream,stair,trill,chord,longjob,side,complex,speedvariation,doublestairs,stair6,main6b,read,difficultyspikes
 553,DIE IN,4,SC,15,1,3,2,3,3,,,,,,,,,,
 789,LAMIA,4,SC,15,,,3,3,2,1,,3,,,,,,,
 756,Heliocentrism,4,SC,15,,1,3,3,2,1,1,1,,,,,,,
@@ -8,7 +8,7 @@
 843,추격 섬멸전 ~Wicked Frontier Remix~,4,SC,15,,1,3,2,3,3,1,,,,,,,,
 815,Megingjord,4,SC,15,,,3,1,2,,,,,,,,,,
 810,Sleipnir,4,SC,15,,,2,3,,,,,,,,,,,
-807,RE;DIEIN,4,SC,15,,,2,2,,3,1,,,,,,,,
+807,RE;DIEIN,4,SC,15,,,2,2,,3,2,,,,,,,,
 794,MEGATØNiX PHANTØM,4,SC,15,1,2,1,3,3,2,2,,,,,,,,
 733,#1f1e33,4,SC,15,1,2,3,2,2,1,1,2,,,,,,,
 722,PUPA (xi Remix),4,SC,15,,2,2,3,3,1,,,,,,,,,
@@ -42,7 +42,7 @@
 719,thinking!,4,SC,14,1,,2,3,1,1,,,,,,,,,
 696,Polyphonic,4,SC,14,,,1,3,,,1,1,,,,,,,
 685,alliance,4,SC,14,1,,3,2,2,,1,1,,,,,,,
-676,Eternal Damnation,4,SC,14,,,3,,2,,,,,,,,,,
+676,Eternal Damnation,4,SC,14,,,3,,2,1,,1,,,,,,,
 674,Diomedes ~Extended Mix~,4,SC,13,2,1,3,,2,1,,,,,,,,,
 659,Delusion (feat. SOONHO),4,SC,14,,,3,2,,,2,,,,,,,,
 634,Licrom,4,SC,14,,2,,2,,1,1,3,,,,,,,
@@ -62,7 +62,7 @@
 602,Rhapsody for The VEndetta,4,SC,13,1,1,,3,2,1,,,,,,,,,
 588,3:33,4,SC,13,1,,3,2,1,2,,,,,,,,,
 512,Fundamental,4,SC,13,2,1,2,3,1,1,1,,,,,,,,
-468,Cthugha,4,SC,13,,,2,,,3,,,,,,,,,
+468,Cthugha,4,SC,13,,,2,,1,3,,,,,,,,,
 393,Gone Astray,4,SC,13,,1,,3,,1,1,,,,,,,,
 781,脳天直撃,4,SC,13,2,,2,2,3,1,1,,,,,,,,
 765,RUN & RUN,4,SC,13,2,2,3,1,2,2,1,,,,,,,,
@@ -97,12 +97,12 @@
 695,Oxygen Destroyer,4,SC,12,1,,2,,2,,3,,,,,,,,
 690,Gregorius | Symphony,4,SC,13,,1,2,1,,2,1,,,,,,,,
 652,Yodeling in meadow hill (Hidden Retreat),4,SC,12,,,,1,1,1,2,3,,,,,,,
-591,Carrot Carrot,4,SC,12,2,,1,3,,,1,,,,,,,,
+591,Carrot Carrot,4,SC,12,2,,1,3,1,,1,,,,,,,,
 510,Emerge,4,SC,12,1,2,2,1,1,1,,,,,,,,,
 480,Airlock,4,SC,12,,2,1,,,2,1,,,,,,,,
 342,Rage Of Demon,4,SC,12,2,,2,,2,2,,,,,,,,,
 304,Bamboo on Bamboo,4,SC,12,1,,1,2,2,2,1,,,,,,,,
-270,ANALYS,4,SC,12,2,1,2,,1,1,1,,,,,,,,
+270,ANALYS,4,SC,12,2,1,2,1,1,1,1,,,,,,,,
 231,Fermion,4,SC,12,1,2,1,3,1,1,,,,,,,,,
 178,Kensei,4,SC,12,1,2,2,,2,,,,,,,,,,
 169,Super lovely,4,SC,12,1,,1,,3,1,,,,,,,,,
@@ -229,7 +229,7 @@
 352,Beyond the Future,4,SC,10,2,,1,,,1,1,,,,,,,,
 325,Xeus,4,SC,10,2,1,1,,,,,,,,,,,,
 317,Out of CTRL,4,SC,10,1,,,,2,2,1,,,,,,,,
-254,Dark ENVY,4,SC,11,,,1,,1,2,,1,,,,,,,
+254,Dark ENVY,4,SC,11,,,2,,1,2,,1,,,,,,,
 234,Grave Consequence,4,SC,11,1,2,1,,,1,,1,,,,,,,
 135,Minimal Life,4,SC,10,1,2,,,1,,,,,,,,,,
 107,BlythE,4,SC,11,1,,2,,1,1,1,,,,,,,,
@@ -250,28 +250,28 @@
 678,Hyperboloid,4,SC,10,,2,,,,,,1,,,,,,,
 595,God Machine,4,SC,10,2,1,,1,,,,,,,,,,,
 557,Hyper Drive,4,SC,10,,,1,1,,,,,,,,,,,
-503,Techno Racer,4,SC,10,,,1,,,,,,,,,,,,
-501,Thor (Deepin' Absonant Mix),4,SC,10,,,1,,,,,,,,,,,,
+503,Techno Racer,4,SC,10,1,,1,,1,1,,,,,,,,,
+501,Thor (Deepin' Absonant Mix),4,SC,10,1,,1,,1,1,1,,,,,,,,
 479,XING,4,SC,10,,,,,2,,,,,,,,,,
 455,Red Eyes,4,SC,10,,,2,2,,,,,,,,,,,
-429,카트라이더 Mashup ~Cosmograph Remix~,4,SC,10,,,1,,1,,,,,,,,,,
+429,카트라이더 Mashup ~Cosmograph Remix~,4,SC,10,,,1,,2,1,2,,,,,,,,
 427,죽음의 신 : 크로우 크루아흐,4,SC,10,,2,,,,1,,,,,,,,,
-405,SuperSonic ~Mr.Funky Dirty Planet Remix~,4,SC,10,,1,,,,,,,,,,,,,
-368,Thor,4,SC,10,1,,1,,,,,,,,,,,,
-334,Dual Strikers,4,SC,10,1,,1,,,,,,,,,,,,
+405,SuperSonic ~Mr.Funky Dirty Planet Remix~,4,SC,10,2,1,,,,,,1,,,,,,,
+368,Thor,4,SC,10,1,,1,,,,1,,,,,,,,
+334,Dual Strikers,4,SC,10,1,,1,,,2,,,,,,,,,
 323,Supersonic 2011,4,SC,10,1,,,1,1,,,,,,,,,,
-318,Over the Rainbow,4,SC,10,,,,,,1,,,,,,,,,
-275,Angelic Sphere,4,SC,11,,,,1,,,,,,,,,,,
-223,Break a Spell,4,SC,10,,,,,,1,,,,,,,,,
-194,Got more raves?,4,SC,10,,,,,,1,,,,,,,,,
-181,Lost Temple,4,SC,10,,,,,1,1,,,,,,,,,
-179,Lisrim,4,SC,11,,,1,1,,,,,,,,,,,
-24,NB RANGER - Virgin Force,4,SC,10,,,,,1,1,,,,,,,,,
-7,Binary World,4,SC,10,,,1,,,1,,,,,,,,,
+318,Over the Rainbow,4,SC,10,,,1,,1,2,,,,,,,,,
+275,Angelic Sphere,4,SC,11,,,,2,,,,,,,,,,,
+223,Break a Spell,4,SC,10,,,,,,2,,1,,,,,,,
+194,Got more raves?,4,SC,10,1,,2,1,1,2,1,,,,,,,,
+181,Lost Temple,4,SC,10,,,,,2,1,,,,,,,,,
+179,Lisrim,4,SC,11,,,2,1,,,,,,,,,,,
+24,NB RANGER - Virgin Force,4,SC,10,,,,,1,2,1,1,,,,,,,
+7,Binary World,4,SC,10,1,,1,,1,1,,,,,,,,,
 837,"비극의 도시, 엘레리논",4,SC,10,,,1,,,,1,,,,,,,,
 829,Permutation Part.1,4,SC,10,,,1,,,,,,,,,,,,
 241,PDM,4,SC,10,1,1,,,,1,1,,,,,,,,
-801,Cosmo (feat. Letsu),4,SC,10,,,1,,,,,,,,,,,,
+801,Cosmo (feat. Letsu),4,SC,10,,,1,1,,,,,,,,,,,
 798,Aria (feat. DIEIN),4,SC,10,,,2,,1,1,1,,,,,,,,
 428,최종무곡,4,SC,11,,,,,,,2,,,,,,,,
 76,My Alias,4,SC,10,,,,,,2,,,,,,,,,
@@ -283,87 +283,87 @@
 769,Village Racing,4,SC,10,,,2,,,,,,,,,,,,
 757,Luv Master,4,SC,10,1,,2,1,,1,1,1,,,,,,,
 707,Hero,4,SC,10,,,1,,,1,,2,,,,,,,
-630,Cotton Candy Soda,4,SC,10,,,1,1,,,,,,,,,,,
-629,Broken Sphere,4,SC,10,,,1,,,,,,,,,,,,
-609,GENESIS BEYOND THE BEGINNING,4,SC,10,,,1,,,,,,,,,,,,
+630,Cotton Candy Soda,4,SC,10,,,1,1,,,1,,,,,,,,
+629,Broken Sphere,4,SC,10,1,,1,1,1,1,,,,,,,,,
+609,GENESIS BEYOND THE BEGINNING,4,SC,10,1,,1,2,1,,1,1,,,,,,,
 597,My Wonderland,4,SC,9,,,,,2,1,1,,,,,,,,
 555,Gloxinia,4,SC,10,,,1,,1,1,,,,,,,,,
 546,Dark Lightning,4,SC,9,,,1,,2,,,,,,,,,,
-510,Emerge,4,MX,14,,,1,,1,,,,,,,,,,
+510,Emerge,4,MX,14,1,,1,,2,1,,,,,,,,,
 502,VORTEX,4,SC,9,,,,1,1,,,,,,,,,,
 490,Kal_wrnw,4,SC,10,1,2,,1,,,,,,,,,,,
 482,OrBiTal,4,SC,10,,2,,,,1,,,,,,,,,
 401,NB Ranger : Nonstop Remix,4,SC,10,1,,1,,,1,1,1,,,,,,,
-396,Leave me alone,4,SC,10,,,,,,1,,,,,,,,,
+396,Leave me alone,4,SC,10,1,1,1,1,,2,1,,,,,,,,
 386,Dance of the Dead,4,SC,10,,,,1,1,,,,,,,,,,
 382,Ray Tuning,4,SC,9,,,1,,,1,,2,,,,,,,
-379,Cyberozar,4,SC,10,,,1,,,,,,,,,,,,
-348,XLASHER,4,SC,10,1,,,,,,,,,,,,,,
+379,Cyberozar,4,SC,10,1,,2,,,1,1,2,,,,,,,
+348,XLASHER,4,SC,10,1,,1,,1,,1,,,,,,,,
 286,CODE NAME : ZERO,4,SC,10,,,,,,2,,,,,,,,,
 279,Magnolia,4,SC,9,,,,,,,,2,,,,,,,
-271,Chemical Slave,4,SC,10,,1,,1,,,,,,,,,,,
-198,ouroboros -twin stroke of the end-,4,MX,15,,,2,,,,,,,,,,,,
+271,Chemical Slave,4,SC,10,,2,,1,,,,,,,,,,,
+198,ouroboros -twin stroke of the end-,4,MX,15,,,2,1,1,1,,,,,,,,,
 191,WONDER $LOT 777,4,SC,10,,,1,1,,,,,,,,,,,
 189,Vile Requiem,4,SC,10,,1,,1,1,,,,,,,,,,
 139,OBLIVION (Rockin' Night Style),4,SC,10,1,,,,2,,1,,,,,,,,
-115,End of the Moonlight,4,SC,10,,,1,,,,,,,,,,,,
+115,End of the Moonlight,4,SC,10,1,1,1,,1,1,,,,,,,,,
 78,NB POWER,4,SC,9,,1,,1,,1,,,,,,,,,
 828,The Final Frontier,4,SC,10,1,1,,,2,2,,,,,,,,,
 802,Dreamscape,4,SC,10,,1,,1,,,,1,,,,,,,
-72,Mess it Up,4,SC,10,,,1,,,,,,,,,,,,
+72,Mess it Up,4,SC,10,1,,1,,,,1,,,,,,,,
 787,Eta Beta Eta,4,MX,15,,,1,,2,,,,,,,,,,
 784,Baqeela,4,SC,10,,1,,1,,,,1,,,,,,,
-756,Heliocentrism,4,MX,15,,,2,,1,1,,1,,,,,,,
+756,Heliocentrism,4,MX,15,,,2,,1,1,1,1,,,,,,,
 714,Rusty Shell,4,SC,10,,,1,,,1,,,,,,,,,
 709,Labyrinth of Tears,4,SC,10,,,1,,,1,,,,,,,,,
 651,The Decisive Blow (Normal),4,SC,10,,,1,1,1,,,2,,,,,,,
 631,Diomedes,4,MX,15,2,,1,,1,,,,,,,,,,
 623,성장통 [ScreaM Records],4,SC,10,,,,1,,1,,,,,,,,,
-611,NORSE WIND,4,SC,10,,,1,,,,,,,,,,,,
-604,Rocket Launcher,4,SC,9,,,1,,,,,,,,,,,,
-600,Pitter-patter,4,SC,9,,,,1,,,,,,,,,,,
-523,Winners,4,SC,10,,,1,1,,,,,,,,,,,
-420,"공성전 ~Pierre Blanche, Yonce Remix~",4,SC,10,,,1,1,,1,,,,,,,,,
-356,HEXAD,4,SC,9,,1,,,,,,,,,,,,,
-336,La Campanella : Nu Rave,4,SC,9,,,1,,,,,,,,,,,,
-288,EMber,4,SC,10,,,1,,,,,2,,,,,,,
+611,NORSE WIND,4,SC,10,,,1,1,2,1,1,,,,,,,,
+604,Rocket Launcher,4,SC,9,1,,2,,1,1,1,,,,,,,,
+600,Pitter-patter,4,SC,9,,,,2,1,,,,,,,,,,
+523,Winners,4,SC,10,1,,1,1,,1,,,,,,,,,
+420,"공성전 ~Pierre Blanche, Yonce Remix~",4,SC,10,1,,1,1,,1,,,,,,,,,
+356,HEXAD,4,SC,9,1,1,1,,,1,1,,,,,,,,
+336,La Campanella : Nu Rave,4,SC,9,2,1,1,,1,1,,,,,,,,,
+288,EMber,4,SC,10,,1,1,,,,,2,,,,,,,
 273,Watch Your Step,4,SC,9,1,1,,1,,,,,,,,,,,
-229,Cypher Gate,4,SC,9,,,,,,1,,,,,,,,,
+229,Cypher Gate,4,SC,9,2,,1,1,1,2,,,,,,,,,
 186,Never Die,4,SC,9,1,,1,,,1,,,,,,,,,
 148,Rock Or Die,4,SC,9,,,1,1,,2,1,,,,,,,,
-35,Secret Dejavu,4,SC,9,,,,1,,,,,,,,,,,
-711,mochimochi (feat. Hatsune Miku),4,SC,9,,,,,1,2,1,,,,,,,,
+35,Secret Dejavu,4,SC,9,,,,2,,,,,,,,,,,
+711,mochimochi (feat. Hatsune Miku),4,SC,9,,,1,,1,2,1,,,,,,,,
 97,WhiteBlue,4,SC,10,1,,1,,,1,,1,,,,,,,
 96,Syriana,4,SC,9,,,1,,,,1,1,,,,,,,
 735,Axium Crisis,4,SC,9,,,1,,1,,,,,,,,,,
 722,PUPA (xi Remix),4,MX,15,,,2,,2,,,,,,,,,,
 717,Synchronized Resonance,4,SC,9,,,,1,,1,,1,,,,,,,
 710,"Love, Epilogue (feat. mill)",4,SC,10,,,1,1,1,,,,,,,,,,
-680,Let's Burn,4,SC,10,,,,,,1,,,,,,,,,
+680,Let's Burn,4,SC,10,1,1,1,,,2,,,,,,,,,
 673,TOXIC (feat. Shabel Tonya),4,SC,9,,,,,,,,3,,,,,,,
 648,My Last Stand,4,SC,10,,,1,,,1,,,,,,,,,
-605,S.A.V.E,4,SC,9,,,,,,1,,,,,,,,,
+605,S.A.V.E,4,SC,9,2,1,,,,1,1,,,,,,,,
 544,LIMBO,4,MX,15,,,1,,1,,,,,,,,,,
-538,Showdown,4,SC,9,,,,,1,,,,,,,,,,
+538,Showdown,4,SC,9,1,1,,1,1,,1,1,,,,,,,
 489,Festa Nova,4,SC,9,,,,,,1,,,,,,,,,
 481,Daylight,4,MX,14,2,,1,,1,,,,,,,,,,
 469,DataErr0r,4,SC,9,,,1,,,,,,,,,,,,
 468,Cthugha,4,MX,15,,,1,,,1,,,,,,,,,
-450,Imaginary dance,4,SC,9,,,1,,,,,,,,,,,,
+450,Imaginary dance,4,SC,9,,,1,1,2,,1,,,,,,,,
 448,Forgotten,4,SC,9,,,1,,,1,,,,,,,,,
 437,Start The Adventure ~SOPHI Remix~,4,SC,9,,,,,1,,2,,,,,,,,
 421,광명의 루 : 루 라바다,4,SC,9,,,,,,1,,1,,,,,,,
 342,Rage Of Demon,4,MX,15,,,1,,,,,,,,,,,,
 255,Electronics,4,SC,9,,2,,,1,,,,,,,,,,
-254,Dark ENVY,4,MX,15,,,1,,,1,,,,,,,,,
-196,HB-axeleration,4,SC,9,,,1,,,,,,,,,,,,
+254,Dark ENVY,4,MX,15,,,1,,1,2,,,,,,,,,
+196,HB-axeleration,4,SC,9,1,,2,,1,,,,,,,,,,
 183,Misty Er'A,4,SC,9,,,,,,,2,,,,,,,,
 151,SIN ~The Last Scene~,4,SC,9,,,1,,,1,,,,,,,,,
 130,Light House,4,SC,9,1,,,,1,,,,,,,,,,
-68,Higher,4,SC,9,,,,1,,,,,,,,,,,
+68,Higher,4,SC,9,,,,2,,,,,,,,,,,
 56,Chain of Gravity,4,SC,9,,,1,,1,,,,,,,,,,
-41,U.A.D,4,SC,9,,,1,1,,,,1,,,,,,,
-11,Child of Night,4,SC,9,,,1,,,,,,,,,,,,
+41,U.A.D,4,SC,9,,1,1,2,1,,,1,,,,,,,
+11,Child of Night,4,SC,9,1,2,1,,,1,,1,,,,,,,
 809,Second Light (feat. Ahn Yeonjae),4,SC,9,,,,,1,,1,,,,,,,,
 73,Midnight Blood,4,SC,9,1,,2,,,,1,,,,,,,,
 791,MarbleBlue.,4,MX,15,,,1,,1,,,,,,,,,,
@@ -375,10 +375,10 @@
 692,HIGH5LANDER,4,SC,9,,,1,,1,1,,,,,,,,,
 658,Cheonmasan,4,SC,9,,,1,1,1,,,,,,,,,,
 614,SUNSHINE COASTLINE,4,SC,9,,,,,1,1,1,,,,,,,,
-589,Accelerate,4,SC,8,,,1,1,,,,1,,,,,,,
+589,Accelerate,4,SC,8,1,1,1,2,,,,1,,,,,,,
 576,Missing You ~SOPHI Remix~,4,SC,9,,,2,2,,,,,,,,,,,
 573,Fairytale ~Pan Remix~,4,SC,9,,,1,1,,,,,,,,,,,
-568,From Hell to Breakfast,4,SC,8,,,,,,1,,,,,,,,,
+568,From Hell to Breakfast,4,SC,8,,,1,2,1,1,1,,,,,,,,
 562,New World,4,SC,9,1,,1,1,,,,,,,,,,,
 531,Complex,4,SC,9,1,1,1,2,,,,,,,,,,,
 512,Fundamental,4,MX,14,1,1,1,,1,,,,,,,,,,
@@ -387,7 +387,7 @@
 410,glory day (Mintorment Remix),4,SC,9,,,1,1,,,,,,,,,,,
 390,Desperado ~Nu Skool Mix~,4,SC,8,,,1,1,,,,,,,,,,,
 381,Ikazuchi,4,MX,15,,,1,,,,,,,,,,,,
-360,Melody,4,SC,9,,,1,,,,,,,,,,,,
+360,Melody,4,SC,9,,,2,1,1,,1,,,,,,,,
 293,Myosotis,4,SC,9,,,,1,,1,,,,,,,,,
 225,Marionette,4,SC,9,,,,,1,,2,,,,,,,,
 217,The One,4,SC,8,,,,2,,,1,,,,,,,,
@@ -396,8 +396,8 @@
 170,Urban Night,4,SC,9,,,,2,1,,,,,,,,,,
 154,Temptation,4,SC,9,1,,,1,1,1,,,,,,,,,
 79,NB RANGERS : Returns,4,SC,9,,,1,,1,1,,,,,,,,,
-30,Remains Of Doom,4,SC,9,,,,,,1,,,,,,,,,
-29,quixotic,4,SC,9,,,,,,1,,,,,,,,,
+30,Remains Of Doom,4,SC,9,2,1,1,1,1,1,,1,,,,,,,
+29,quixotic,4,SC,9,1,1,,,1,1,,,,,,,,,
 12,Don't Die,4,SC,9,,,1,,,1,,,,,,,,,
 818,Aria,4,SC,9,,,1,,1,,1,,,,,,,,
 813,That Girl (feat. Bira),4,SC,9,1,,1,,,,,,,,,,,,
@@ -488,13 +488,13 @@
 694,Operation☆DOTABATA!,4,SC,8,1,,,,,1,,,,,,,,,
 676,Eternal Damnation,4,MX,15,,,1,,,,,,,,,,,,
 672,Saga Script,4,SC,8,,,,1,,,1,,,,,,,,
-655,B!G-BANG CHALLENGE,4,MX,15,,,1,,,,,,,,,,,,
+655,B!G-BANG CHALLENGE,4,MX,15,,,1,,1,,,,,,,,,,
 646,Moonlit Wilderness,4,SC,8,,,1,,,,,,,,,,,,
 626,Basement,4,MX,13,,,,,2,,,,,,,,,,
 599,Peace Comes At a Price,4,SC,7,,,,1,1,,1,1,,,,,,,
-590,Behemoth,4,SC,8,1,,,,,,,,,,,,,,
+590,Behemoth,4,SC,8,1,2,1,,1,1,,,,,,,,,
 569,Celestial Tears,4,SC,8,,,1,,1,,,,,,,,,,
-529,Aquaris,4,SC,8,1,,,,,,,,,,,,,,
+529,Aquaris,4,SC,8,2,,2,,1,,1,,,,,,,,
 487,Deborah,4,SC,8,1,1,,,,,,,,,,,,,
 452,Never let you go,4,SC,7,,,,,2,,,,,,,,,,
 440,The Raindrop Flower ~jam-jam Remix~,4,SC,8,,,,2,,,,,,,,,,,
@@ -524,7 +524,7 @@
 654,1! 2! 3! 4! Streaming rn CHU!,4,MX,15,,,,1,,,,,,,,,,,
 650,Tekken Tag Tournament Piano Intro -Massive True Mix-,4,SC,8,,,,1,,,,1,,,,,,,
 624,평행고백 ~Pan Remix~,4,SC,8,,,1,1,1,,,,,,,,,,
-617,BlueWhite,4,MX,15,,,,1,,,,,,,,,,,
+617,BlueWhite,4,MX,15,,,,2,1,1,,,,,,,,,
 610,Inevitable Struggle,4,SC,8,,,1,,,,,1,,,,,,,
 596,Inside the Light,4,SC,8,,,,,,1,1,,,,,,,,
 582,The Lake of Oblivion ~jam-jam Remix~,4,SC,8,,1,,1,,,,,,,,,,,
@@ -776,7 +776,7 @@
 526,Dancin' Planet,4,SC,5,,,,,,,,,,,,,,,
 514,Misty E'ra 'Mui',4,MX,12,,,,,1,,,,,,,,,,
 501,Thor (Deepin' Absonant Mix),4,MX,13,,,,,,,,,,,,,,,
-465,Bang!!,4,SC,5,,,,,,,,,,,,,,,
+465,Bang!!,4,SC,5,,,,1,,,,,,,,,,,
 458,Vertical Floating,4,MX,14,,,,,,,,,,,,,,,
 414,In My Heart ~ESTi Remix~,4,SC,5,,,,,,,,,,,,,,,
 408,Your Smile,4,SC,6,,,,,,,,,,,,,,,
@@ -1227,7 +1227,7 @@
 293,Myosotis,4,MX,13,,,,,,,,,,,,,,,
 281,Sairai,4,SC,2,,,,,1,1,,,,,,,,,
 279,Magnolia,4,MX,13,,,,,,,,,,,,,,,
-274,혜성,4,SC,2,,,,,,,,,,,,,,,
+274,혜성,4,SC,2,,,,,,,1,1,,,,,,,
 251,Coastal Tempo,4,MX,11,,,,,,,,,,,,,,,
 240,Lover (BS Style),4,MX,12,1,,1,,,,,,,,,,,,
 231,Fermion,4,HD,11,,,,,,,,,,,,,,,
@@ -1386,7 +1386,7 @@
 612,Silver Will,4,SC,2,,,,,,,,,,,,,,,
 497,Shining My Boy,4,SC,1,,,,,,,1,,,,,,,,
 496,Retention,4,MX,10,1,,1,,,,,,,,,,,,
-488,Eternal Fantasy (Miya Vocal Mix),4,SC,1,,,,,,,,,,,,,,,
+488,Eternal Fantasy (Miya Vocal Mix),4,SC,1,,1,,,,,1,,,,,,,,
 481,Daylight,4,HD,10,,,1,,,,,,,,,,,,
 445,Cocked Pistol,4,HD,10,1,,1,,,,,,,,,,,,
 428,최종무곡,4,HD,11,,,,,1,,,,,,,,,,
@@ -1397,7 +1397,7 @@
 266,The Night Stage,4,SC,2,1,,,,,1,,,,,,,,,
 174,Do it,4,MX,12,,,,,,,,,,,,,,,
 171,Yo! Max!,4,SC,2,,,,,,,1,,,,,,,,
-165,Feel,4,SC,1,,,,,,,,,,,,,,,
+165,Feel,4,SC,1,1,,,,,,,,,,,,,,
 156,Ya! Party!,4,HD,8,,,,,1,,,,,,,,,,
 152,Sunny Side,4,HD,8,,,,,,,,,,,,,,,
 139,OBLIVION (Rockin' Night Style),4,HD,8,,,,,1,,,,,,,,,,
@@ -1414,18 +1414,18 @@
 608,Blue Destination,4,SC,1,,,,1,,,1,,,,,,,,
 527,느낌,4,SC,1,,,,,,,1,,,,,,,,
 447,FALLING IN LOVE,4,SC,1,1,,,,,,,,,,,,,,
-278,Legacy,4,SC,1,,1,,,,,,,,,,,,,
+278,Legacy,4,SC,1,1,1,,,,,,,,,,,,,
 277,Dream,4,SC,1,1,,,,,,,,,,,,,,
 264,Tell Me,4,SC,1,,,,,,,1,,,,,,,,
 638,Song For You,4,SC,1,,,,,,,,,,,,,,,
 554,Don't Cry,4,SC,1,,,,,,1,1,,,,,,,,
 354,DJMAX,4,SC,1,,,,1,1,,,,,,,,,,
-47,WHY,4,SC,1,,,,,,,,,,,,,,,
+47,WHY,4,SC,1,,,,,,1,,,,,,,,,
 22,Lift You Up,4,SC,1,,,,,,,1,,,,,,,,
 1,2Nite,4,SC,1,,,,,,,,,,,,,,,
 246,"고백, 꽃, 늑대",4,SC,1,,,,1,,,,,,,,,,,
-759,Mirage Night (feat. Yurisa),4,SC,1,,,,,,,,,,,,,,,
-584,Where Stars Rest,4,SC,1,,,,,,,,,,,,,,,
+759,Mirage Night (feat. Yurisa),4,SC,1,,,,,,1,,,,,,,,,
+584,Where Stars Rest,4,SC,1,1,,,,,,,,,,,,,,
 404,Season (Warm Mix),4,SC,1,,,,,,,1,,,,,,,,
 284,YUBIKIRI-GENMAN,4,SC,1,,,,,,,,,,,,,,,
 250,Closer,4,SC,1,1,,,,,,1,,,,,,,,
@@ -1478,7 +1478,7 @@
 536,Nihilism,5,SC,14,,,2,1,1,,2,,,,,,,,
 844,캐릭터 선택창 ~PahNic Remix~ (feat. Funtwo),5,SC,14,,,2,,,1,2,,1,,,,,,
 828,The Final Frontier,5,MX,13,,,,,,1,1,,1,,,,,,
-844,캐릭터 선택창 ~PahNic Remix~ (feat. Funtwo),5,MX,15,,,2,1,1,1,,,,,,,,,
+844,캐릭터 선택창 ~PahNic Remix~ (feat. Funtwo),5,MX,15,,,2,1,1,1,,,2,,,,,,
 795,미래소녀 (feat. 혜지),5,SC,14,,,2,,,1,1,,2,,,,,,
 791,MarbleBlue.,5,SC,14,1,2,2,1,2,,2,,1,,,,,,
 787,Eta Beta Eta,5,SC,14,1,,2,1,3,1,1,,2,,,,,,
@@ -1750,7 +1750,7 @@
 107,BlythE,5,SC,10,2,,2,,,,,,,,,,,,
 476,PUPA,5,MX,15,,,2,,,,,,2,,,,,,
 468,Cthugha,5,MX,15,,,,,,2,,,1,,,,,,
-822,DUKA,5,SC,10,1,1,2,,,3,,,1,,,,,,
+822,DUKA,5,SC,10,1,1,2,,,2,,,1,,,,,,
 817,Acid Invasion,5,SC,10,,,1,1,2,,1,,1,,,,,,
 800,Break The Chains (feat. Re.may),5,SC,9,,,2,,1,2,,,1,,,,,,
 773,Let Up,5,SC,9,,,1,,1,2,,,,,,,,,
@@ -1854,7 +1854,7 @@
 603,Right Time [ScreaM Records],5,SC,9,,1,2,1,,2,,,2,,,,,,
 505,밤비(Bambi) - DJMAX Edit -,5,SC,9,,,1,2,,,1,,1,,,,,,
 462,너로피어오라 ~Original Ver.~,5,SC,9,1,,2,2,1,,1,,,,,,,,
-422,부여성 ~Blosso Remix~,5,SC,9,,,,,,,,,,,,,,,
+422,부여성 ~Blosso Remix~,5,SC,9,1,1,2,,1,1,1,,1,,,,,,
 419,너로피어오라,5,SC,9,1,,1,2,1,,1,,,,,,,,
 411,glory day -JHS Remix-,5,SC,8,,,1,2,1,,,,1,,,,,,
 387,Grid System,5,SC,9,,,,,,,,,,,,,,,
@@ -1924,7 +1924,7 @@
 253,Creator,5,SC,8,2,,1,,,2,,,,,,,,,
 810,Sleipnir,5,MX,15,1,,1,3,,,,,1,,,,,,
 804,Final Lap,5,SC,8,,,1,,1,1,,,1,,,,,,
-803,EverDreams (feat. saewool),5,SC,8,,,,,,2,1,,1,,,,,,
+803,EverDreams (feat. saewool),5,SC,8,,,,,,1,1,,1,,,,,,
 56,Chain of Gravity,5,SC,8,,,2,1,1,1,,,1,,,,,,
 730,The Edge,5,SC,9,,,,,,,,,,,,,,,
 369,Voyage,5,SC,8,,,,,,,,,,,,,,,
@@ -1933,7 +1933,7 @@
 117,Eternal Memory ~소녀의 꿈~,5,SC,8,,,,,,,,,,,,,,,
 89,Smoky Quartz,5,SC,8,2,,1,1,,1,,,1,,,,,,
 88,Showtime,5,SC,8,,,2,,,1,1,,1,,,,,,
-66,Good Bye,5,SC,8,2,1,1,,1,,1,,3,,,,,,
+66,Good Bye,5,SC,8,2,1,1,,1,,1,,2,,,,,,
 703,Checkmate (feat. Re.may),5,MX,14,,,,,1,,2,,1,,,,,,
 681,Nature Fortress,5,SC,8,,,,,,,,,,,,,,,
 657,Cata (feat. NC.A),5,SC,8,2,,2,1,2,,1,,1,,,,,,
@@ -1990,7 +1990,7 @@
 673,TOXIC (feat. Shabel Tonya),5,SC,8,1,2,,1,1,,1,,1,,,,,,
 670,RIPPER,5,MX,13,,,,,,,,,,,,,,,
 644,Heat Haze Shadow,5,SC,8,,,,,,,,,,,,,,,
-628,Break Out,5,SC,8,1,,1,,1,2,,,1,,,,,,
+628,Break Out,5,SC,8,1,,1,,1,1,,,1,,,,,,
 593,ECiLA,5,SC,8,1,1,1,2,,,2,,1,,,,,,
 592,Critical Point,5,MX,14,,,,,,,,,,,,,,,
 586,Can We Talk (Broken Dog Leg Mix),5,SC,8,,,,,,,,,,,,,,,
@@ -2270,7 +2270,7 @@
 791,MarbleBlue.,5,MX,14,,,,,1,,,,2,,,,,,
 763,Octet rule,5,MX,14,,,,,1,,,,,3,,,,,
 727,MAX POWER (feat. Larakay),5,SC,6,,,,,,,,,,,,,,,
-441,Alone,5,SC,6,1,,,1,,2,,,,,,,,,
+441,Alone,5,SC,6,1,,,1,,1,,,,,,,,,
 299,유령,5,SC,5,2,,1,,,2,,,1,,,,,,
 715,Shimmer (feat. Kinoko),5,MX,13,,,1,,1,,,,2,,,,,,
 508,Charming World,5,SC,5,,,,,2,1,1,,1,,,,,,
@@ -2342,7 +2342,7 @@
 187,Remember Me,5,MX,13,,,,,,,,,,,,,,,
 179,Lisrim,5,MX,13,,,,,,,,,,,,,,,
 112,CnP,5,SC,5,,,,,,,,,,,,,,,
-96,Syriana,5,SC,5,,,,,,,,,,,,,,,
+96,Syriana,5,SC,5,1,,2,,,,,,,,,,,,
 58,DIVINE SERVICE,5,SC,5,,,,,,,,,,,,,,,
 7,Binary World,5,MX,13,,,,,,,,,,,,,,,
 2,Alone,5,SC,5,,,,,,,1,,2,,,,,,
@@ -2845,12 +2845,12 @@
 459,Voyage,5,HD,12,,,1,,1,2,,,1,,,,,,
 337,Love is Beautiful,5,SC,1,,,,,,,,,,,,,,,
 28,Over Your Dream,5,HD,11,,,,,,,,,,,,,,,
-828,The Final Frontier,5,MX,13,,,,,,,,,,,,,,,
+828,The Final Frontier,5,MX,13,,,,,,1,1,,1,,,,,,
 805,"PPPP (feat. Hatsune Miku, Kasane Teto)",5,MX,12,,,,,,,1,,,,,,,,
 774,On Da Floor,5,MX,12,2,,,,1,,,,1,,,,,,
 756,Heliocentrism,5,HD,12,,2,,,2,1,,,,,,,,,
 411,glory day -JHS Remix-,5,HD,11,,,,,,1,,,2,,,,,,
-157,Ghost Voices,5,HD,11,,,1,,1,1,,,1,,,,,,
+157,Ghost Voices,5,HD,11,,,1,,1,1,1,,1,,,,,,
 89,Smoky Quartz,5,HD,10,,,2,1,,1,,,1,,,,,,
 60,Fallen Angel,5,HD,9,,,2,,1,2,,,1,,,,,,
 296,Ververg,5,MX,12,,,,1,1,1,,,,,,,,,
@@ -2858,7 +2858,7 @@
 162,Get Jinxed,5,MX,12,,,,,1,1,,,,,,,,,
 105,A.I,5,NM,9,,,1,,,,,,2,,,,,,
 117,Eternal Memory ~소녀의 꿈~,5,HD,9,,,,,1,,,,1,,,,,,
-616,To the Future.,5,SC,1,1,1,,,,2,,,1,,,,,,
+616,To the Future.,5,SC,1,1,1,,,,2,2,,1,,,,,,
 583,The Tune of the Azure Light ~Parang Remix~,5,HD,12,2,,,,,1,,,1,,,,,,
 519,Set Me Free,5,MX,12,,,,,,1,2,,,,,,,,
 425,연합군과 제국군,5,MX,12,2,,,,,1,1,,1,,,,,,
@@ -2871,7 +2871,7 @@
 494,Never Ending TECHNIKA,5,SC,2,,,,,1,,1,,,,,,,,
 293,Myosotis,5,HD,12,1,,1,,,,,,1,,,,,,
 646,Moonlit Wilderness,5,MX,12,1,,,,1,,1,,1,,,,,,
-608,Blue Destination,5,SC,1,2,,1,,,1,,,1,,,,,,
+608,Blue Destination,5,SC,1,2,,1,,,1,1,,1,,,,,,
 158,Sad Machine,5,SC,1,,,,,1,,1,,,,,,,,
 278,Legacy,5,SC,1,,,,1,,,1,,,,,,,,
 454,Over Me,5,HD,10,1,,1,,,,,,1,,,,,,
@@ -3872,235 +3872,235 @@
 249,영원,6,SC,5,1,,,,,1,1,,,,,1,,,
 527,느낌,6,SC,5,,,,,,1,1,,,,,,,,
 547,너에게로 갈래,6,SC,5,,1,,,,,1,,,,1,1,,,
-553,DIE IN,8,SC,15,,3,2,,3,3,3,,,2,,,2,,3
-756,Heliocentrism,8,SC,15,,1,3,,2,3,1,,,,,,1,2,3
+553,DIE IN,8,SC,15,,3,2,,3,2,3,,,2,,,3,,3
+756,Heliocentrism,8,SC,15,,1,3,,2,1,1,,,,,,3,2,3
 767,The Castle of Báthory,8,SC,15,,3,3,,3,2,2,,,,,,2,,2
 635,O'men,8,SC,15,,3,3,,2,2,3,,,,,,2,2,3
 654,1! 2! 3! 4! Streaming rn CHU!,8,SC,15,,1,2,,3,3,2,,,,,,3,,3
 843,추격 섬멸전 ~Wicked Frontier Remix~,8,SC,15,,,,,,,,,,,,,,,
-815,Megingjord,8,SC,15,,,3,,2,3,1,,,,,,,,2
-810,Sleipnir,8,SC,15,,,3,,1,3,1,,,,,,,,3
-807,RE;DIEIN,8,SC,15,,,3,,,2,2,,,,,,3,2,3
-794,MEGATØNiX PHANTØM,8,SC,15,,,2,,2,2,3,,,3,,,,,3
-524,Zero-Break,8,SC,15,,1,3,,2,3,2,,,,,,,1,3
-304,Bamboo on Bamboo,8,SC,15,,,3,,1,1,1,,,,,,3,3,
-46,We're All Gonna Die,8,SC,15,,3,3,,3,3,1,,,,,,2,2,2
-789,LAMIA,8,SC,15,,,3,,3,1,1,,,,,,2,3,2
-781,脳天直撃,8,SC,15,,,3,,2,2,2,,,,,,1,1,2
-722,PUPA (xi Remix),8,SC,15,,2,2,,2,3,3,,,,,,1,,3
-713,Rise Up,8,SC,15,,1,2,,3,3,2,,,,,,1,,
-690,Gregorius | Symphony,8,SC,14,,,3,,,3,3,,,,,,,,
-631,Diomedes,8,SC,14,,3,3,,3,2,2,,,,,,1,,3
-617,BlueWhite,8,SC,14,,,1,,1,3,3,,,,,,2,1,3
+815,Megingjord,8,SC,15,,,3,,2,,1,,,,,,3,,2
+810,Sleipnir,8,SC,15,,,3,,1,,1,,,,,,3,,3
+807,RE;DIEIN,8,SC,15,,,3,,,3,2,,,,,,2,2,3
+794,MEGATØNiX PHANTØM,8,SC,15,,,2,,2,,3,,,3,,,2,,3
+524,Zero-Break,8,SC,15,,1,3,,2,,2,,,,,,3,1,3
+304,Bamboo on Bamboo,8,SC,15,,,3,,1,3,1,,,,,,1,3,
+46,We're All Gonna Die,8,SC,15,,3,3,,3,2,1,,,,,,3,2,2
+789,LAMIA,8,SC,15,,,3,,3,2,1,,,,,,1,3,2
+781,脳天直撃,8,SC,15,,,3,,2,1,2,,,,,,2,1,2
+722,PUPA (xi Remix),8,SC,15,,2,2,,2,1,3,,,,,,3,,3
+713,Rise Up,8,SC,15,,1,2,,3,1,2,,,,,,3,,
+690,Gregorius | Symphony,8,SC,14,,,3,,,,3,,,,,,3,,
+631,Diomedes,8,SC,14,,3,3,,3,1,2,,,,,,2,,3
+617,BlueWhite,8,SC,14,,,1,,1,2,3,,,,,,3,1,3
 544,LIMBO,8,SC,14,,3,2,,2,2,2,,,,,,2,,3
 198,ouroboros -twin stroke of the end-,8,SC,14,,1,3,,2,2,1,,,,,,2,2,1
-276,ANiMA,8,SC,15,,2,2,,1,3,3,,,,,,2,1,1
-791,MarbleBlue.,8,SC,14,,2,3,,2,2,2,,,,,,1,,2
-775,Pharm of Charm,8,SC,15,,,3,,2,1,,,,,,,3,3,2
-739,Grievous Lady,8,SC,14,,,3,,2,,1,,,,,,2,2,1
-733,#1f1e33,8,SC,14,,2,3,,2,2,3,,,,,,1,2,2
-718,The Universe,8,SC,15,,,3,,3,3,2,,,,,,2,,2
-591,Carrot Carrot,8,SC,14,,3,2,,1,3,3,,,,,,,,3
-147,Road Of Death,8,SC,14,,,2,,3,3,,,,,,,2,,3
-674,Diomedes ~Extended Mix~,8,SC,14,,,3,,3,2,2,,,,,,1,,2
-619,Kamui,8,SC,14,,,3,,3,2,3,,,,,,1,3,1
+276,ANiMA,8,SC,15,,2,2,,1,2,3,,,,,,3,1,1
+791,MarbleBlue.,8,SC,14,,2,3,,2,1,2,,,,,,2,,2
+775,Pharm of Charm,8,SC,15,,,3,,2,3,,,,,,,1,3,2
+739,Grievous Lady,8,SC,14,,,3,,2,2,1,,,,,,,2,1
+733,#1f1e33,8,SC,14,,2,3,,2,1,3,,,,,,2,2,2
+718,The Universe,8,SC,15,,,3,,3,2,2,,,,,,3,,2
+591,Carrot Carrot,8,SC,14,,3,2,,1,,3,,,,,,3,,3
+147,Road Of Death,8,SC,14,,,2,,3,2,,,,,,,3,,3
+674,Diomedes ~Extended Mix~,8,SC,14,,,3,,3,1,2,,,,,,2,,2
+619,Kamui,8,SC,14,,,3,,3,1,3,,,,,,2,3,1
 602,Rhapsody for The VEndetta,8,SC,14,,1,3,,2,2,2,,,3,,,2,2,1
-601,Revenger,8,SC,14,,,3,,2,1,1,,,,,,3,3,1
-42,v o l d e n u i t,8,SC,14,,,2,,1,3,2,,,,,,1,2,3
+601,Revenger,8,SC,14,,,3,,2,3,1,,,,,,1,3,1
+42,v o l d e n u i t,8,SC,14,,,2,,1,1,2,,,,,,3,2,3
 81,Nightmare,8,SC,14,,3,,,,2,1,,,,,,2,,3
 844,캐릭터 선택창 ~PahNic Remix~ (feat. Funtwo),8,SC,14,,,,,,,,,,,,,,,
-830,Permutation (Original Ver.),8,SC,13,,,3,,1,3,2,,,,,,,1,
-823,Endless Dream (Game Ver.),8,SC,14,,1,3,,2,1,1,,,3,,,3,1,2
-685,alliance,8,SC,14,,2,3,,2,3,1,,,,,,,,2
-23,Mulch,8,SC,14,,,2,,,,1,,,,,,3,3,2
-764,Re-Rule,8,SC,14,,,3,,2,2,1,,,,,,1,,2
+830,Permutation (Original Ver.),8,SC,13,,,3,,1,,2,,,,,,3,1,
+823,Endless Dream (Game Ver.),8,SC,14,,1,3,,2,3,1,,,3,,,1,1,2
+685,alliance,8,SC,14,,2,3,,2,,1,,,,,,3,,2
+23,Mulch,8,SC,14,,,2,,,3,1,,,,,,,3,2
+764,Re-Rule,8,SC,14,,,3,,2,1,1,,,,,,2,,2
 737,Far Away Light,8,SC,14,,,3,,3,2,1,,,3,,,2,3,2
-660,ELIXIR,8,SC,14,,1,3,,2,2,2,,,,,,3,2,1
-629,Broken Sphere,8,SC,14,,1,3,,1,2,2,,,,,,1,1,3
-570,Ariant ~ned Remix~,8,SC,14,,1,2,,1,3,1,,,,,,1,,1
+660,ELIXIR,8,SC,14,,1,3,,2,3,2,,,,,,2,2,1
+629,Broken Sphere,8,SC,14,,1,3,,1,1,2,,,,,,2,1,3
+570,Ariant ~ned Remix~,8,SC,14,,1,2,,1,1,1,,,,,,3,,1
 556,Hell'o,8,SC,14,,,3,,1,2,3,,,,,,2,3,3
-513,KICK IT,8,SC,14,,1,2,,2,3,2,,,,,,2,2,3
-512,Fundamental,8,SC,14,,1,3,,2,2,,,,,,,3,,2
-453,Odysseus,8,SC,14,,3,1,,1,3,1,,,,,,1,,2
-325,Xeus,8,SC,14,,1,3,,,3,1,,,,,,1,,2
-825,New Arm (feat. RVNBAEK),8,SC,14,,,3,,2,1,1,,,,,,2,,1
-374,SON OF SUN ~Extended Mix~,8,SC,14,,,3,,,1,1,,,,,,3,2,2
-768,Trembling Moods,8,SC,14,,,3,,2,2,2,,,,,,,,2
+513,KICK IT,8,SC,14,,1,2,,2,2,2,,,,,,3,2,3
+512,Fundamental,8,SC,14,,1,3,,2,3,,,,,,,2,,2
+453,Odysseus,8,SC,14,,3,1,,1,1,1,,,,,,3,,2
+325,Xeus,8,SC,14,,1,3,,,1,1,,,,,,3,,2
+825,New Arm (feat. RVNBAEK),8,SC,14,,,3,,2,2,1,,,,,,1,,1
+374,SON OF SUN ~Extended Mix~,8,SC,14,,,3,,,3,1,,,,,,1,2,2
+768,Trembling Moods,8,SC,14,,,3,,2,,2,,,,,,2,,2
 765,RUN & RUN,8,SC,13,,,3,,2,,2,,,,,,,,3
-384,Trrricksters!!,8,SC,13,,2,3,,,2,2,,,,,,1,2,2
-695,Oxygen Destroyer,8,SC,14,,1,3,,3,2,2,,,,,,,3,3
+384,Trrricksters!!,8,SC,13,,2,3,,,1,2,,,,,,2,2,2
+695,Oxygen Destroyer,8,SC,14,,1,3,,3,,2,,,,,,2,3,3
 676,Eternal Damnation,8,SC,14,,,3,,1,2,2,,,,,,2,,
-659,Delusion (feat. SOONHO),8,SC,14,,,3,,1,2,1,,,,,,1,2,2
+659,Delusion (feat. SOONHO),8,SC,14,,,3,,1,1,1,,,,,,2,2,2
 588,3:33,8,SC,14,,2,2,,3,2,1,,,,,,2,,1
 552,Deadly Bomber,8,SC,14,,1,3,,2,2,2,,,,,,2,2,2
-381,Ikazuchi,8,SC,14,,,2,,2,3,2,,,,,,1,2,1
+381,Ikazuchi,8,SC,14,,,2,,2,1,2,,,,,,3,2,1
 236,In my Dream,8,SC,13,,3,3,,,2,2,,,,,,2,3,2
-826,Permutation Part.2,8,SC,13,,,3,,1,2,1,,,,,,,1,
-788,"Good bye, Merry-Go-Round.",8,SC,14,,1,2,,,1,2,,,,,,2,3,
-751,ALTER/ƏgØ,8,SC,13,,3,2,,,1,2,,,2,,,,,2
+826,Permutation Part.2,8,SC,13,,,3,,1,,1,,,,,,2,1,
+788,"Good bye, Merry-Go-Round.",8,SC,14,,1,2,,,2,2,,,,,,1,3,
+751,ALTER/ƏgØ,8,SC,13,,3,2,,,,2,,,2,,,1,,2
 746,trappola bewitching,8,SC,13,,1,2,,3,1,1,,,,,,1,1,2
-742,Malicious Mischance,8,SC,13,,1,3,,2,2,,,,,,,,2,2
-537,Sand Storm,8,SC,13,,1,3,,,1,,,,,,,2,3,2
-364,SON OF SUN,8,SC,13,,,3,,1,2,1,,,,,,3,2,
+742,Malicious Mischance,8,SC,13,,1,3,,2,,,,,,,,2,2,2
+537,Sand Storm,8,SC,13,,1,3,,,2,,,,,,,1,3,2
+364,SON OF SUN,8,SC,13,,,3,,1,3,1,,,,,,2,2,
 653,Kill Trap,8,SC,13,,1,3,,1,2,1,,,,,,2,1,
 543,A Site De La Rue,8,SC,13,,,3,,2,2,,,,,,,2,,2
-476,PUPA,8,SC,13,,1,2,,3,3,1,,,,,,1,,1
+476,PUPA,8,SC,13,,1,2,,3,1,1,,,,,,3,,1
 391,Enemy Storm ~Dark Jungle Mix~,8,SC,13,,,2,,1,2,2,,,,,,2,2,
 332,D2,8,SC,13,,3,3,,2,2,,,,,,,2,,3
-222,Nevermind,8,SC,13,,2,3,,1,2,3,,,,,,1,3,
+222,Nevermind,8,SC,13,,2,3,,1,1,3,,,,,,2,3,
 197,"Marry me, Nightmare",8,SC,13,,1,2,,1,2,1,,,3,,,2,,1
-13,Enter The Universe,8,SC,13,,,1,,1,3,1,,,,,,,,2
+13,Enter The Universe,8,SC,13,,,1,,1,,1,,,,,,3,,2
 806,Proliferation,8,SC,13,,,3,,2,1,,,,,,,1,2,1
 787,Eta Beta Eta,8,SC,13,,2,2,,3,1,,,,,,,1,1,2
-785,Dazzle hop,8,SC,13,,1,3,,1,1,1,,,,,,3,2,
-783,And Revive The Melody,8,SC,13,,,3,,1,1,,,,3,,,2,,
-702,小緋縅(kohiodoshi),8,SC,13,,,1,,1,2,2,,,,,,1,,1
-763,Octet rule,8,SC,13,,3,2,,1,1,,,,3,,,,,2
-755,HEAVENLY STRIKE,8,SC,13,,,2,,2,2,2,,,,,,,,1
+785,Dazzle hop,8,SC,13,,1,3,,1,3,1,,,,,,1,2,
+783,And Revive The Melody,8,SC,13,,,3,,1,2,,,,3,,,1,,
+702,小緋縅(kohiodoshi),8,SC,13,,,1,,1,1,2,,,,,,2,,1
+763,Octet rule,8,SC,13,,3,2,,1,,,,,3,,,1,,2
+755,HEAVENLY STRIKE,8,SC,13,,,2,,2,,2,,,,,,2,,1
 611,NORSE WIND,8,SC,13,,1,2,,1,2,1,,,,,,2,1,
 583,The Tune of the Azure Light ~Parang Remix~,8,SC,13,,2,1,,,2,2,,,,,,2,1,2
 545,Zeroize,8,SC,13,,3,3,,,2,,,,,,,2,2,2
-536,Nihilism,8,SC,13,,,1,,,2,2,,,,,,1,1,1
+536,Nihilism,8,SC,13,,,1,,,1,2,,,,,,2,1,1
 507,Bright Future,8,SC,13,,1,1,,2,2,,,,,,,2,,
-356,HEXAD,8,SC,13,,,3,,1,1,3,,,,,,,3,
+356,HEXAD,8,SC,13,,,3,,1,,3,,,,,,1,3,
 289,Entrance,8,SC,13,,2,2,,,2,1,,,,,,2,2,1
 235,Heart of Witch,8,SC,13,,1,3,,1,2,1,,,,,,2,,
 845,헨돈마이어 ~ned Remix~,8,SC,13,,,,,,,,,,,,,,,
-827,Seek and destroy,8,SC,11,,2,2,,1,,3,,,,,,1,3,
-373,Airwave ~Extended Mix~,8,SC,13,,,2,,,2,,,,,,,,,
+827,Seek and destroy,8,SC,11,,2,2,,1,1,3,,,,,,,3,
+373,Airwave ~Extended Mix~,8,SC,13,,,2,,,,,,,,,,2,,
 786,Don't Fight The Music,8,SC,13,,2,3,,1,2,1,,,2,,,2,1,2
 685,alliance,8,MX,15,,,,,,,,,,,,,,,
-469,DataErr0r,8,SC,13,,,1,,,2,3,,,,,,,2,
-766,Samsara Garden (feat. SOONHO),8,SC,13,,2,3,,,1,2,,,,,,2,,
-743,MIRINAE (DJMAX Edit),8,SC,13,,,1,,1,2,2,,,,,,,,2
+469,DataErr0r,8,SC,13,,,1,,,,3,,,,,,2,2,
+766,Samsara Garden (feat. SOONHO),8,SC,13,,2,3,,,2,2,,,,,,1,,
+743,MIRINAE (DJMAX Edit),8,SC,13,,,1,,1,,2,,,,,,2,,2
 739,Grievous Lady,8,MX,15,,,,,,,,,,,,,,,
-738,Fracture Ray,8,SC,13,,2,1,,,2,2,,,,,,,1,3
-704,CHiNEM4TiC,8,SC,12,,1,2,,1,1,2,,,,,,2,1,
-640,Insane Drift,8,SC,12,,,2,,2,2,1,,,,,,1,1,1
-626,Basement,8,SC,12,,,3,,,1,1,,,,,,2,1,1
-566,Vertical Eclipse,8,SC,13,,,2,,1,3,1,,,,,,1,1,1
-541,Weird Wave,8,SC,13,,1,1,,,2,,,,,,,,,1
+738,Fracture Ray,8,SC,13,,2,1,,,,2,,,,,,2,1,3
+704,CHiNEM4TiC,8,SC,12,,1,2,,1,2,2,,,,,,1,1,
+640,Insane Drift,8,SC,12,,,2,,2,1,1,,,,,,2,1,1
+626,Basement,8,SC,12,,,3,,,2,1,,,,,,1,1,1
+566,Vertical Eclipse,8,SC,13,,,2,,1,1,1,,,,,,3,1,1
+541,Weird Wave,8,SC,13,,1,1,,,,,,,,,,2,,1
 517,Plasma Sphere,8,SC,12,,1,2,,2,2,2,,,,,,2,3,
-431,"카트라이더, 크레이지아케이드, 버블파이터 Main theme ~CHUCK Remix~",8,SC,12,,,2,,,2,2,,,,,,1,1,2
+431,"카트라이더, 크레이지아케이드, 버블파이터 Main theme ~CHUCK Remix~",8,SC,12,,,2,,,1,2,,,,,,2,1,2
 383,The wheel to the right,8,SC,12,,,2,,,2,2,,,,,,2,1,1
 342,Rage Of Demon,8,SC,12,,,2,,1,2,2,,,,,,2,1,
-286,CODE NAME : ZERO,8,SC,13,,,2,,,2,,,,,,,3,1,
+286,CODE NAME : ZERO,8,SC,13,,,2,,,3,,,,,,,2,1,
 92,STALKER,8,SC,12,,,3,,,1,3,,,,,,1,3,1
 24,NB RANGER - Virgin Force,8,SC,12,,,2,,,2,1,,,,,,2,1,
 838,섈로우 킵 보스 ~RVNBAEK Remix~,8,SC,12,,,,,,,,,,,,,,,
-829,Permutation Part.1,8,SC,12,,,2,,,2,2,,,,,,,2,
-814,Touch The Sky,8,SC,12,,,1,,1,1,1,,,3,,,2,,2
+829,Permutation Part.1,8,SC,12,,,2,,,,2,,,,,,2,2,
+814,Touch The Sky,8,SC,12,,,1,,1,2,1,,,3,,,1,,2
 795,미래소녀 (feat. 혜지),8,SC,13,,,2,,,2,2,,,,,,2,,1
 725,I wanna make some NO!ZE,8,SC,12,,,1,,,,,,,,,,,3,
 327,Airwave,8,SC,12,,,,,,,,,,,,,,,
-744,NEO WINGS,8,SC,12,,1,2,,2,2,1,,,,,,1,,2
-736,Cyaegha,8,SC,12,,,2,,2,,1,,,,,,3,3,
-720,Violent (feat. SAINT MILLER),8,SC,12,,2,2,,1,2,1,,,,,,1,2,1
+744,NEO WINGS,8,SC,12,,1,2,,2,1,1,,,,,,2,,2
+736,Cyaegha,8,SC,12,,,2,,2,3,1,,,,,,,3,
+720,Violent (feat. SAINT MILLER),8,SC,12,,2,2,,1,1,1,,,,,,2,2,1
 707,Hero,8,SC,12,,,2,,1,1,2,,,,,,1,2,
 703,Checkmate (feat. Re.may),8,SC,12,,1,1,,1,1,2,,,,,,1,2,1
-639,Synchronize,8,SC,12,,1,2,,1,2,2,,,,,,1,2,1
-553,DIE IN,8,MX,15,,2,1,,2,1,2,,,2,,,2,,2
-670,RIPPER,8,SC,12,,1,2,,1,1,1,,,,,,2,2,
-598,Paradise,8,SC,12,,,2,,1,1,1,,,,,,3,3,2
+639,Synchronize,8,SC,12,,1,2,,1,1,2,,,,,,2,2,1
+553,DIE IN,8,MX,15,,2,1,,2,2,2,,,2,,,1,,2
+670,RIPPER,8,SC,12,,1,2,,1,2,1,,,,,,1,2,
+598,Paradise,8,SC,12,,,2,,1,3,1,,,,,,1,3,2
 592,Critical Point,8,SC,12,,1,2,,2,2,2,,,,,,2,2,1
-519,Set Me Free,8,SC,12,,,1,,,1,3,,,,,,,3,
+519,Set Me Free,8,SC,12,,,1,,,,3,,,,,,1,3,
 509,Disappearing Act,8,SC,12,,,2,,1,2,2,,,,,,2,1,1
-480,Airlock,8,SC,12,,2,2,,1,2,1,,,,,,1,,
-476,PUPA,8,MX,15,,,2,,2,2,1,,,,,,1,,
+480,Airlock,8,SC,12,,2,2,,1,1,1,,,,,,2,,
+476,PUPA,8,MX,15,,,2,,2,1,1,,,,,,2,,
 468,Cthugha,8,SC,12,,,2,,1,2,2,,,,,,2,2,
-225,Marionette,8,SC,12,,,2,,2,2,3,,,,,,1,1,
-194,Got more raves?,8,SC,12,,1,2,,1,2,2,,,,,,1,3,1
+225,Marionette,8,SC,12,,,2,,2,1,3,,,,,,2,1,
+194,Got more raves?,8,SC,12,,1,2,,1,1,2,,,,,,2,3,1
 452,Never let you go,8,SC,12,,,2,,2,2,1,,,,,,2,3,1
 840,엘븐가드 ~chomin Remix~,8,SC,12,,,,,,,,,,,,,,,
 836,백야 ~Kapoo Remix~,8,SC,12,,,,,,,,,,,,,,,
 234,Grave Consequence,8,SC,12,,,,,,,,,,,,,,,
 815,Megingjord,8,MX,15,,,,,,,,,,,,,,,
 812,"Summer Ride (feat. chomin, Funtwo)",8,SC,12,,,,,,,,,,,,,,,
-808,Rebound Alpha,8,SC,12,,,1,,2,1,2,,,,,,,,
-156,Ya! Party!,8,SC,12,,,3,,1,,,,,,,,2,,
+808,Rebound Alpha,8,SC,12,,,1,,2,,2,,,,,,1,,
+156,Ya! Party!,8,SC,12,,,3,,1,2,,,,,,,,,
 782,Ai Nov,8,SC,12,,,2,,,2,1,,,,,,2,,2
 12,Don't Die,8,SC,12,,,,,,,,,,,,,,,
 741,Lost Desire (feat.Sennzai),8,SC,12,,2,1,,1,2,2,,,,,,2,,1
 740,Löschen,8,SC,12,,,,,,,,,,,,,,,
 168,Space of Soul,8,SC,12,,1,2,,,2,1,,,,,,2,1,1
 545,Zeroize,8,MX,15,,2,2,,1,1,,,,,,,1,2,1
-374,SON OF SUN ~Extended Mix~,8,MX,15,,,2,,,1,2,,,,,,2,2,
-663,Krush,8,SC,12,,1,2,,1,3,1,,,2,,,2,,1
-625,Away,8,SC,11,,,1,,1,2,1,,,,,,1,,2
+374,SON OF SUN ~Extended Mix~,8,MX,15,,,2,,,2,2,,,,,,1,2,
+663,Krush,8,SC,12,,1,2,,1,2,1,,,2,,,3,,1
+625,Away,8,SC,11,,,1,,1,1,1,,,,,,2,,2
 590,Behemoth,8,SC,11,,2,3,,,2,1,,,,,,2,2,1
-568,From Hell to Breakfast,8,SC,11,,,2,,2,2,2,,,,,,,2,1
-565,The Four Seasons : Summer 2017,8,SC,12,,2,2,,3,2,1,,,,,,1,2,
+568,From Hell to Breakfast,8,SC,11,,,2,,2,,2,,,,,,2,2,1
+565,The Four Seasons : Summer 2017,8,SC,12,,2,2,,3,1,1,,,,,,2,2,
 564,Stolen Memory,8,SC,12,,,2,,2,2,1,,,,,,2,,2
 560,Love.Game.Money,8,SC,12,,1,1,,1,2,2,,,,,,2,2,
-551,Back to the oldschool,8,SC,12,,,2,,1,1,,,,,,,2,,
+551,Back to the oldschool,8,SC,12,,,2,,1,2,,,,,,,1,,
 549,!!New Game Start!!,8,SC,12,,1,1,,3,2,2,,,,,,2,,
-455,Red Eyes,8,SC,12,,1,2,,1,2,2,,,,,,1,,1
-290,L,8,SC,12,,,1,,1,2,2,,,,,,,,2
+455,Red Eyes,8,SC,12,,1,2,,1,1,2,,,,,,2,,1
+290,L,8,SC,12,,,1,,1,,2,,,,,,2,,2
 254,Dark ENVY,8,SC,12,,,2,,1,2,2,,,,,,2,1,
-193,"Good Night, Bad Luck.",8,SC,12,,1,2,,2,2,1,,,,,,1,1,2
-178,Kensei,8,SC,12,,1,2,,2,2,1,,,,,,1,1,
-489,Festa Nova,8,SC,11,,,2,,,1,,,,3,,,2,,
+193,"Good Night, Bad Luck.",8,SC,12,,1,2,,2,1,1,,,,,,2,1,2
+178,Kensei,8,SC,12,,1,2,,2,1,1,,,,,,2,1,
+489,Festa Nova,8,SC,11,,,2,,,2,,,,3,,,1,,
 813,That Girl (feat. Bira),8,SC,12,,,,,,,,,,,,,,,
 136,NB RANGER,8,SC,12,,,,,,,,,,,,,,,
 128,Lemonade,8,SC,12,,,,,,,,,,,,,,,
 76,My Alias,8,SC,12,,,,,,,,,,,,,,,
 713,Rise Up,8,MX,15,,,,,,,,,,,,,,,
 151,SIN ~The Last Scene~,8,SC,12,,,,,,,,,,,,,,,
-127,KUDA,8,SC,12,,1,3,,,1,1,,,,,,,2,
+127,KUDA,8,SC,12,,1,3,,,,1,,,,,,1,2,
 6,Beyond Yourself,8,SC,11,,,,,,,,,,,,,,,
 747,ultradiaxon-N3,8,SC,12,,,,,,,,,,,,,,,
-721,DUKA -Special Edit-,8,SC,12,,1,2,,2,2,1,,,,,,1,1,1
-699,Tok9 Train,8,SC,11,,,2,,,2,1,,,,,,1,2,1
+721,DUKA -Special Edit-,8,SC,12,,1,2,,2,1,1,,,,,,2,1,1
+699,Tok9 Train,8,SC,11,,,2,,,1,1,,,,,,2,2,1
 674,Diomedes ~Extended Mix~,8,MX,15,,1,2,,2,1,2,,,,,,1,,
 631,Diomedes,8,MX,15,,1,2,,2,1,2,,,,,,1,,
-535,Metagalactic,8,SC,12,,3,2,,2,1,1,,,,,,,1,2
-173,BLACK GOLD,8,SC,11,,1,2,,,2,1,,,,,,1,,
-696,Polyphonic,8,SC,12,,,2,,,2,,,,,,,1,1,3
-655,B!G-BANG CHALLENGE,8,SC,12,,,2,,1,2,1,,,,,,1,2,
-637,Rhythm In My Head,8,SC,12,,,2,,2,2,2,,,,,,1,2,
+535,Metagalactic,8,SC,12,,3,2,,2,,1,,,,,,1,1,2
+173,BLACK GOLD,8,SC,11,,1,2,,,1,1,,,,,,2,,
+696,Polyphonic,8,SC,12,,,2,,,1,,,,,,,2,1,3
+655,B!G-BANG CHALLENGE,8,SC,12,,,2,,1,1,1,,,,,,2,2,
+637,Rhythm In My Head,8,SC,12,,,2,,2,1,2,,,,,,2,2,
 523,Winners,8,SC,12,,,2,,1,2,,,,,,,2,,
 510,Emerge,8,SC,11,,1,1,,1,2,1,,,,,,2,1,1
 458,Vertical Floating,8,SC,11,,,1,,1,2,1,,,,,,2,1,
 427,죽음의 신 : 크로우 크루아흐,8,SC,12,,2,1,,,2,2,,,,,,2,,
 348,XLASHER,8,SC,11,,1,1,,1,1,2,,,,,,1,2,
-322,Supernova,8,SC,11,,2,1,,2,2,2,,,,,,1,2,1
+322,Supernova,8,SC,11,,2,1,,2,1,2,,,,,,2,2,1
 287,conflict,8,SC,11,,2,2,,,2,1,,,,,,2,2,
 279,Magnolia,8,SC,12,,,1,,,1,3,,,,,,1,2,
-218,Ventilator,8,SC,12,,2,2,,,2,,,,,,,1,1,1
-692,HIGH5LANDER,8,SC,12,,,2,,1,2,1,,,,,,1,1,
+218,Ventilator,8,SC,12,,2,2,,,1,,,,,,,2,1,1
+692,HIGH5LANDER,8,SC,12,,,2,,1,1,1,,,,,,2,1,
 731,The Lost World,8,SC,12,,,,,,,,,,,,,,,
 4,Armored Phantom,8,SC,11,,,,,,,,,,,,,,,
-748,Gate of Elysium,8,SC,11,,,2,,2,2,1,,,,,,1,,
+748,Gate of Elysium,8,SC,11,,,2,,2,1,1,,,,,,2,,
 722,PUPA (xi Remix),8,MX,15,,,,,,,,,,,,,,,
 719,thinking!,8,SC,12,,1,1,,1,1,2,,,,,,1,,2
 382,Ray Tuning,8,SC,11,,,1,,2,2,1,,,,,,2,2,1
-680,Let's Burn,8,SC,11,,,2,,,1,2,,,,,,2,1,
+680,Let's Burn,8,SC,11,,,2,,,2,2,,,,,,1,1,
 504,모짜르트 교향곡 40번 1악장,8,SC,11,,1,1,,2,2,1,,,,,,2,,
-470,Dysthymia,8,MX,15,,1,2,,2,1,1,,,,,,2,1,
-448,Forgotten,8,SC,11,,2,2,,2,1,1,,,,,,2,1,
-181,Lost Temple,8,SC,11,,,2,,2,1,1,,,,,,2,2,
+470,Dysthymia,8,MX,15,,1,2,,2,2,1,,,,,,1,1,
+448,Forgotten,8,SC,11,,2,2,,2,2,1,,,,,,1,1,
+181,Lost Temple,8,SC,11,,,2,,2,2,1,,,,,,1,2,
 52,Brain Storm,8,MX,15,,,3,,,1,,,,,,,1,1,2
 634,Licrom,8,SC,11,,,2,,,1,2,,,,,,1,2,
-614,SUNSHINE COASTLINE,8,SC,11,,,2,,,1,2,,,,,,2,1,
-610,Inevitable Struggle,8,SC,11,,,2,,,1,2,,,,,,2,2,
+614,SUNSHINE COASTLINE,8,SC,11,,,2,,,2,2,,,,,,1,1,
+610,Inevitable Struggle,8,SC,11,,,2,,,2,2,,,,,,1,2,
 588,3:33,8,MX,15,,2,1,,2,1,1,,,,,,1,,2
-582,The Lake of Oblivion ~jam-jam Remix~,8,SC,11,,1,2,,,2,2,,,,,,,1,1
-580,Story of Maple,8,SC,11,,,2,,,1,2,,,,,,2,1,
-563,Stay Alive,8,SC,11,,,2,,2,2,1,,,,,,1,,
-557,Hyper Drive,8,SC,11,,,2,,2,2,1,,,,,,1,1,1
-542,I'M ALIVE,8,SC,11,,,2,,1,2,1,,,,,,1,,2
-473,Lights of Muse,8,SC,11,,1,2,,2,2,,,,,,,1,,
-461,Zero to the hunnit,8,SC,11,,,2,,2,2,,,,,,,1,,
-454,Over Me,8,SC,11,,1,2,,1,2,1,,,,,,1,3,1
-406,The Rain Maker,8,SC,11,,2,2,,1,1,3,,,,,,2,2,1
-346,Thor ~Extended Mix~,8,SC,11,,2,2,,1,2,1,,,,,,1,,
+582,The Lake of Oblivion ~jam-jam Remix~,8,SC,11,,1,2,,,,2,,,,,,2,1,1
+580,Story of Maple,8,SC,11,,,2,,,2,2,,,,,,1,1,
+563,Stay Alive,8,SC,11,,,2,,2,1,1,,,,,,2,,
+557,Hyper Drive,8,SC,11,,,2,,2,1,1,,,,,,2,1,1
+542,I'M ALIVE,8,SC,11,,,2,,1,1,1,,,,,,2,,2
+473,Lights of Muse,8,SC,11,,1,2,,2,1,,,,,,,2,,
+461,Zero to the hunnit,8,SC,11,,,2,,2,1,,,,,,,2,,
+454,Over Me,8,SC,11,,1,2,,1,1,1,,,,,,2,3,1
+406,The Rain Maker,8,SC,11,,2,2,,1,2,3,,,,,,1,2,1
+346,Thor ~Extended Mix~,8,SC,11,,2,2,,1,1,1,,,,,,2,,
 301,AD2222,8,SC,11,,1,2,,2,1,1,,,,,,1,2,1
 292,Mammal,8,SC,11,,1,2,,2,2,1,,,,,,2,2,
-201,Warrior,8,SC,11,,1,2,,2,2,,,,,,,1,1,
+201,Warrior,8,SC,11,,1,2,,2,1,,,,,,,2,1,
 34,Ruti'n (GOTH Wild Electro Remix),8,SC,11,,2,2,,,2,2,,,,,,2,2,
-393,Gone Astray,8,SC,12,,1,1,,1,2,1,,,,,,1,2,1
-305,Black Swan,8,SC,11,,,1,,,2,2,,,3,,,1,1,
-169,Super lovely,8,SC,12,,,2,,2,2,1,,,,,,1,,
+393,Gone Astray,8,SC,12,,1,1,,1,1,1,,,,,,2,2,1
+305,Black Swan,8,SC,11,,,1,,,1,2,,,3,,,2,1,
+169,Super lovely,8,SC,12,,,2,,2,1,1,,,,,,2,,
 837,"비극의 도시, 엘레리논",8,SC,11,,,,,,,,,,,,,,,
 824,Just Let It All Go (feat. TRIΔNGLE),8,SC,11,,,,,,,,,,,,,,,
 817,Acid Invasion,8,SC,11,,,,,,,,,,,,,,,
@@ -4114,35 +4114,35 @@
 754,Hallasan,8,SC,11,,,,,,,,,,,,,,,
 737,Far Away Light,8,MX,15,,,,,,,,,,,,,,,
 712,Phylma,8,SC,11,,,2,,,2,1,,,,,,2,1,2
-709,Labyrinth of Tears,8,SC,11,,2,2,,2,2,2,,,,,,1,2,1
+709,Labyrinth of Tears,8,SC,11,,2,2,,2,1,2,,,,,,2,2,1
 688,Bunny Bunny Carrot Carrot,8,SC,11,,,2,,2,2,1,,,,,,2,2,
-601,Revenger,8,MX,15,,,2,,1,1,1,,,,,,2,2,
+601,Revenger,8,MX,15,,,2,,1,2,1,,,,,,1,2,
 573,Fairytale ~Pan Remix~,8,SC,11,,1,2,,1,2,2,,,,,,2,1,2
 513,KICK IT,8,MX,15,,,2,,2,2,2,,,,,,2,2,1
 455,Red Eyes,8,MX,15,,1,2,,1,1,1,,,,,,1,1,1
-683,SINister Evolution,8,SC,11,,1,1,,1,2,2,,,,,,,1,2
+683,SINister Evolution,8,SC,11,,1,1,,1,,2,,,,,,2,1,2
 629,Broken Sphere,8,MX,15,,,2,,1,1,1,,,,,,1,2,
-600,Pitter-patter,8,SC,11,,,1,,1,1,2,,,,,,2,2,2
-595,God Machine,8,SC,11,,,2,,1,1,,,,,,,2,1,1
+600,Pitter-patter,8,SC,11,,,1,,1,2,2,,,,,,1,2,2
+595,God Machine,8,SC,11,,,2,,1,2,,,,,,,1,1,1
 552,Deadly Bomber,8,MX,15,,,2,,2,1,1,,,,,,1,,1
-531,Complex,8,SC,11,,1,2,,,2,,,,,,,1,,2
-501,Thor (Deepin' Absonant Mix),8,SC,11,,,2,,1,2,,,,,,,1,,
+531,Complex,8,SC,11,,1,2,,,1,,,,,,,2,,2
+501,Thor (Deepin' Absonant Mix),8,SC,11,,,2,,1,1,,,,,,,2,,
 481,Daylight,8,SC,11,,1,2,,1,1,,,,,,,1,,
-468,Cthugha,8,MX,15,,,2,,1,1,2,,,,,,2,2,
+468,Cthugha,8,MX,15,,,2,,1,2,2,,,,,,1,2,
 450,Imaginary dance,8,SC,11,,1,1,,,1,,,,,,,1,,1
 429,카트라이더 Mashup ~Cosmograph Remix~,8,SC,11,,1,2,,2,1,2,,,,,,1,1,
-426,전설이 시작된 곳 ~VoidRover Remix~,8,SC,11,,,1,,1,2,1,,,,,,1,,1
-402,Out Law : Reborn,8,SC,10,,1,2,,,2,2,,,,,,1,1,
+426,전설이 시작된 곳 ~VoidRover Remix~,8,SC,11,,,1,,1,1,1,,,,,,2,,1
+402,Out Law : Reborn,8,SC,10,,1,2,,,1,2,,,,,,2,1,
 386,Dance of the Dead,8,SC,10,,1,1,,1,1,2,,,,,,1,2,
 379,Cyberozar,8,SC,11,,,2,,,1,2,,,,,,1,2,
-368,Thor,8,SC,11,,2,2,,,2,1,,,,,,1,,
-359,Landscape,8,SC,10,,2,1,,,2,2,,,,,,1,,
-270,ANALYS,8,SC,11,,1,1,,1,2,2,,,,,,1,1,
-227,Beat U Down,8,SC,11,,1,2,,1,2,2,,,,,,,1,1
+368,Thor,8,SC,11,,2,2,,,1,1,,,,,,2,,
+359,Landscape,8,SC,10,,2,1,,,1,2,,,,,,2,,
+270,ANALYS,8,SC,11,,1,1,,1,1,2,,,,,,2,1,
+227,Beat U Down,8,SC,11,,1,2,,1,,2,,,,,,2,1,1
 130,Light House,8,SC,11,,,2,,3,1,2,,,,,,1,1,2
-602,Rhapsody for The VEndetta,8,MX,15,,2,2,,2,1,2,,,2,,,2,2,2
-333,Dream of Winds,8,SC,11,,1,1,,2,2,,,,,,,,1,1
-200,Satisfiction,8,SC,11,,,2,,1,1,1,,,,,,2,2,
+602,Rhapsody for The VEndetta,8,MX,15,,2,2,,2,2,2,,,2,,,1,2,2
+333,Dream of Winds,8,SC,11,,1,1,,2,,,,,,,,2,1,1
+200,Satisfiction,8,SC,11,,,2,,1,2,1,,,,,,1,2,
 470,Dysthymia,8,SC,11,,1,2,,1,2,1,,,,,,2,,
 842,천공의 둥지 (프레이-이시스),8,SC,11,,,,,,,,,,,,,,,
 841,웨스트코스트 ~eeu Remix~,8,SC,11,,,,,,,,,,,,,,,
@@ -4150,7 +4150,7 @@
 155,Triple Zoe,8,SC,11,,,2,,1,1,,,,,,,1,1,2
 60,Fallen Angel,8,SC,11,,,,,,,,,,,,,,,
 790,LiftOff,8,SC,11,,,,,,,,,,,,,,,
-784,Baqeela,8,SC,11,,1,2,,,2,,,,,,,1,2,
+784,Baqeela,8,SC,11,,1,2,,,1,,,,,,,2,2,
 767,The Castle of Báthory,8,MX,15,,,,,,,,,,,,,,,
 119,FEAR,8,SC,11,,,,,,,,,,,,,,,
 77,NANO RISK,8,SC,11,,,,,,,,,,,,,,,
@@ -4158,86 +4158,86 @@
 769,Village Racing,8,SC,11,,,,,,,,,,,,,,,
 750,A Miracle For Me,8,SC,10,,,,,,,,,,,,,,,
 746,trappola bewitching,8,MX,15,,,,,,,,,,,,,,,
-745,Redolent Shape,8,SC,11,,,2,,,2,,,,,,,,,
-716,Summer Fling,8,SC,10,,1,2,,,1,2,,,,,,2,2,
+745,Redolent Shape,8,SC,11,,,2,,,,,,,,,,2,,
+716,Summer Fling,8,SC,10,,1,2,,,2,2,,,,,,1,2,
 711,mochimochi (feat. Hatsune Miku),8,SC,11,,1,2,,,1,1,,,,,,1,1,
-700,Unwelcome School,8,SC,11,,,2,,,1,,,,,,,2,1,
-666,MADNESS (feat. 유일(U1)),8,SC,10,,1,2,,1,1,,,,,,,2,,1
+700,Unwelcome School,8,SC,11,,,2,,,2,,,,,,,1,1,
+666,MADNESS (feat. 유일(U1)),8,SC,10,,1,2,,1,2,,,,,,,1,,1
 605,S.A.V.E,8,SC,10,,2,2,,1,1,,,,,,,1,1,
-192,Black MInD,8,SC,11,,,1,,,,,,,,,,1,,1
+192,Black MInD,8,SC,11,,,1,,,1,,,,,,,,,1
 46,We're All Gonna Die,8,MX,15,,,2,,1,1,1,,,,,,1,1,1
-697,Raise the Huddle,8,SC,10,,,2,,2,1,,,,,,,2,2,1
-644,Heat Haze Shadow,8,SC,11,,,2,,,1,2,,,,,,2,2,
-635,O'men,8,MX,15,,,2,,2,1,1,,,,,,2,1,1
+697,Raise the Huddle,8,SC,10,,,2,,2,2,,,,,,,1,2,1
+644,Heat Haze Shadow,8,SC,11,,,2,,,2,2,,,,,,1,2,
+635,O'men,8,MX,15,,,2,,2,2,1,,,,,,1,1,1
 633,Final Round,8,SC,11,,,2,,2,2,1,,,,,,2,,2
 619,Kamui,8,MX,15,,,2,,1,1,2,,,,,,1,2,1
-613,STEP AHEAD,8,SC,10,,,2,,,1,1,,,,,,2,,1
-603,Right Time [ScreaM Records],8,SC,11,,,1,,1,2,2,,,,,,,,1
-599,Peace Comes At a Price,8,SC,10,,,1,,1,1,2,,,,,,2,2,
-591,Carrot Carrot,8,MX,15,,1,2,,2,2,2,,,,,,1,,1
+613,STEP AHEAD,8,SC,10,,,2,,,2,1,,,,,,1,,1
+603,Right Time [ScreaM Records],8,SC,11,,,1,,1,,2,,,,,,2,,1
+599,Peace Comes At a Price,8,SC,10,,,1,,1,2,2,,,,,,1,2,
+591,Carrot Carrot,8,MX,15,,1,2,,2,1,2,,,,,,2,,1
 544,LIMBO,8,MX,15,,,2,,2,1,2,,,,,,1,,1
-514,Misty E'ra 'Mui',8,SC,10,,2,1,,2,2,1,,,1,,,1,1,1
-512,Fundamental,8,MX,15,,1,2,,1,1,,,,,,,2,,
-509,Disappearing Act,8,MX,15,,1,2,,1,1,,,,,,,2,,
-482,OrBiTal,8,SC,10,,2,2,,,1,2,,,,,,2,2,1
+514,Misty E'ra 'Mui',8,SC,10,,2,1,,2,1,1,,,1,,,2,1,1
+512,Fundamental,8,MX,15,,1,2,,1,2,,,,,,,1,,
+509,Disappearing Act,8,MX,15,,1,2,,1,2,,,,,,,1,,
+482,OrBiTal,8,SC,10,,2,2,,,2,2,,,,,,1,2,1
 437,Start The Adventure ~SOPHI Remix~,8,SC,11,,,1,,2,1,2,,,,,,1,,
 413,HELIX,8,SC,10,,1,2,,2,2,1,,,,,,2,1,
 378,What am I fighting for?,8,SC,10,,1,1,,,2,2,,,,,,2,2,
-332,D2,8,MX,15,,1,2,,1,1,1,,,,,,2,1,
-289,Entrance,8,MX,15,,1,2,,1,2,,,,,,,,1,1
-286,CODE NAME : ZERO,8,MX,14,,,2,,,1,,,,,,,2,2,
-228,Colours of Sorrow,8,SC,10,,,2,,2,2,1,,,,,,1,1,
+332,D2,8,MX,15,,1,2,,1,2,1,,,,,,1,1,
+289,Entrance,8,MX,15,,1,2,,1,,,,,,,,2,1,1
+286,CODE NAME : ZERO,8,MX,14,,,2,,,2,,,,,,,1,2,
+228,Colours of Sorrow,8,SC,10,,,2,,2,1,1,,,,,,2,1,
 223,Break a Spell,8,SC,11,,,1,,,2,1,,,,,,2,1,
 143,Para-Q,8,SC,11,,2,1,,2,1,1,,,,,,1,2,2
-92,STALKER,8,MX,15,,,2,,,1,2,,,,,,,2,2
-87,Seeker,8,SC,11,,,2,,,2,,,,,,,1,,
-460,Won't Back Down,8,SC,11,,1,1,,1,1,1,,,,,,2,1,2
+92,STALKER,8,MX,15,,,2,,,,2,,,,,,1,2,2
+87,Seeker,8,SC,11,,,2,,,1,,,,,,,2,,
+460,Won't Back Down,8,SC,11,,1,1,,1,2,1,,,,,,1,1,2
 828,The Final Frontier,8,SC,10,,,,,,,,,,,,,,,
 802,Dreamscape,8,SC,10,,,,,,,,,,,,,,,
 797,A Rainbow In The Sky (feat. eili),8,SC,10,,,,,,,,,,,,,,,
 425,연합군과 제국군,8,SC,11,,,,,,,,,,,,,,,
 780,Wake Up feat.a-m,8,SC,10,,,,,,,,,,,,,,,
 772,For Boyhood,8,SC,10,,,,,,,,,,,,,,,
-731,The Lost World,8,MX,15,,,2,,1,2,1,,,,,,1,,
+731,The Lost World,8,MX,15,,,2,,1,1,1,,,,,,2,,
 387,Grid System,8,SC,10,,,,,,,,,,,,,,,
 734,AI[UE]OON,8,SC,10,,,,,,,,,,,,,,,
 659,Delusion (feat. SOONHO),8,MX,14,,1,1,,2,1,,,,,,,1,,1
 483,Angelic Tears,8,SC,10,,,,,,,,,,,,,,,
 179,Lisrim,8,SC,10,,,,,,,,,,,,,,,
-698,RE Aoharu,8,SC,11,,,2,,1,1,1,,,,,,2,,
+698,RE Aoharu,8,SC,11,,,2,,1,2,1,,,,,,1,,
 678,Hyperboloid,8,SC,10,,1,2,,1,1,1,,,,,,1,2,
 676,Eternal Damnation,8,MX,14,,,1,,1,1,,,,,,,1,1,
 652,Yodeling in meadow hill (Hidden Retreat),8,SC,10,,,2,,,1,1,,,,,,1,2,
-618,Re:BIRTH,8,SC,10,,,2,,1,1,1,,,,,,,1,
-609,GENESIS BEYOND THE BEGINNING,8,SC,10,,1,2,,1,2,1,,,,,,1,2,1
+618,Re:BIRTH,8,SC,10,,,2,,1,,1,,,,,,1,1,
+609,GENESIS BEYOND THE BEGINNING,8,SC,10,,1,2,,1,1,1,,,,,,2,2,1
 604,Rocket Launcher,8,SC,10,,,2,,1,1,1,,,,,,1,1,
 592,Critical Point,8,MX,14,,,2,,2,1,1,,,,,,1,1,
-576,Missing You ~SOPHI Remix~,8,SC,10,,,1,,1,2,1,,,,,,,,1
-568,From Hell to Breakfast,8,MX,14,,,2,,1,1,1,,,,,,,1,1
+576,Missing You ~SOPHI Remix~,8,SC,10,,,1,,1,,1,,,,,,2,,1
+568,From Hell to Breakfast,8,MX,14,,,2,,1,,1,,,,,,1,1,1
 555,Gloxinia,8,SC,10,,1,1,,1,1,2,,,,,,1,2,
-543,A Site De La Rue,8,MX,15,,1,2,,2,1,,,,,,,2,,
-452,Never let you go,8,MX,14,,,2,,1,1,1,,,,,,2,1,1
+543,A Site De La Rue,8,MX,15,,1,2,,2,2,,,,,,,1,,
+452,Never let you go,8,MX,14,,,2,,1,2,1,,,,,,1,1,1
 430,카트라이더 Mashup ~Pure 100% Remix~,8,SC,10,,1,1,,,1,1,,,,,,1,1,
 404,Season (Warm Mix),8,SC,9,,,2,,,,2,,,,,,,3,
 401,NB Ranger : Nonstop Remix,8,SC,10,,1,1,,1,1,1,,,,,,1,1,1
-383,The wheel to the right,8,MX,15,,,2,,,1,2,,,,,,2,1,1
+383,The wheel to the right,8,MX,15,,,2,,,2,2,,,,,,1,1,1
 381,Ikazuchi,8,MX,15,,,1,,2,1,2,,,,,,1,1,1
-380,Garakuta Doll Play,8,SC,10,,2,1,,,1,1,,,,,,2,1,1
-380,Garakuta Doll Play,8,MX,15,,1,1,,1,1,2,,,,,,2,2,
+380,Garakuta Doll Play,8,SC,10,,2,1,,,2,1,,,,,,1,1,1
+380,Garakuta Doll Play,8,MX,15,,1,1,,1,2,2,,,,,,1,2,
 364,SON OF SUN,8,MX,15,,,2,,,2,2,,,,,,2,1,
 355,Fury,8,SC,10,,1,2,,1,2,,,,,,,2,,
-352,Beyond the Future,8,SC,10,,1,2,,1,2,2,,,,,,,,
-325,Xeus,8,MX,15,,1,2,,2,1,1,,,,,,,,
-320,Showdown,8,SC,10,,2,2,,,1,1,,,,,,,1,
+352,Beyond the Future,8,SC,10,,1,2,,1,,2,,,,,,2,,
+325,Xeus,8,MX,15,,1,2,,2,,1,,,,,,1,,
+320,Showdown,8,SC,10,,2,2,,,,1,,,,,,1,1,
 312,Feel Ma Beat,8,SC,10,,,1,,,2,1,,,,,,2,1,
-269,Rising The Sonic,8,SC,10,,,2,,,1,2,,,,,,,2,
-235,Heart of Witch,8,MX,15,,,2,,2,1,,,,,,,2,,
-222,Nevermind,8,MX,15,,1,2,,2,1,2,,,,,,2,2,
-216,Talk! Talk!,8,SC,11,,,2,,1,2,2,,,,,,1,2,
-215,Syriana ~Blast Wave Mix~,8,SC,9,,1,2,,,2,2,,,,,,1,1,1
-208,Mind Control,8,SC,10,,,1,,1,1,1,,,,,,2,1,1
+269,Rising The Sonic,8,SC,10,,,2,,,,2,,,,,,1,2,
+235,Heart of Witch,8,MX,15,,,2,,2,2,,,,,,,1,,
+222,Nevermind,8,MX,15,,1,2,,2,2,2,,,,,,1,2,
+216,Talk! Talk!,8,SC,11,,,2,,1,1,2,,,,,,2,2,
+215,Syriana ~Blast Wave Mix~,8,SC,9,,1,2,,,1,2,,,,,,2,1,1
+208,Mind Control,8,SC,10,,,1,,1,2,1,,,,,,1,1,1
 30,Remains Of Doom,8,SC,10,,2,1,,1,2,,,,,,,2,1,
-20,Kung Brother,8,SC,10,,1,2,,,2,1,,,,,,1,1,1
+20,Kung Brother,8,SC,10,,1,2,,,1,1,,,,,,2,1,1
 831,결투장 - 달빛주점,8,SC,11,,,,,,,,,,,,,,,
 823,Endless Dream (Game Ver.),8,MX,15,,,,,,,,,,,,,,,
 820,Chaser,8,SC,10,,,,,,,,,,,,,,,
@@ -4245,19 +4245,19 @@
 794,MEGATØNiX PHANTØM,8,MX,15,,,,,,,,,,,,,,,
 59,Dream of You,8,SC,10,,,,,,,,,,,,,,,
 792,Radiance,8,SC,10,,,,,,,,,,,,,,,
-788,"Good bye, Merry-Go-Round.",8,MX,15,,,1,,1,1,1,,,,,,,2,1
+788,"Good bye, Merry-Go-Round.",8,MX,15,,,1,,1,,1,,,,,,1,2,1
 773,Let Up,8,SC,10,,,,,,,,,,,,,,,
 349,Y ~Extended Mix~,8,SC,11,,,,,,,,,,,,,,,
 97,WhiteBlue,8,SC,10,,,,,,,,,,,,,,,
 11,Child of Night,8,SC,10,,,,,,,,,,,,,,,
-762,No Mercy,8,SC,10,,,2,,,,,,,,,,2,,
+762,No Mercy,8,SC,10,,,2,,,2,,,,,,,,,
 736,Cyaegha,8,MX,14,,,,,,,,,,,,,,,
 733,#1f1e33,8,MX,14,,,,,,,,,,,,,,,
 717,Synchronized Resonance,8,SC,10,,1,2,,1,1,1,,,,,,1,,2
-715,Shimmer (feat. Kinoko),8,SC,10,,,1,,2,1,1,,,,,,2,1,
+715,Shimmer (feat. Kinoko),8,SC,10,,,1,,2,2,1,,,,,,1,1,
 595,God Machine,8,MX,14,,,2,,1,1,,,,,,,1,,
 617,BlueWhite,8,MX,15,,,,,,,,,,,,,,,
-537,Sand Storm,8,MX,13,,,2,,1,2,,,,,,,1,,
+537,Sand Storm,8,MX,13,,,2,,1,1,,,,,,,2,,
 662,Kakera,8,SC,10,,,,,,,,,,,,,,,
 654,1! 2! 3! 4! Streaming rn CHU!,8,MX,15,,,,,,,,,,,,,,,
 641,Empty Your Mind 1st,8,SC,10,,,,,,,,,,,,,,,
@@ -4269,12 +4269,12 @@
 503,Techno Racer,8,SC,9,,,2,,,1,1,,,,,,1,1,
 502,VORTEX,8,SC,10,,,,,,,,,,,,,,,
 471,ENERGY SYNERGY MATRIX,8,SC,10,,,,,,,,,,,,,,,
-469,DataErr0r,8,MX,15,,1,1,,1,,,,,,,,1,,2
+469,DataErr0r,8,MX,15,,1,1,,1,1,,,,,,,,,2
 467,Comet Coaster,8,SC,10,,,,,,,,,,,,,,,
 445,Cocked Pistol,8,SC,10,,,,,,,,,,,,,,,
 411,glory day -JHS Remix-,8,SC,10,,,,,,,,,,,,,,,
 391,Enemy Storm ~Dark Jungle Mix~,8,MX,15,,,2,,1,1,2,,,,,,1,,
-322,Supernova,8,MX,14,,,1,,2,1,,,,,,,,2,1
+322,Supernova,8,MX,14,,,1,,2,,,,,,,,1,2,1
 319,Right Back,8,MX,14,,,2,,1,,1,,,,,,,,
 306,Dark Prism,8,SC,10,,,,,,,,,,,,,,,
 293,Myosotis,8,SC,10,,,,,,,,,,,,,,,
@@ -4285,8 +4285,8 @@
 196,HB-axeleration,8,SC,10,,,,,,,,,,,,,,,
 148,Rock Or Die,8,SC,9,,1,2,,,1,1,,,,,,1,1,
 104,피아노 협주곡 1번,8,SC,10,,,2,,1,1,,,,,,,1,,1
-29,quixotic,8,SC,10,,,1,,,1,,,,,,,2,,
-24,NB RANGER - Virgin Force,8,MX,15,,,2,,,1,1,,,,,,2,1,
+29,quixotic,8,SC,10,,,1,,,2,,,,,,,1,,
+24,NB RANGER - Virgin Force,8,MX,15,,,2,,,2,1,,,,,,1,1,
 651,The Decisive Blow (Normal),8,SC,11,,,2,,1,1,2,,,,,,1,1,1
 839,시작의 노래 (feat. YOUHA),8,SC,10,,,,,,,,,,,,,,,
 830,Permutation (Original Ver.),8,MX,15,,,,,,,,,,,,,,,
@@ -4304,7 +4304,7 @@
 760,Never Forget You,8,SC,10,,,,,,,,,,,,,,,
 405,SuperSonic ~Mr.Funky Dirty Planet Remix~,8,SC,9,,,1,,,1,1,,,,,,1,1,
 93,StarFish,8,SC,9,,,1,,1,1,1,,,,,,1,,
-186,Never Die,8,SC,9,,1,1,,1,2,1,,,,,,1,,
+186,Never Die,8,SC,9,,1,1,,1,1,1,,,,,,2,,
 664,Love or Die,8,SC,10,,,,,,,,,,,,,,,
 630,Cotton Candy Soda,8,SC,9,,,1,,,1,2,,,,,,1,1,
 600,Pitter-patter,8,MX,13,,,,,,,,,,,,,,,
@@ -4315,15 +4315,15 @@
 525,Mr.Lonely,8,SC,9,,1,1,,,1,1,,,,,,1,1,2
 524,Zero-Break,8,MX,14,,,,,,,,,,,,,,,
 521,STEP,8,SC,9,,1,1,,2,1,1,,,,,,1,,
-444,Chrysanthemum,8,SC,9,,,1,,,2,1,,,,,,1,,
+444,Chrysanthemum,8,SC,9,,,1,,,1,1,,,,,,2,,
 427,죽음의 신 : 크로우 크루아흐,8,MX,15,,,,,,,,,,,,,,,
-423,소년 모험가 ~SiNA Remix~,8,SC,9,,,2,,1,2,1,,,1,,,1,1,1
+423,소년 모험가 ~SiNA Remix~,8,SC,9,,,2,,1,1,1,,,1,,,2,1,1
 393,Gone Astray,8,MX,14,,,,,,,,,,,,,,,
 379,Cyberozar,8,MX,14,,,,,,,,,,,,,,,
 376,Barbarous Funera,8,SC,10,,,,,,,,,,,,,,,
 342,Rage Of Demon,8,MX,15,,,,,,,,,,,,,,,
 341,Puzzler,8,SC,9,,,1,,1,1,1,,,,,,1,1,1
-336,La Campanella : Nu Rave,8,SC,10,,1,1,,,2,,,,3,,,,,3
+336,La Campanella : Nu Rave,8,SC,10,,1,1,,,,,,,3,,,2,,3
 328,BEE-U-TIFUL,8,SC,10,,,,,,,,,,,,,,,
 305,Black Swan,8,MX,14,,,,,,,,,,,,,,,
 304,Bamboo on Bamboo,8,MX,15,,,,,,,,,,,,,,,
@@ -4361,17 +4361,17 @@
 125,JBG,8,SC,10,,,,,,,,,,,,,,,
 735,Axium Crisis,8,SC,9,,,2,,1,1,1,,,1,,,1,,
 556,Hell'o,8,MX,14,,,,,,,,,,,,,,,
-434,It's my war now,8,SC,9,,,1,,1,2,1,,,,,,1,1,1
+434,It's my war now,8,SC,9,,,1,,1,1,1,,,,,,2,1,1
 21,Liar,8,SC,8,,1,2,,1,1,2,,,,,,1,,
 672,Saga Script,8,SC,10,,,,,,,,,,,,,,,
 669,Pull The Trigger,8,SC,10,,,,,,,,,,,,,,,
 655,B!G-BANG CHALLENGE,8,MX,15,,,,,,,,,,,,,,,
-593,ECiLA,8,SC,9,,,1,,1,2,2,,,,,,1,1,
+593,ECiLA,8,SC,9,,,1,,1,1,2,,,,,,2,1,
 578,Smile,8,SC,9,,,1,,1,1,1,,,,,,1,,1
 566,Vertical Eclipse,8,MX,15,,,,,,,,,,,,,,,
 538,Showdown,8,SC,10,,,,,,,,,,,,,,,
 473,Lights of Muse,8,MX,15,,,,,,,,,,,,,,,
-440,The Raindrop Flower ~jam-jam Remix~,8,SC,9,,,1,,1,2,1,,,,,,1,,1
+440,The Raindrop Flower ~jam-jam Remix~,8,SC,9,,,1,,1,1,1,,,,,,2,,1
 410,glory day (Mintorment Remix),8,SC,10,,,,,,,,,,,,,,,
 396,Leave me alone,8,SC,9,,1,1,,,1,2,,,,,,1,,
 356,HEXAD,8,MX,13,,,,,,,,,,,,,,,
@@ -4406,9 +4406,9 @@
 729,STOP,8,SC,9,,1,1,,1,1,1,,,2,,,1,1,
 723,Bring The Techno,8,SC,9,,,1,,1,1,1,,,,,,1,,
 720,Violent (feat. SAINT MILLER),8,MX,15,,,,,,,,,,,,,,,
-689,Goal Wo Nerae!,8,SC,8,,,1,,1,1,1,,,,,,2,1,1
+689,Goal Wo Nerae!,8,SC,8,,,1,,1,2,1,,,,,,1,1,1
 351,Area 7,8,SC,9,,,2,,,1,,,,,,,1,1,
-83,plastic method,8,SC,9,,1,2,,1,2,1,,,,,,1,,2
+83,plastic method,8,SC,9,,1,2,,1,1,1,,,,,,2,,2
 66,Good Bye,8,SC,8,,,2,,1,1,1,,,,,,1,,1
 33,Running girl,8,SC,9,,,1,,,1,1,,,,,,1,,
 758,Maboroshi (feat. AZK),8,SC,8,,,2,,2,1,1,,,,,,1,,
@@ -4416,35 +4416,35 @@
 738,Fracture Ray,8,MX,15,,,,,,,,,,,,,,,
 714,Rusty Shell,8,SC,9,,1,1,,2,1,1,,,,,,1,,1
 705,"DJ조선 (feat. 이오몽, 판다랑)",8,SC,9,,1,2,,1,1,1,,,,,,1,1,
-172,Attack,8,SC,8,,,1,,1,1,,,,,,,2,,1
-693,Luminous Memory,8,SC,8,,1,1,,,1,1,,,,,,2,,
+172,Attack,8,SC,8,,,1,,1,2,,,,,,,1,,1
+693,Luminous Memory,8,SC,8,,1,1,,,2,1,,,,,,1,,
 668,Outcast (feat. BIRA),8,SC,9,,1,1,,1,1,1,,,,,,1,2,
 461,Zero to the hunnit,8,MX,13,,,,,,,,,,,,,,,
-438,Tayberrs - Collapsed Paradise,8,SC,8,,,1,,,1,1,,,1,,,2,,1
+438,Tayberrs - Collapsed Paradise,8,SC,8,,,1,,,2,1,,,1,,,1,,1
 236,In my Dream,8,MX,15,,,,,,,,,,,,,,,
 175,Dream it,8,SC,9,,,1,,1,1,1,,,,,,1,,
 680,Let's Burn,8,MX,14,,,,,,,,,,,,,,,
 660,ELIXIR,8,MX,15,,,,,,,,,,,,,,,
 650,Tekken Tag Tournament Piano Intro -Massive True Mix-,8,SC,9,,,1,,,1,1,,,1,,,1,1,
-615,TO MAKE THE END OF BATTLE,8,SC,9,,1,1,,1,1,2,,,,,,2,,
+615,TO MAKE THE END OF BATTLE,8,SC,9,,1,1,,1,2,2,,,,,,1,,
 611,NORSE WIND,8,MX,14,,,,,,,,,,,,,,,
 597,My Wonderland,8,SC,9,,,1,,1,1,1,,,,,,1,1,
 580,Story of Maple,8,MX,14,,,,,,,,,,,,,,,
 571,Catch Your Dreams!,8,SC,8,,,2,,1,1,1,,,,,,1,1,
 548,염라 ~Original Ver.~,8,SC,9,,,,,,,,,,,,,,,
-516,NB RANGERS - 운명의 Destiny,8,SC,9,,,1,,1,2,1,,,,,,1,,1
+516,NB RANGERS - 운명의 Destiny,8,SC,9,,,1,,1,1,1,,,,,,2,,1
 489,Festa Nova,8,MX,14,,,,,,,,,,,,,,,
 453,Odysseus,8,MX,15,,,,,,,,,,,,,,,
 432,Apparition,8,SC,8,,,1,,1,1,1,,,2,,,1,,
 384,Trrricksters!!,8,MX,15,,,,,,,,,,,,,,,
 365,SuperSonic,8,SC,8,,,1,,,1,1,,,,,,1,1,
-319,Right Back,8,SC,9,,,1,,1,2,1,,,,,,1,,
+319,Right Back,8,SC,9,,,1,,1,1,1,,,,,,2,,
 208,Mind Control,8,MX,14,,,,,,,,,,,,,,,
 139,OBLIVION (Rockin' Night Style),8,SC,9,,,1,,1,1,1,,,,,,1,,
 135,Minimal Life,8,MX,14,,,,,,,,,,,,,,,
 89,Smoky Quartz,8,HD,14,,,,,,,,,,,,,,,
 58,DIVINE SERVICE,8,SC,8,,,1,,1,1,2,,,,,,1,1,
-52,Brain Storm,8,SC,9,,,1,,,2,,,,,,,1,,
+52,Brain Storm,8,SC,9,,,1,,,1,,,,,,,2,,
 49,태권부리,8,MX,13,,,,,,,,,,,,,,,
 39,The Obliterator,8,SC,9,,,,,1,1,1,,,,,,1,1,
 0,비상 ~Stay With Me~,8,SC,8,,,2,,,1,1,,,,,,1,,
@@ -4465,8 +4465,8 @@
 89,Smoky Quartz,8,SC,9,,,1,,1,1,1,,,,,,1,,
 80,Negative Nature,8,SC,8,,,1,,1,1,1,,,2,,,1,1,
 55,Bye Bye Love,8,SC,8,,,2,,,1,,,,,,,1,,
-10,"Bullet, Wanted!",8,SC,8,,,,,,,1,,,,,,1,1,
-753,Crazy (feat. Yina),8,SC,8,,,1,,,2,1,,,,,,1,,
+10,"Bullet, Wanted!",8,SC,8,,,,,,1,1,,,,,,,1,
+753,Crazy (feat. Yina),8,SC,8,,,1,,,1,1,,,,,,2,,
 747,ultradiaxon-N3,8,MX,14,,,,,,,,,,,,,,,
 565,The Four Seasons : Summer 2017,8,MX,13,,,,,,,,,,,,,,,
 413,HELIX,8,MX,13,,,,,,,,,,,,,,,
@@ -4474,9 +4474,9 @@
 446,Daydream,8,MX,15,,,,,,,,,,,,,,,
 662,Kakera,8,MX,13,,,,,,,,,,,,,,,
 658,Cheonmasan,8,SC,8,,,1,,2,1,,,,,,,1,1,1
-389,Break!,8,SC,8,,,1,,,,1,,,,,,1,1,
+389,Break!,8,SC,8,,,1,,,1,1,,,,,,,1,
 687,After School Dessert,8,SC,8,,,2,,1,1,1,,,,,,1,,
-667,Misty Er'A ~One Day~,8,SC,8,,1,1,,1,2,1,,,1,,,1,,2
+667,Misty Er'A ~One Day~,8,SC,8,,1,1,,1,1,1,,,1,,,2,,2
 657,Cata (feat. NC.A),8,SC,9,,1,1,,1,1,1,,,,,,1,,
 648,My Last Stand,8,SC,9,,1,1,,1,1,1,,,,,,1,1,
 636,Petunia,8,SC,9,,,1,,2,1,1,,,,,,1,1,
@@ -4484,12 +4484,12 @@
 474,MUSEDASH!!!!,8,SC,9,,1,1,,1,1,1,,,,,,1,,
 421,광명의 루 : 루 라바다,8,SC,9,,1,1,,,1,2,,,,,,1,,
 377,Frontline,8,SC,9,,1,1,,1,1,1,,,,,,1,1,
-329,Burn it Down,8,SC,8,,,1,,,1,1,,,,,,2,1,
+329,Burn it Down,8,SC,8,,,1,,,2,1,,,,,,1,1,
 240,Lover (BS Style),8,SC,8,,,2,,1,1,1,,,,,,1,,
 229,Cypher Gate,8,MX,13,,,,,,,,,,,,,,,
 138,OBLIVION,8,SC,8,,1,2,,,1,1,,,,,,1,,
 133,MASAI,8,SC,9,,1,1,,,1,1,,,,,,1,,
-78,NB POWER,8,SC,8,,,1,,,2,1,,,,,,1,,1
+78,NB POWER,8,SC,8,,,1,,,1,1,,,,,,2,,1
 49,태권부리,8,SC,8,,1,2,,2,1,,,,,,,1,,
 535,Metagalactic,8,MX,13,,,,,,,,,,,,,,,
 31,Royal Clown,8,MX,14,,,,,,,,,,,,,,,
@@ -4497,7 +4497,7 @@
 247,내게로 와,8,SC,8,,,,,,,,,,,,,,,
 716,Summer Fling,8,MX,13,,,,,,,,,,,,,,,
 366,Sweet Shining Shooting Star,8,SC,8,,,1,,,1,1,,,,,,1,1,
-31,Royal Clown,8,SC,8,,,1,,,1,1,,,1,,,2,,
+31,Royal Clown,8,SC,8,,,1,,,2,1,,,1,,,1,,
 5,Beautiful Day,8,SC,8,,,1,,,1,2,,,,,,1,,
 640,Insane Drift,8,MX,14,,,,,,,,,,,,,,,
 605,S.A.V.E,8,MX,13,,,,,,,,,,,,,,,
@@ -4517,7 +4517,7 @@
 582,The Lake of Oblivion ~jam-jam Remix~,8,MX,14,,,,,,,,,,,,,,,
 564,Stolen Memory,8,MX,14,,,,,,,,,,,,,,,
 549,!!New Game Start!!,8,MX,14,,,,,,,,,,,,,,,
-466,can you feel it,8,SC,9,,,1,,1,2,1,,,,,,1,,
+466,can you feel it,8,SC,9,,,1,,1,1,1,,,,,,2,,
 462,너로피어오라 ~Original Ver.~,8,SC,8,,,1,,1,1,1,,,,,,1,1,
 419,너로피어오라,8,SC,8,,,1,,1,1,1,,,,,,1,1,
 395,IF,8,SC,8,,,,,,,,,,,,,,,
@@ -4531,7 +4531,7 @@
 95,Sunset Rider,8,SC,8,,,1,,,1,1,,,,,,1,,
 86,Rolling On the Duck,8,SC,9,,1,1,,1,1,1,,,,,,1,,
 79,NB RANGERS : Returns,8,SC,9,,1,1,,2,1,,,,,,,1,,
-19,KILLER BEE,8,SC,8,,1,1,,1,2,,,,1,,,1,,
+19,KILLER BEE,8,SC,8,,1,1,,1,1,,,,1,,,2,,
 19,KILLER BEE,8,HD,13,,,,,,,,,,,,,,,
 15,Fly Away,8,SC,8,,1,1,,,1,,,,,,,1,,
 255,Electronics,8,SC,8,,2,1,,1,1,1,,,,,,1,,
@@ -4544,19 +4544,19 @@
 346,Thor ~Extended Mix~,8,MX,14,,,,,,,,,,,,,,,
 70,Lost n' found,8,SC,8,,,1,,,1,1,,,,,,1,1,1
 14,Far East Princess,8,SC,8,,,1,,,2,1,,,,,,2,,
-708,I'm Dizzy,8,SC,7,,1,1,,,,1,,,,,,1,1,
-701,Usagi Flap,8,SC,9,,,1,,,1,,,,,,,2,,
+708,I'm Dizzy,8,SC,7,,1,1,,,1,1,,,,,,,1,
+701,Usagi Flap,8,SC,9,,,1,,,2,,,,,,,1,,
 550,ADDICT!ON (DJMAX Edit),8,SC,8,,1,1,,1,1,1,,,,,,1,1,2
 406,The Rain Maker,8,HD,13,,,,,,,,,,,,,,,
 46,We're All Gonna Die,8,HD,13,,,,,,,,,,,,,,,
 628,Break Out,8,SC,7,,,1,,,,,,,,,,,,
 183,Misty Er'A,8,SC,8,,,1,,,1,1,,,1,,,1,1,
-8,BlackCat,8,SC,7,,,1,,,,,,,,,,1,1,
+8,BlackCat,8,SC,7,,,1,,,1,,,,,,,,1,
 694,Operation☆DOTABATA!,8,SC,8,,,2,,,1,1,,,,,,1,1,
 645,Kitsch,8,SC,8,,,1,,1,1,2,,,,,,1,1,
 632,Final Hour (Game Ver.),8,SC,8,,,2,,1,1,1,,,,,,1,,
 627,Bestie,8,SC,8,,,1,,,1,1,,,,,,1,1,
-623,성장통 [ScreaM Records],8,SC,8,,,1,,1,2,,,,,,,1,,2
+623,성장통 [ScreaM Records],8,SC,8,,,1,,1,1,,,,,,,2,,2
 616,To the Future.,8,SC,7,,1,1,,,1,2,,,,,,1,,
 551,Back to the oldschool,8,MX,13,,,,,,,,,,,,,,,
 533,Lie Lie,8,SC,8,,,,,,,,,,,,,,,
@@ -4566,7 +4566,7 @@
 500,The MAX,8,SC,7,,,1,,1,1,2,,,,,,1,1,
 463,Aurora Borealis,8,SC,8,,1,1,,,1,1,,,,,,1,1,
 445,Cocked Pistol,8,MX,14,,,,,,,,,,,,,,,
-420,"공성전 ~Pierre Blanche, Yonce Remix~",8,SC,8,,,1,,1,2,1,,,,,,,,1
+420,"공성전 ~Pierre Blanche, Yonce Remix~",8,SC,8,,,1,,1,,1,,,,,,2,,1
 409,ZET ~Mr.Funky Remix~,8,SC,8,,,1,,,1,1,,,,,,1,1,
 394,Hanz up!,8,SC,8,,1,1,,,1,1,,,,,,1,2,
 392,Everything,8,SC,7,,,1,,,,,,,,,,,,
@@ -4578,11 +4578,11 @@
 188,Space Challenger,8,SC,8,,,1,,1,1,1,,,,,,1,1,
 178,Kensei,8,MX,14,,,,,,,,,,,,,,,
 147,Road Of Death,8,HD,14,,,,,,,,,,,,,,,
-107,BlythE,8,SC,8,,,1,,1,2,1,,,,,,1,,
+107,BlythE,8,SC,8,,,1,,1,1,1,,,,,,2,,
 79,NB RANGERS : Returns,8,HD,13,,,,,,,,,,,,,,,
-75,Minus 3,8,SC,8,,1,1,,,2,,,,,,,1,,
-28,Over Your Dream,8,SC,7,,,1,,1,,1,,,,,,1,,
-3,Always,8,SC,7,,,,,,,1,,,,,,1,1,
+75,Minus 3,8,SC,8,,1,1,,,1,,,,,,,2,,
+28,Over Your Dream,8,SC,7,,,1,,1,1,1,,,,,,,,
+3,Always,8,SC,7,,,,,,1,1,,,,,,,1,
 321,SigNalize,8,MX,14,,,,,,,,,,,,,,,
 832,다가올 시간들을 위해 (feat. 최현아),8,SC,8,,,,,,,,,,,,,,,
 82,Phantom Of Sky,8,SC,8,,,,,,,,,,,,,,,
@@ -4592,7 +4592,7 @@
 367,The Last Dance,8,SC,8,,,1,,,1,1,,,,,,1,,
 44,waiting for me,8,SC,7,,,1,,,1,2,,,,,,1,,
 43,Void,8,SC,7,,,,,,,1,,,,,,,1,
-27,OPEN FIRE,8,SC,7,,,2,,,,,,,,,,1,1,
+27,OPEN FIRE,8,SC,7,,,2,,,1,,,,,,,,1,
 748,Gate of Elysium,8,MX,14,,,,,,,,,,,,,,,
 743,MIRINAE (DJMAX Edit),8,MX,15,,,,,,,,,,,,,,,
 698,RE Aoharu,8,MX,12,,,,,,,,,,,,,,,
@@ -4641,7 +4641,7 @@
 735,Axium Crisis,8,MX,13,,,,,,,,,,,,,,,
 710,"Love, Epilogue (feat. mill)",8,SC,7,,1,1,,1,1,1,,,,,,1,,1
 51,Another DAY,8,SC,7,,,,,1,,,,,,,,,,
-661,Hikari (feat. Negoto Bunnyla),8,SC,7,,,1,,1,,,,,,,,1,,
+661,Hikari (feat. Negoto Bunnyla),8,SC,7,,,1,,1,1,,,,,,,,,
 522,Tic! Tac! Toe!,8,SC,8,,,1,,,1,1,,,,,,1,,1
 397,Luv Flow ~Funky House Mix~,8,SC,7,,,1,,,,,,,,,,,1,
 372,Do you want it,8,SC,7,,,,,,,1,,,,,,,1,
@@ -4650,12 +4650,12 @@
 695,Oxygen Destroyer,8,MX,13,,,,,,,,,,,,,,,
 677,HALO,8,SC,8,,,1,,,1,1,,,,,,1,,
 651,The Decisive Blow (Normal),8,MX,14,,,,,,,,,,,,,,,
-539,Sparrow,8,SC,7,,,,,1,1,,,,,,,,,
+539,Sparrow,8,SC,7,,,,,1,,,,,,,,1,,
 501,Thor (Deepin' Absonant Mix),8,MX,14,,,,,,,,,,,,,,,
-493,Mukilteo Beach,8,SC,7,,,,,,,,,,,,,1,,
+493,Mukilteo Beach,8,SC,7,,,,,,1,,,,,,,,,
 487,Deborah,8,SC,8,,1,1,,,1,,,,,,,1,1,
 454,Over Me,8,MX,14,,,,,,,,,,,,,,,
-451,Melonaid,8,SC,8,,,1,,,2,1,,,,,,1,,
+451,Melonaid,8,SC,8,,,1,,,1,1,,,,,,2,,
 434,It's my war now,8,MX,14,,,,,,,,,,,,,,,
 429,카트라이더 Mashup ~Cosmograph Remix~,8,MX,15,,,,,,,,,,,,,,,
 417,서울여자,8,SC,7,,,1,,,,,,,,,,,,
@@ -4666,16 +4666,16 @@
 273,Watch Your Step,8,SC,8,,1,1,,1,1,,,,,,,1,1,1
 272,RockSTAR,8,SC,7,,,,,,,,,,,,,,,
 271,Chemical Slave,8,MX,14,,,,,,,,,,,,,,,
-268,Y (CE Style),8,SC,7,,,1,,,1,2,,,,,,,1,
-221,ZET,8,SC,7,,2,2,,,1,1,,,,,,,,
+268,Y (CE Style),8,SC,7,,,1,,,,2,,,,,,1,1,
+221,ZET,8,SC,7,,2,2,,,,1,,,,,,1,,
 192,Black MInD,8,MX,14,,,,,,,,,,,,,,,
 191,WONDER $LOT 777,8,MX,14,,,,,,,,,,,,,,,
 187,Remember Me,8,SC,7,,,1,,1,1,1,,,,,,1,,
 187,Remember Me,8,MX,14,,,,,,,,,,,,,,,
 169,Super lovely,8,MX,15,,,,,,,,,,,,,,,
-161,So Happy,8,SC,7,,,,,1,,1,,,,,,1,2,
+161,So Happy,8,SC,7,,,,,1,1,1,,,,,,,2,
 150,SIN,8,MX,15,,,,,,,,,,,,,,,
-116,Enemy Storm,8,SC,7,,,,,,,1,,,,,,1,,
+116,Enemy Storm,8,SC,7,,,,,,1,1,,,,,,,,
 105,A.I,8,SC,7,,,1,,1,,,,,,,,,,
 81,Nightmare,8,MX,15,,,,,,,,,,,,,,,
 32,Runaway,8,HD,13,,,,,,,,,,,,,,,
@@ -4696,21 +4696,21 @@
 170,Urban Night,8,SC,6,,,1,,,,,,,,,,,,1
 678,Hyperboloid,8,MX,12,,,,,,,,,,,,,,,
 633,Final Round,8,MX,13,,,,,,,,,,,,,,,
-205,Catch You,8,SC,7,,,,,,,,,,,,,1,,
+205,Catch You,8,SC,7,,,,,,1,,,,,,,,,
 607,Ashita e no Kodou,8,SC,6,,,,,,,,,,,,,,,
-606,Shining Light (feat. Shabel Tonya),8,SC,7,,,1,,1,,1,,,,,,1,,
+606,Shining Light (feat. Shabel Tonya),8,SC,7,,,1,,1,1,1,,,,,,,,
 596,Inside the Light,8,SC,7,,,,,,,1,,,,,,,,
 583,The Tune of the Azure Light ~Parang Remix~,8,MX,14,,,,,,,,,,,,,,,
 546,Dark Lightning,8,SC,8,,,1,,1,1,1,,,1,,,1,,
 514,Misty E'ra 'Mui',8,MX,13,,,,,,,,,,,,,,,
-506,#mine (feat. Riho Iwamoto),8,SC,7,,,,,,,1,,,,,,1,,
+506,#mine (feat. Riho Iwamoto),8,SC,7,,,,,,1,1,,,,,,,,
 490,Kal_wrnw,8,SC,7,,,,,,,,,,,,,,,
 478,The 90's Decision,8,SC,7,,,,,,,,,,,,,,,
 422,부여성 ~Blosso Remix~,8,SC,7,,,1,,,,,,,,,,,,
 365,SuperSonic,8,MX,13,,,,,,,,,,,,,,,
 360,Melody,8,SC,7,,,,,,,,,,,,,,,
 300,A Life With You,8,SC,7,,,1,,,,,,,,,,,,
-280,Nine point eight,8,SC,6,,,,,,,,,,,,,1,,
+280,Nine point eight,8,SC,6,,,,,,1,,,,,,,,,
 185,NANAIRO,8,MX,13,,,,,,,,,,,,,,,
 173,BLACK GOLD,8,MX,14,,,,,,,,,,,,,,,
 123,Futurism,8,SC,7,,,1,,1,,1,,,,,,,,
@@ -4720,7 +4720,7 @@
 94,Stay with me,8,SC,6,,,1,,,,,,,,,,,,
 68,Higher,8,MX,13,,,,,,,,,,,,,,,
 7,Binary World,8,SC,7,,,,,,,,,,,,,,,
-2,Alone,8,SC,7,,,1,,1,,1,,,,,,1,,
+2,Alone,8,SC,7,,,1,,1,1,1,,,,,,,,
 334,Dual Strikers,8,SC,7,,,,,,,,,,,,,,,
 163,POP/STARS,8,SC,7,,,,,,,,,,,,,,,
 835,바람의 너를 (feat. 최현아),8,SC,7,,,,,,,,,,,,,,,
@@ -4728,7 +4728,7 @@
 797,A Rainbow In The Sky (feat. eili),8,MX,12,,,,,,,,,,,,,,,
 804,Final Lap,8,SC,7,,,,,,,,,,,,,,,
 129,Let's Go Baby,8,SC,7,,,,,,,,,,,,,,,
-793,River Flow,8,SC,8,,,1,,,,1,,,,,,1,,
+793,River Flow,8,SC,8,,,1,,,1,1,,,,,,,,
 772,For Boyhood,8,MX,13,,,,,,,,,,,,,,,
 750,A Miracle For Me,8,MX,13,,,,,,,,,,,,,,,
 726,IWTEYI,8,SC,7,,1,1,,,,,,,,,,,,
@@ -4736,9 +4736,9 @@
 713,Rise Up,8,HD,13,,,,,,,,,,,,,,,
 704,CHiNEM4TiC,8,MX,13,,,,,,,,,,,,,,,
 686,Phoenix Virus,8,SC,6,,,1,,1,,,,,,,,,,
-331,Cozy Quilt,8,SC,7,,,,,,,1,,,,,,1,,
-153,Sunny Side (deepn'soul Mix),8,SC,7,,1,1,,,,1,,,,,,1,,
-706,Fly with me (feat. 황정미),8,SC,7,,,1,,,,1,,,,,,1,,
+331,Cozy Quilt,8,SC,7,,,,,,1,1,,,,,,,,
+153,Sunny Side (deepn'soul Mix),8,SC,7,,1,1,,,1,1,,,,,,,,
+706,Fly with me (feat. 황정미),8,SC,7,,,1,,,1,1,,,,,,,,
 644,Heat Haze Shadow,8,MX,13,,,,,,,,,,,,,,,
 597,My Wonderland,8,MX,13,,,,,,,,,,,,,,,
 671,Rocket Ride,8,SC,7,,,1,,,1,1,,,,,,1,,
@@ -4759,26 +4759,26 @@
 225,Marionette,8,MX,13,,,,,,,,,,,,,,,
 223,Break a Spell,8,MX,14,,,,,,,,,,,,,,,
 165,Feel,8,SC,6,,,,,,,,,,,,,,,
-137,Never Say,8,SC,7,,1,,,,,1,,,,,,1,,
+137,Never Say,8,SC,7,,1,,,,1,1,,,,,,,,
 118,Extreme Z4,8,HD,12,,,,,,,,,,,,,,,
 99,Yo Creo Que Si,8,SC,7,,1,1,,,1,1,,,,,,1,,
-73,Midnight Blood,8,SC,7,,,2,,,1,,,,,,,,,
+73,Midnight Blood,8,SC,7,,,2,,,,,,,,,,1,,
 64,Get on Top,8,SC,7,,,1,,,,,,,,,,,,
-443,Arcade Love (feat. KNVWN),8,SC,7,,,,,,,1,,,,,,1,,
+443,Arcade Love (feat. KNVWN),8,SC,7,,,,,,1,1,,,,,,,,
 248,너에게,8,SC,7,,,,,,,,,,,,,,,
 149,Save My Dream,8,SC,6,,,,,,,,,,,,,,,
 779,This is you,8,SC,7,,,,,,,,,,,,,,,
 751,ALTER/ƏgØ,8,MX,14,,,,,,,,,,,,,,,
 724,Destrocode,8,SC,7,,1,,,1,1,1,,,,,,1,,
 357,Honeymoon,8,SC,6,,,1,,,,,,,,,,,,
-48,설레임,8,SC,6,,,1,,,,,,,,,,1,,
+48,설레임,8,SC,6,,,1,,,1,,,,,,,,,
 691,Hifumi Daisuki,8,MX,12,,,,,,,,,,,,,,,
 496,Retention,8,SC,6,,,,,,,,,,,,,,,
 371,End of Mythology,8,SC,6,,,,,,,,,,,,,,,
 211,sO mUCH iN LUV ~Melodic Twisted Mix~,8,SC,6,,,,,,,,,,,,,,,
 590,Behemoth,8,MX,14,,,,,,,,,,,,,,,
 587,별빛너머,8,SC,7,,,,,,,,,,,,,,,
-579,Star Bubble,8,SC,7,,,1,,,,1,,,,,,1,,
+579,Star Bubble,8,SC,7,,,1,,,1,1,,,,,,,,
 562,New World,8,MX,13,,,,,,,,,,,,,,,
 553,DIE IN,8,HD,13,,,,,,,,,,,,,,,
 542,I'M ALIVE,8,MX,13,,,,,,,,,,,,,,,
@@ -4801,13 +4801,13 @@
 122,Funky Chups,8,SC,6,,,1,,,,,,,,,,,,
 116,Enemy Storm,8,MX,14,,,,,,,,,,,,,,,
 253,Creator,8,SC,6,,,,,1,,,,,,,,,,1
-9,Boom!,8,SC,7,,,,,,1,,,,,,,,,
+9,Boom!,8,SC,7,,,,,,,,,,,,,1,,
 814,Touch The Sky,8,MX,13,,,,,,,,,,,,,,,
 802,Dreamscape,8,MX,13,,,,,,,,,,,,,,,
 723,Bring The Techno,8,MX,13,,,,,,,,,,,,,,,
 707,Hero,8,MX,14,,,,,,,,,,,,,,,
 703,Checkmate (feat. Re.may),8,MX,13,,,,,,,,,,,,,,,
-353,Dear my Lady,8,SC,7,,,,,,,1,,,,,,1,,
+353,Dear my Lady,8,SC,7,,,,,,1,1,,,,,,,,
 674,Diomedes ~Extended Mix~,8,HD,12,,,,,,,,,,,,,,,
 700,Unwelcome School,8,MX,13,,,,,,,,,,,,,,,
 652,Yodeling in meadow hill (Hidden Retreat),8,MX,13,,,,,,,,,,,,,,,
@@ -4825,7 +4825,7 @@
 363,Shoreline,8,SC,6,,,,,,,,,,,,,,,
 320,Showdown,8,MX,13,,,,,,,,,,,,,,,
 312,Feel Ma Beat,8,MX,14,,,,,,,,,,,,,,,
-296,Ververg,8,SC,6,,,,,,,1,,,,,,1,,
+296,Ververg,8,SC,6,,,,,,1,1,,,,,,,,
 291,Les Parfums de L'Amour,8,HD,14,,,,,,,,,,,,,,,
 272,RockSTAR,8,MX,13,,,,,,,,,,,,,,,
 189,Vile Requiem,8,MX,14,,,,,,,,,,,,,,,
@@ -4844,7 +4844,7 @@
 744,NEO WINGS,8,MX,13,,,,,,,,,,,,,,,
 631,Diomedes,8,HD,12,,,,,,,,,,,,,,,
 656,break it down!,8,SC,7,,,,,,,,,,,,,,,
-624,평행고백 ~Pan Remix~,8,SC,6,,,,,1,,,,,,,,1,1,
+624,평행고백 ~Pan Remix~,8,SC,6,,,,,1,1,,,,,,,,1,
 403,Raise me up,8,SC,5,,,,,,,,,,,,,,,
 41,U.A.D,8,MX,12,,,,,,,,,,,,,,,
 622,"때론, 냉정도 필요해",8,SC,6,,,,,,,1,,,,,,,,
@@ -4877,11 +4877,11 @@
 711,mochimochi (feat. Hatsune Miku),8,MX,12,,,,,,,,,,,,,,,
 374,SON OF SUN ~Extended Mix~,8,HD,11,,,,,,,,,,,,,,,
 330,Cosmic Fantastic Lovesong,8,SC,6,,,1,,,,,,,,,,,,
-761,New Fantasy (feat. Crystal Tea),8,SC,5,,,,,,1,1,,,,,,,,
+761,New Fantasy (feat. Crystal Tea),8,SC,5,,,,,,,1,,,,,,1,,
 701,Usagi Flap,8,MX,12,,,,,,,,,,,,,,,
 696,Polyphonic,8,MX,13,,,,,,,,,,,,,,,
-561,LUV,8,SC,5,,,,,,,1,,,,,,1,1,
-464,너랑 있으면,8,SC,5,,,,,,,1,,,,,,1,,
+561,LUV,8,SC,5,,,,,,1,1,,,,,,,1,
+464,너랑 있으면,8,SC,5,,,,,,1,1,,,,,,,,
 160,Kingdom,8,SC,5,,,,,1,,1,,,,,,,,
 158,Sad Machine,8,SC,5,,,,,,,1,,,,,,,,
 643,Fiji -Paraiso Mix- (Eternal Paradise),8,SC,6,,,,,,,,,,,,,,,
@@ -4916,8 +4916,8 @@
 784,Baqeela,8,MX,14,,,,,,,,,,,,,,,
 354,DJMAX,8,SC,5,,,,,,,,,,,,,,,
 117,Eternal Memory ~소녀의 꿈~,8,SC,6,,,,,1,,1,,,,,,,,
-71,Memoirs,8,SC,6,,,1,,,1,,,,,,,,,
-65,GET OUT,8,SC,6,,,1,,,,,,,,,,1,,
+71,Memoirs,8,SC,6,,,1,,,,,,,,,,1,,
+65,GET OUT,8,SC,6,,,1,,,1,,,,,,,,,
 745,Redolent Shape,8,MX,14,,,,,,,,,,,,,,,
 697,Raise the Huddle,8,MX,12,,,,,,,,,,,,,,,
 408,Your Smile,8,SC,5,,,,,,,1,,,,,,,,
@@ -4941,7 +4941,7 @@
 243,Ruti'n,8,SC,5,,,,,,,,,,,,,,,
 235,Heart of Witch,8,HD,12,,,,,,,,,,,,,,,
 140,ON,8,SC,5,,,,,,,,,,,,,,,
-45,Waiting for you,8,SC,5,,,,,,,,,,,,,1,,
+45,Waiting for you,8,SC,5,,,,,,1,,,,,,,,,
 17,Groovin Up,8,SC,5,,,,,,,,,,,,,,,
 60,Fallen Angel,8,HD,11,,,,,,,,,,,,,,,
 476,PUPA,8,HD,13,,,,,,,,,,,,,,,
@@ -5039,7 +5039,7 @@
 215,Syriana ~Blast Wave Mix~,8,MX,13,,,,,,,,,,,,,,,
 159,Bleed,8,SC,4,,,,,,,,,,,,,,,1
 157,Ghost Voices,8,SC,5,,,,,,,,,,,,,,,
-103,아침형 인간,8,HD,11,,,1,,,,,,,,,,1,,
+103,아침형 인간,8,HD,11,,,1,,,1,,,,,,,,,
 56,Chain of Gravity,8,HD,12,,,,,,,,,,,,,,,
 45,Waiting for you,8,HD,11,,,,,,,,,,,,,,,
 42,v o l d e n u i t,8,MX,13,,,,,,,,,,,,,,,
@@ -5047,7 +5047,7 @@
 28,Over Your Dream,8,HD,12,,,,,,,,,,,,,,,
 10,"Bullet, Wanted!",8,HD,11,,,,,,,,,,,,,,,
 25,NEON 1989 (ESTi Remix),8,SC,4,,,,,,,,,,,,,,,
-190,welcome to the space (feat. Jisun),8,SC,5,,,1,,,1,,,,,,,,,
+190,welcome to the space (feat. Jisun),8,SC,5,,,1,,,,,,,,,,1,,
 805,"PPPP (feat. Hatsune Miku, Kasane Teto)",8,MX,12,,,,,,,,,,,,,,,
 439,The Little Adventurer,8,SC,3,,,,,,,,,,,,,,,
 375,Here in the Moment ~Extended Mix~,8,MX,11,,,,,,,,,,,,,,,
@@ -5140,7 +5140,7 @@
 224,Holy Orders (Be Just Or Be Dead),8,MX,11,,,,,,,,,,,,,,,
 114,Elastic STAR,8,SC,4,,,,,,,,,,,,,,,
 78,NB POWER,8,HD,10,,,,,,,,,,,,,,,
-38,The Lost Story,8,SC,4,,,,,,,1,,,,,,1,,
+38,The Lost Story,8,SC,4,,,,,,1,1,,,,,,,,
 736,Cyaegha,8,HD,12,,,,,,,,,,,,,,,
 687,After School Dessert,8,MX,12,,,,,,,,,,,,,,,
 682,Saturday,8,MX,12,,,,,,,,,,,,,,,
