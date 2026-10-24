@@ -125,7 +125,7 @@ Both read the local store through `AnalyzeUtil`; for another account inject its 
 
 - `history_generate.generate_history(username, recent100=True, date=None, target_date=None)`
     - Renders the play-history chart from the local event log.
-    - `recent100=True`: latest 100 plays; `False`: the day selected by `date`.
+    - `recent100=True`: latest n plays(adjust MAX_ROWS); `False`: the day selected by `date`.
     - `date=None` means “the latest day with records”; a `datetime.date` traces back from it.
     - Pass a list as `target_date` to receive the day actually charted (useful for file names).
     - Rows carry the chart's previous best and score/DJPower gains; mode blocks show daily total

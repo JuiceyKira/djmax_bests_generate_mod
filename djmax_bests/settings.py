@@ -20,11 +20,11 @@ DEFAULT_TEXT = """; DJMAX 成绩图生成器设置
 ; 显示名称；留空 = 直接显示账号名
 nickname =
 ; 头像使用的曲绘 songid；留空 = 每次随机
-photo_id = 456
-; 高亮的按键模式（4,5,6,8 的子集，逗号分隔）
-prefer_button = 6,8
+photo_id =
+; 高亮的按键模式（4,5,6,8 的子集，逗号分隔；留空 = 四个都高亮）
+prefer_button = 4
 ; 签名栏文字；留空 = 不写签名
-info = steam 179448484
+info =
 
 [target]
 ; 难度上限（floor 单位，例如 6.0）；留空 = 不限制

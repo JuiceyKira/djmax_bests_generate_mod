@@ -62,10 +62,11 @@ def draw_userinfo(analyzer:data_analyzer.RecordAnalyzer, username:str, photo=Non
                 drawing_board.alpha_composite(monochromed_img,(x,155))
         x += 150
 
-    # Info
-    with Image.open(os.path.join(ASSETS_PATH, 'signature.png')) as img:
-        drawing_board.alpha_composite(img,(350,270))
-        painter.text((420,285), info, fill='white', font=font_rg.font_variant(size=50),anchor='lm')
+    # Info; nothing is drawn when the signature is blank, the lone bubble icon looked like debris
+    if info:
+        with Image.open(os.path.join(ASSETS_PATH, 'signature.png')) as img:
+            drawing_board.alpha_composite(img,(350,270))
+            painter.text((420,285), info, fill='white', font=font_rg.font_variant(size=50),anchor='lm')
 
     drawing_board=tools.resize_image(drawing_board, size)
     return drawing_board

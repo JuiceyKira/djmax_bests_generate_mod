@@ -242,17 +242,17 @@ async def cmd_single(name: str) -> None:
                 image = await generate.generate_bests_local(name, bmode)
                 path = _save(image, f"best_{name}_{bmode}B.png")
             elif choice == "2":
-                level = int(ask("等级 1-15", "8"))
+                level = int(ask("等级 1-15", "15"))
                 image = await generate.generate_scorelist_local(name, bmode, False, level)
                 _save(image, f"level_{bmode}B", f"scorelist_{bmode}B_{level}.png")
                 image = await generate.generate_scorelist_local(name, bmode, True, level)
                 path = _save(image, f"level_{bmode}B", f"scorelist_{bmode}B_sc{level}.png")
             elif choice == "3":
-                diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
+                diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                 image = await generate.generate_scorelist_new_local(name, bmode, diff)
                 path = _save(image, f"level_{bmode}B", f"scorelist_new_{bmode}B{diff}.png")
             elif choice == "4":
-                diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
+                diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                 pack = ask("曲包代码（V-ARCHIVE 的 dlcCode，如 DNF）", "DNF")
                 image = await generate.generate_scorelist_pack_local(name, bmode, diff, pack)
                 path = _save(image, f"level_{bmode}B", "dlc", f"scorelist_{pack}_{bmode}B{diff}.png")
@@ -271,7 +271,7 @@ async def cmd_single(name: str) -> None:
                 path = _save(image, "theoretical", f"theoretical_{bmode}B.png")
             else:
                 songid = int(ask("歌曲 ID（songid）", "711"))
-                diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
+                diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                 image = await song_history_generate.generate_song_history(name, songid, bmode, diff)
                 path = _save(image, "history", "songs", f"SongHistory_{bmode}B{diff}_{songid}.png")
             saved(path)
@@ -349,7 +349,7 @@ async def cmd_inspect() -> None:
             print("    [6] 标签推歌进度")
             print("    [7] 单曲成绩轨迹")
             print("    [8] 总结图")
-            print("    [9] 最近 100 局")
+            print("    [9] 最近 50 局")
             print("    [10] 目标 DJPower 规划")
             print("    [0] 返回\n")
             choice = input("请输入序号后回车：").strip()
@@ -363,23 +363,23 @@ async def cmd_inspect() -> None:
                 # ask for one; everything else renders a single mode.
                 bmode = None
                 if choice not in ("8", "9"):
-                    bmode = int(ask("按键模式 [4/5/6/8]", "6", ("4", "5", "6", "8")))
+                    bmode = int(ask("按键模式 [4/5/6/8]", "4", ("4", "5", "6", "8")))
                 if choice == "1":
                     image = await generate.generate_bests(name, bmode)
                     path = _save_under(root, image, f"best_{bmode}B",
                                        f"best_{name}_{bmode}B_{time.strftime('%Y%m%d_%H%M')}.png")
                 elif choice == "2":
-                    level = int(ask("等级 1-15", "8"))
+                    level = int(ask("等级 1-15", "15"))
                     image = await generate.generate_scorelist(name, bmode, False, level)
                     _save_under(root, image, f"level_{bmode}B", f"scorelist_{bmode}B_{level}.png")
                     image = await generate.generate_scorelist(name, bmode, True, level)
                     path = _save_under(root, image, f"level_{bmode}B", f"scorelist_{bmode}B_sc{level}.png")
                 elif choice == "3":
-                    diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
+                    diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                     image = await generate.generate_scorelist_new(name, bmode, diff)
                     path = _save_under(root, image, f"level_{bmode}B", f"scorelist_new_{bmode}B{diff}.png")
                 elif choice == "4":
-                    diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
+                    diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                     pack = ask("曲包代码（dlcCode，如 DNF）", "DNF")
                     image = await generate.generate_scorelist_pack(name, bmode, diff, pack)
                     path = _save_under(root, image, f"level_{bmode}B", "dlc",
@@ -395,11 +395,11 @@ async def cmd_inspect() -> None:
                     path = _save_under(root, image, f"tag_{bmode}B", f"{tag}_{level}.png")
                 elif choice == "7":
                     texts = await single_mode(bmode)
-                    songid = int(ask("歌曲 ID（songid）", "711"))
-                    diff = ask("难度 NM/HD/MX/SC", "MX", ("NM", "HD", "MX", "SC"))
+                    songid = int(ask("歌曲 ID（songid）", "1"))
+                    diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                     image = await song_history_generate.generate_song_history_snapshot(
                         name, texts, songid, bmode, diff)
-                    path = _save_under(root, image, "history",
+                    path = _save_under(root, image, "history", "songs",
                                        f"SongHistory_{bmode}B{diff}_{songid}.png")
                 elif choice == "8":
                     await all_modes()
@@ -414,17 +414,17 @@ async def cmd_inspect() -> None:
                 elif choice == "9":
                     await ensure_song_db()
                     texts = data_fetcher.fetch_all(name, write=False)
-                    recent = ask("范围：1 = 最近 100 局，2 = 最近一天", "1", ("1", "2")) == "1"
+                    recent = ask("范围：1 = 最近 50 局，2 = 最近一天", "1", ("1", "2")) == "1"
                     image = await history_generate.generate_history_snapshot(name, texts, recent)
                     stamp = time.strftime("%Y%m%d_%H%M" if recent else "%Y%m%d")
-                    filename = f"History_R100_{stamp}.png" if recent else f"History_{stamp}.png"
+                    filename = f"History_R50_{stamp}.png" if recent else f"History_{stamp}.png"
                     path = _save_under(root, image, "history", filename)
                 else:
                     texts = await single_mode(bmode)
                     opts = settings.target_options()
                     cap_default = opts["floor_cap"]
-                    total = float(ask("目标总分", "6400"))
-                    accuracy = float(ask("预计准确率", "99.2"))
+                    total = float(ask("目标总分", "6200"))
+                    accuracy = float(ask("预计准确率", "99.0"))
                     cap_hint = "不限制" if cap_default is None else f"{cap_default:g}"
                     cap_raw = ask(f"难度上限（floor，如 6.0；回车 = {cap_hint}）", "")
                     if cap_raw:

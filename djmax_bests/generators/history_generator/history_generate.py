@@ -67,8 +67,8 @@ LEFT = 80
 RIGHT = WIDTH - 80
 BLOCK_W = (RIGHT - LEFT) // 4 + 15
 
-MAX_ROWS = 50          # the record cap: a single play day (or the recent100 window) is sliced here
-MAX_ROWS_SINGLEDAY = 200
+MAX_ROWS = 50          # the record cap: recent window is sliced here
+MAX_ROWS_SINGLEDAY = 200    # the record cap: a single play day is sliced here
 BMODES = (4, 5, 6, 8)
 
 PATTERN_COLORS = {'NM': '#F0A62E', 'HD': '#EA7F42',
@@ -135,7 +135,7 @@ def _recent_one_day(events: pd.DataFrame, day):
             .head(MAX_ROWS_SINGLEDAY).reset_index(drop=True))
 
 
-def _recent_100(events: pd.DataFrame):
+def _recent(events: pd.DataFrame):
     """The latest MAX_ROWS plays across all modes, newest first — the recent100 = True selection.
     `events` is replay_view's uncapped newest-first stream; the cap lands wherever it lands, so
     the day the cap falls in simply carries fewer rows."""
@@ -555,7 +555,7 @@ async def generate_history(username: str, recent100: bool = True, date=None,
                            target_date: list | None = None) -> Image.Image:
     """Render the play-history chart for `username` from the event log, with per-record
     increments; see the module docstring for the layout. Each row's floor name is looked up in the
-    records store. `recent100` picks the window: True the latest 100 plays, False the one play day
+    records store. `recent100` picks the window: True the latest MAX_ROWS plays, False the one play day
     `date` selects (the same day the mode gains are measured over). `date` is None for "the latest
     day with records", or a date to trace back from. The image is returned, not written.
 
@@ -563,7 +563,7 @@ async def generate_history(username: str, recent100: bool = True, date=None,
     resolved to, which is the one a caller should name the output file after."""
     events, totals = history.replay_view(username)
     if recent100:
-        recent = _recent_100(events)
+        recent = _recent(events)
         day = None
     else:
         day = _target_day(totals, date)

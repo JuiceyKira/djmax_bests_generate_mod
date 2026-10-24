@@ -124,7 +124,7 @@ python -c "import matplotlib.font_manager as fm; print([f.name for f in fm.fontM
 
 - `history_generate.generate_history(username, recent100=True, date=None, target_date=None)`
     - 从本地游玩事件日志渲染历史图。
-    - `recent100=True`：最近 100 局；`False`：`date` 指定的那一天。
+    - `recent100=True`：最近 n 局（调整MAX_ROWS）；`False`：`date` 指定的那一天。
     - `date=None` 表示“最近有记录的一天”；也可以传 `datetime.date` 回溯指定日期。
     - `target_date` 传一个列表时，会把实际绘制的那一天追加进去，方便命名输出文件。
     - 每行带该谱面之前的最好成绩和分数 / DJ POWER 增量；模式块带每日总值变化。
