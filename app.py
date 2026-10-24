@@ -51,7 +51,7 @@ def set_title() -> None:
         return
     try:
         import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW("DJMAX 成绩图生成器")
+        ctypes.windll.kernel32.SetConsoleTitleW("DJMAX 成绩图生成器v1.0.0")
     except Exception:
         pass
 
@@ -456,7 +456,7 @@ def print_menu(name: str) -> None:
     clear()
     print()
     print("  " + "=" * 58)
-    print("                  DJMAX 成绩图生成器")
+    print("                  DJMAX 成绩图生成器v1.0.0")
     print(f"                  当前账号：{name}")
     print("  " + "=" * 58)
     print()
