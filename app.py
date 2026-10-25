@@ -179,11 +179,11 @@ async def cmd_target(name: str) -> None:
     opts = settings.target_options()
     cap_default = opts["floor_cap"]
 
-    bmode = int(ask("按键模式 [4/5/6/8]", "6", ("4", "5", "6", "8")))
-    total = float(ask("目标总分", "6400"))
-    accuracy = float(ask("预计准确率", "99.2"))
+    bmode = int(ask("按键模式 [4/5/6/8]", "4", ("4", "5", "6", "8")))
+    total = float(ask("目标总分", "6200"))
+    accuracy = float(ask("预计准确率", "99.0"))
     cap_hint = "不限制" if cap_default is None else f"{cap_default:g}"
-    cap_raw = ask(f"难度上限（floor，如 6.0；回车 = {cap_hint}）", "")
+    cap_raw = ask(f"难度上限（floor，如 6.1；回车 = {cap_hint}）", "")
     if cap_raw:
         cap = None if cap_raw.lower() in ("none", "-") else float(cap_raw)
     else:
@@ -236,7 +236,7 @@ async def cmd_single(name: str) -> None:
         if choice not in "12345678" or len(choice) != 1:
             continue
 
-        bmode = int(ask("按键模式 [4/5/6/8]", "6", ("4", "5", "6", "8")))
+        bmode = int(ask("按键模式 [4/5/6/8]", "4", ("4", "5", "6", "8")))
         try:
             if choice == "1":
                 image = await generate.generate_bests_local(name, bmode)
@@ -253,7 +253,7 @@ async def cmd_single(name: str) -> None:
                 path = _save(image, f"level_{bmode}B", f"scorelist_new_{bmode}B{diff}.png")
             elif choice == "4":
                 diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
-                pack = ask("曲包代码（V-ARCHIVE 的 dlcCode，如 DNF）", "DNF")
+                pack = ask("曲包代码（V-ARCHIVE 的 dlcCode，如 DNF）", "RV")
                 image = await generate.generate_scorelist_pack_local(name, bmode, diff, pack)
                 path = _save(image, f"level_{bmode}B", "dlc", f"scorelist_{pack}_{bmode}B{diff}.png")
             elif choice == "5":
@@ -261,7 +261,7 @@ async def cmd_single(name: str) -> None:
                 path = _save(image, f"perfect_{bmode}B.png")
             elif choice == "6":
                 tag = ask("标签（Jack/Longjack/Stream/Stair/Trill/Chord/Long/Side/Complex/SV/…）", "Jack")
-                level = int(ask("标签难度 1-3", "1"))
+                level = int(ask("标签难度 1-3", "3"))
                 image = tag_scorelist(name, bmode, tag, level)
                 path = _save(image, f"tag_{bmode}B", f"{tag}_{level}.png")
             elif choice == "8":
@@ -270,7 +270,7 @@ async def cmd_single(name: str) -> None:
                 image = await generate.generate_bests_theoretical(bmode)
                 path = _save(image, "theoretical", f"theoretical_{bmode}B.png")
             else:
-                songid = int(ask("歌曲 ID（songid）", "711"))
+                songid = int(ask("歌曲 ID（songid）", "1"))
                 diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
                 image = await song_history_generate.generate_song_history(name, songid, bmode, diff)
                 path = _save(image, "history", "songs", f"SongHistory_{bmode}B{diff}_{songid}.png")
@@ -380,7 +380,7 @@ async def cmd_inspect() -> None:
                     path = _save_under(root, image, f"level_{bmode}B", f"scorelist_new_{bmode}B{diff}.png")
                 elif choice == "4":
                     diff = ask("难度 NM/HD/MX/SC", "SC", ("NM", "HD", "MX", "SC"))
-                    pack = ask("曲包代码（dlcCode，如 DNF）", "DNF")
+                    pack = ask("曲包代码（dlcCode，如 DNF）", "RV")
                     image = await generate.generate_scorelist_pack(name, bmode, diff, pack)
                     path = _save_under(root, image, f"level_{bmode}B", "dlc",
                                        f"scorelist_{pack}_{bmode}B{diff}.png")
@@ -390,7 +390,7 @@ async def cmd_inspect() -> None:
                 elif choice == "6":
                     await single_mode(bmode)
                     tag = ask("标签（Jack/Longjack/Stream/Stair/Trill/Chord/Long/Side/Complex/SV/…）", "Jack")
-                    level = int(ask("标签难度 1-3", "1"))
+                    level = int(ask("标签难度 1-3", "3"))
                     image = tag_scorelist(name, bmode, tag, level)
                     path = _save_under(root, image, f"tag_{bmode}B", f"{tag}_{level}.png")
                 elif choice == "7":
@@ -403,10 +403,9 @@ async def cmd_inspect() -> None:
                                        f"SongHistory_{bmode}B{diff}_{songid}.png")
                 elif choice == "8":
                     await all_modes()
-                    opts = settings.summary_options()
-                    # the inspected account's name stays as-is; only the presentation knobs apply
-                    summary, modecards = summary_generate.generate_summary(
-                        name, None, opts["photo_id"], opts["prefer_button"], opts["info"])
+                    # another account's summary always uses the stock presentation: settings.ini
+                    # describes your own card, not theirs
+                    summary, modecards = summary_generate.generate_summary(name)
                     _save_under(root, summary, "summary.png")
                     for button, card in modecards.items():
                         _save_under(root, card, f"summary_{button}B.png")
@@ -426,7 +425,7 @@ async def cmd_inspect() -> None:
                     total = float(ask("目标总分", "6200"))
                     accuracy = float(ask("预计准确率", "99.0"))
                     cap_hint = "不限制" if cap_default is None else f"{cap_default:g}"
-                    cap_raw = ask(f"难度上限（floor，如 6.0；回车 = {cap_hint}）", "")
+                    cap_raw = ask(f"难度上限（floor，如 6.1；回车 = {cap_hint}）", "")
                     if cap_raw:
                         cap = None if cap_raw.lower() in ("none", "-") else float(cap_raw)
                     else:

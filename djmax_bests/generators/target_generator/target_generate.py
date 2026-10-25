@@ -7,7 +7,6 @@ numbers from the projected top 100, so the header shows the total the plan actua
 from __future__ import annotations
 
 import os
-import random
 from decimal import Decimal
 
 from PIL import Image, ImageDraw, ImageFont
@@ -46,12 +45,12 @@ def _draw_min_accuracy(image: Image.Image, plan: TargetPlan) -> None:
     Drawn on its own centred line under the caption; omitted when even 100% cannot get there
     (then only a higher difficulty cap would help).
     """
-    if plan.reachable or plan.min_accuracy is None:
-        return
+    # if plan.reachable or plan.min_accuracy is None:
+    #     return
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype(os.path.join(FONT_PATH, "Respect_rg.ttf"), 46)
     draw.text((200, 470), f"MIN ACC: {plan.min_accuracy}%", font=font,
-              fill='#E96464', anchor="lm")
+              fill='lightgrey' if plan.reachable or plan.min_accuracy is None else '#E96464', anchor="lm")
 
 
 def _draw_current_total(image: Image.Image, plan: TargetPlan) -> None:
@@ -63,12 +62,12 @@ def _draw_current_total(image: Image.Image, plan: TargetPlan) -> None:
 
 
 async def generate_target_image(plan: TargetPlan) -> Image.Image:
-    """The projected top 100 of `plan`, marked up with the charts that have to be played."""
-    data = plan.to_dmbests()
+    """The projected top 100 of `plan`, marked up with the charts that have to be played.
 
-    # assemble_background() has a 10% "easter egg" that swaps the tier emblem for the base one;
-    # seed it from the plan so the same plan always renders the same image.
-    random.seed(f"target:{plan.username}:{plan.bmode}:{plan.target_total}:{plan.accuracy}")
+    The background's 10% "easter egg" (the base tier emblem instead of the tier one) is left to
+    the global RNG: the same plan renders a different emblem from one render to the next.
+    """
+    data = plan.to_dmbests()
 
     song_db = await api_handler.fetch_song_db()
     bg = assemble_background(data, is_max=False, song_db=song_db)

@@ -11,7 +11,9 @@ bests look; the differences are
   * such a card also gets the matching corner badge (gold "NEW" / cyan "UP"); untouched cards
     keep their bucket card and no badge;
   * a chart that has a real floor rating shows it at the bottom-right of its cover, opposite the
-    DLC code, in the same style the summary cards use (see summary_generator/tools.single_song).
+    DLC code, in the same style the summary cards use (see summary_generator/tools.single_song);
+  * the grid is ordered by DJPower descending, and cards that tie on DJPower are ordered by
+    floor descending, hardest first (see `_ordered_entries`).
 
 Assets and fonts are read from this module's own assets/ directory (a copy of the bests one),
 and `assemble_background` is copied in as well, so this package no longer imports
@@ -128,12 +130,24 @@ async def generate_single_song(idx: int, card_type: str, entry: PlanEntry) -> Im
         return await asyncio.to_thread(__generate_single_song_sync, idx, card_type, entry, cover)
 
 
+def _ordered_entries(entries: list[PlanEntry]) -> list[PlanEntry]:
+    """Card order: DJPower first, the harder chart first when two cards tie on it.
+
+    The list is ranked by DJPower, but djpower is a floored 4-decimal value, so cards do tie.
+    A tie block reads better by floor, hardest first -- the chart's real floorName, or the
+    design estimate for a chart that has none (the same axis the plan balances tasks on; a
+    real floor is exactly `difficulty / 10`). Python's sort is stable, so cards equal on both
+    keys keep the order the plan picked (songid, then pattern type).
+    """
+    return sorted(entries, key=lambda entry: (-entry.djpower, -entry.pattern.difficulty))
+
+
 async def assemble_song_cards(entries: list[PlanEntry], card_type: str) -> Image.Image | None:
     gap = 20
     layout_width = 5
     bg = None
 
-    for idx, entry in enumerate(entries):
+    for idx, entry in enumerate(_ordered_entries(entries)):
         with await generate_single_song(idx + 1, card_type, entry) as song_image:
             if bg is None:
                 bg = Image.new(
