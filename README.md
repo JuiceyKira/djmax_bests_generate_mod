@@ -221,3 +221,4 @@ See the “构建” section of [README-EXE.md](README-EXE.md).
 ## License
 
 MIT, see [LICENSE](LICENSE). Game data and jackets belong to DJMAX / NEOWIZ and V-ARCHIVE.
+Some assets are from [로페봇](https://xn--2o2bk9ff9x.com/), song skills tags are from [행이봇](https://hang2bot.vercel.app/)
